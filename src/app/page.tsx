@@ -11,21 +11,46 @@ interface Resource {
   searchableContent?: string
 }
 
-const ITEMS_PER_PAGE = 10 // Items per page
+const ITEMS_PER_PAGE = 10
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('')
   const [resources, setResources] = useState<Resource[]>([])
   const [page, setPage] = useState(1)
+  const [sections, setSections] = useState<string[]>([])
 
   useEffect(() => {
     fetch('https://raw.githubusercontent.com/gmh5225/awesome-game-security/refs/heads/main/README.md')
       .then(res => res.text())
       .then(content => {
         const resources: Resource[] = []
+        const sections: string[] = []
         const lines = content.split('\n')
         let currentSection = ''
+        let isInContents = false
 
+        // First pass: collect all sections from Contents
+        for(const line of lines) {
+          const trimmedLine = line.trim()
+          
+          if(trimmedLine === '## Contents') {
+            isInContents = true
+            continue
+          } else if(trimmedLine.startsWith('## ')) {
+            isInContents = false
+          }
+
+          if(isInContents && trimmedLine.startsWith('- [')) {
+            const sectionMatch = trimmedLine.match(/- \[(.*?)\]/)
+            if(sectionMatch) {
+              sections.push(sectionMatch[1])
+            }
+          }
+        }
+
+        setSections(sections)
+
+        // Second pass: collect resources
         for(let i = 0; i < lines.length; i++) {
           const line = lines[i].trim()
           
@@ -45,14 +70,14 @@ export default function Home() {
             let title = ''
             let description = ''
             let url = ''
-            let extraInfo = '' // For text in square brackets after URL
+            let extraInfo = ''
 
             // Try to match markdown link format with optional trailing brackets
             const fullMatch = line.match(/- \[([^\]]+)\]\((https?:\/\/[^\s\)]+)\)(\s*\[([^\]]+)\])?/)
             if(fullMatch) {
               title = fullMatch[1]
               url = fullMatch[2]
-              extraInfo = fullMatch[4] || '' // Text from trailing brackets if exists
+              extraInfo = fullMatch[4] || ''
               description = extraInfo || title
             } else {
               // Try to match direct URL format with optional trailing brackets
@@ -66,7 +91,6 @@ export default function Home() {
               }
             }
 
-            // If URL is found, try to get additional description from next line
             if(url) {
               if(i + 1 < lines.length) {
                 const nextLine = lines[i + 1].trim()
@@ -76,15 +100,21 @@ export default function Home() {
                 }
               }
 
-              // Include extraInfo in the searchable content
-              const searchableContent = [title, description, url, extraInfo].filter(Boolean).join(' ')
+              // Include section in searchable content
+              const searchableContent = [
+                title, 
+                description, 
+                url, 
+                extraInfo, 
+                currentSection
+              ].filter(Boolean).join(' ')
 
               resources.push({
                 title,
                 description: description || extraInfo || title,
                 url,
                 section: currentSection,
-                searchableContent // Add this to the resource object
+                searchableContent
               })
             }
           }
@@ -95,9 +125,22 @@ export default function Home() {
   }, [])
 
   const filteredResources = resources.filter(resource => {
-    const searchLower = searchQuery.toLowerCase()
-    const contentToSearch = (resource.searchableContent || '').toLowerCase()
+    if (!searchQuery) return true
     
+    const searchLower = searchQuery.toLowerCase()
+    
+    // Check if search query matches any section from Contents
+    const matchingSection = sections.find(section => 
+      section.toLowerCase().includes(searchLower)
+    )
+    
+    if (matchingSection) {
+      // If searching for a section, return all resources in that section
+      return resource.section.toLowerCase() === matchingSection.toLowerCase()
+    }
+    
+    // Otherwise perform normal search
+    const contentToSearch = (resource.searchableContent || '').toLowerCase()
     const searchTerms = searchLower.split(/\s+/).filter(Boolean)
     return searchTerms.every(term => contentToSearch.includes(term))
   })
