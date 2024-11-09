@@ -309,7 +309,13 @@ export default function Home() {
                   </h2>
 
                   {sectionResources.map((resource: Resource, index: number) => (
-                    <div key={`${resource.url}-${index}`} className="resource-card mb-6">
+                    <div 
+                      key={`${resource.url}-${index}`} 
+                      className="resource-card mb-6 cursor-pointer"
+                      onDoubleClick={() => {
+                        window.open(resource.url, '_blank', 'noopener,noreferrer')
+                      }}
+                    >
                       <div className="space-y-4">
                         <div className="flex items-baseline">
                           <span className="label">Name:</span>
@@ -335,7 +341,8 @@ export default function Home() {
                               {resource.sections.map(tag => (
                                 <button
                                   key={tag}
-                                  onClick={() => {
+                                  onClick={(e) => {
+                                    e.stopPropagation() // Prevent double click from triggering
                                     handleNavigationSearch(tag, resource.parentSection)
                                   }}
                                   className="tag"
@@ -353,6 +360,7 @@ export default function Home() {
                             target="_blank"
                             rel="noopener noreferrer" 
                             className="view-details"
+                            onClick={(e) => e.stopPropagation()} // Prevent double click from triggering
                           >
                             View Details 
                             <span className="font-mono">→</span>
