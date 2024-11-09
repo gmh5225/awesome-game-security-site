@@ -23,6 +23,8 @@ interface SearchContext {
   isFromNavigation?: boolean;
 }
 
+type SortedResource = [string, Resource[]];
+
 export default function Home() {
   const [searchContext, setSearchContext] = useState<SearchContext>({ 
     query: '',
@@ -217,7 +219,7 @@ export default function Home() {
   }
 
   // Sort resources by section name alphabetically
-  const sortedResources = Object.entries(
+  const sortedResources: SortedResource[] = Object.entries(
     paginatedResources.reduce((acc, resource) => {
       const section = resource.parentSection || resource.sections[0]
       if (!acc[section]) {
@@ -227,10 +229,10 @@ export default function Home() {
       return acc
     }, {} as Record<string, Resource[]>)
   )
-  .sort(([a], [b]) => a.localeCompare(b)) // Sort sections alphabetically
-  .map(([section, resources]) => [
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([section, resources]): SortedResource => [
     section,
-    resources.sort((a, b) => a.title.localeCompare(b.title)) // Sort resources within each section
+    resources.sort((a, b) => a.title.localeCompare(b.title))
   ])
 
   return (
@@ -293,13 +295,13 @@ export default function Home() {
             </div>
           ) : (
             <>
-              {sortedResources.map(([section, sectionResources]) => (
+              {sortedResources.map(([section, sectionResources]: SortedResource) => (
                 <div key={section} className="mb-12">
                   <h2 className="section-title">
                     {section}
                   </h2>
 
-                  {sectionResources.map((resource, index) => (
+                  {sectionResources.map((resource: Resource, index: number) => (
                     <div key={`${resource.url}-${index}`} className="resource-card mb-6">
                       <div className="space-y-4">
                         <div className="flex items-baseline">
