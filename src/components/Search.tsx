@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 interface SearchProps {
   onSearch: (query: string, isTagSearch: boolean) => void;
@@ -18,10 +18,10 @@ export default function Search({
     setSearchValue(initialValue);
   }, [initialValue]);
 
-  const handleSearch = (value: string) => {
+  const handleSearch = useCallback((value: string) => {
     setSearchValue(value);
     onSearch(value, isTagSearch);
-  };
+  }, [isTagSearch, onSearch]);
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
@@ -29,9 +29,10 @@ export default function Search({
     }
   };
 
-  useEffect(() => {
-    handleSearch(searchValue);
-  }, [isTagSearch]);
+  const handleTagModeChange = useCallback(() => {
+    setIsTagSearch(prev => !prev);
+    onSearch(searchValue, !isTagSearch);
+  }, [isTagSearch, searchValue, onSearch]);
 
   return (
     <div className="w-full max-w-2xl mx-auto mb-8">
@@ -47,7 +48,7 @@ export default function Search({
           />
         </div>
         <button
-          onClick={() => setIsTagSearch(!isTagSearch)}
+          onClick={handleTagModeChange}
           className={`search-mode-button ${isTagSearch ? 'active' : ''}`}
           title={isTagSearch ? "Switch to normal search" : "Switch to tag search"}
         >
