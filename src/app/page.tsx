@@ -251,8 +251,45 @@ export default function Home() {
     return acc;
   }, [] as Resource[]);
 
-  const paginatedResources = uniqueResources.slice(0, page * ITEMS_PER_PAGE);
-  const hasMore = uniqueResources.length > page * ITEMS_PER_PAGE;
+  // Sort resources by section name alphabetically
+  const sortedResources: SortedResource[] = Object.entries(
+    uniqueResources.reduce((acc, resource) => {
+      const section = resource.parentSection || resource.sections[0];
+      if (!acc[section]) {
+        acc[section] = [];
+      }
+      acc[section].push(resource);
+      return acc;
+    }, {} as Record<string, Resource[]>)
+  )
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(
+      ([section, resources]): SortedResource => [
+        section,
+        resources.sort((a, b) => a.title.localeCompare(b.title))
+      ]
+    );
+
+  // Calculate start and end indices for current page
+  const startIndex = (page - 1) * ITEMS_PER_PAGE;
+  const endIndex = page * ITEMS_PER_PAGE;
+
+  // Get resources for current page
+  const currentPageResources = sortedResources.reduce((acc, [section, resources]) => {
+    const pageResources = resources.slice(startIndex, endIndex);
+    if (pageResources.length > 0) {
+      acc.push([section, pageResources]);
+    }
+    return acc;
+  }, [] as SortedResource[]);
+
+  // Check if there are more resources to load
+  const hasMore = sortedResources.some(
+    ([_, resources]) => resources.length > endIndex
+  );
+
+  // Add this near the hasMore check
+  const hasPrevious = page > 1;
 
   // Handle global search from search box
   const handleGlobalSearch = (query: string): void => {
@@ -280,25 +317,6 @@ export default function Home() {
     setPage(1);
     setHasSearched(true);
   };
-
-  // Sort resources by section name alphabetically
-  const sortedResources: SortedResource[] = Object.entries(
-    paginatedResources.reduce((acc, resource) => {
-      const section = resource.parentSection || resource.sections[0];
-      if (!acc[section]) {
-        acc[section] = [];
-      }
-      acc[section].push(resource);
-      return acc;
-    }, {} as Record<string, Resource[]>)
-  )
-    .sort(([a], [b]) => a.localeCompare(b))
-    .map(
-      ([section, resources]): SortedResource => [
-        section,
-        resources.sort((a, b) => a.title.localeCompare(b.title)),
-      ]
-    );
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -372,112 +390,118 @@ export default function Home() {
             <div className="text-center text-secondary">No resources found</div>
           ) : (
             <>
-              {sortedResources.map(
-                ([section, sectionResources]: SortedResource) => (
-                  <div key={section} className="mb-12">
-                    <h2 className="section-title">{section}</h2>
+              {currentPageResources.map(([section, sectionResources]: SortedResource) => (
+                <div key={section} className="mb-12">
+                  <h2 className="section-title">{section}</h2>
 
-                    {sectionResources.map(
-                      (resource: Resource, index: number) => (
-                        <div
-                          key={`${resource.url}-${index}`}
-                          className="resource-card mb-6 cursor-pointer"
-                          onDoubleClick={() => {
-                            window.open(
-                              resource.url,
-                              "_blank",
-                              "noopener,noreferrer"
-                            );
-                          }}
-                        >
-                          <div className="space-y-2">
-                            <div className="flex">
-                              <span className="label min-w-[6rem] pt-1">
-                                Name:
+                  {sectionResources.map(
+                    (resource: Resource, index: number) => (
+                      <div
+                        key={`${resource.url}-${index}`}
+                        className="resource-card mb-6 cursor-pointer"
+                        onDoubleClick={() => {
+                          window.open(
+                            resource.url,
+                            "_blank",
+                            "noopener,noreferrer"
+                          );
+                        }}
+                      >
+                        <div className="space-y-2">
+                          <div className="flex">
+                            <span className="label min-w-[6rem] pt-1">
+                              Name:
+                            </span>
+                            <div className="flex-1">
+                              <span className="text-primary font-semibold">
+                                {resource.title}
                               </span>
-                              <div className="flex-1">
-                                <span className="text-primary font-semibold">
-                                  {resource.title}
-                                </span>
-                              </div>
-                            </div>
-
-                            {resource.description !== resource.title && (
-                              <div className="flex">
-                                <span className="label min-w-[6rem] pt-1">
-                                  Desc:
-                                </span>
-                                <div className="flex-1">
-                                  <span className="text-secondary">
-                                    {resource.description}
-                                  </span>
-                                </div>
-                              </div>
-                            )}
-
-                            <div className="flex">
-                              <span className="label min-w-[6rem] pt-1">
-                                URL:
-                              </span>
-                              <div className="flex-1">
-                                <span className="url-text break-all">
-                                  {resource.url}
-                                </span>
-                              </div>
-                            </div>
-
-                            <div className="flex">
-                              <span className="label min-w-[6rem] pt-1">
-                                Tags:
-                              </span>
-                              <div className="flex-1">
-                                <div className="flex flex-wrap gap-2">
-                                  {resource.sections.map((tag) => (
-                                    <button
-                                      key={tag}
-                                      onClick={(e) => {
-                                        e.stopPropagation();
-                                        handleNavigationSearch(
-                                          tag,
-                                          resource.parentSection
-                                        );
-                                      }}
-                                      className="tag"
-                                    >
-                                      {tag}
-                                    </button>
-                                  ))}
-                                </div>
-                              </div>
-                            </div>
-
-                            <div className="flex justify-end mt-2 pt-2 border-t border-card-border">
-                              <a
-                                href={resource.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="view-details"
-                                onClick={(e) => e.stopPropagation()}
-                              >
-                                View Details
-                                <span className="font-mono">→</span>
-                              </a>
                             </div>
                           </div>
-                        </div>
-                      )
-                    )}
-                  </div>
-                )
-              )}
 
-              {hasMore && (
-                <div className="text-center mt-8">
+                          {resource.description !== resource.title && (
+                            <div className="flex">
+                              <span className="label min-w-[6rem] pt-1">
+                                Desc:
+                              </span>
+                              <div className="flex-1">
+                                <span className="text-secondary">
+                                  {resource.description}
+                                </span>
+                              </div>
+                            </div>
+                          )}
+
+                          <div className="flex">
+                            <span className="label min-w-[6rem] pt-1">
+                              URL:
+                            </span>
+                            <div className="flex-1">
+                              <span className="url-text break-all">
+                                {resource.url}
+                              </span>
+                            </div>
+                          </div>
+
+                          <div className="flex">
+                            <span className="label min-w-[6rem] pt-1">
+                              Tags:
+                            </span>
+                            <div className="flex-1">
+                              <div className="flex flex-wrap gap-2">
+                                {resource.sections.map((tag) => (
+                                  <button
+                                    key={tag}
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      handleNavigationSearch(
+                                        tag,
+                                        resource.parentSection
+                                      );
+                                    }}
+                                    className="tag"
+                                  >
+                                    {tag}
+                                  </button>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="flex justify-end mt-2 pt-2 border-t border-card-border">
+                            <a
+                              href={resource.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="view-details"
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              View Details
+                              <span className="font-mono">→</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    )
+                  )}
+                </div>
+              ))}
+
+              {(hasPrevious || hasMore) && (
+                <div className="text-center mt-8 flex justify-center gap-4">
+                  <button
+                    onClick={() => setPage((p) => Math.max(1, p - 1))}
+                    className={`pagination-button ${!hasPrevious ? 'opacity-50 cursor-not-allowed' : ''}`}
+                    disabled={!hasPrevious}
+                  >
+                    <span className="font-mono">←</span> Previous
+                  </button>
                   <button
                     onClick={() => setPage((p) => p + 1)}
-                    className="load-more-button"
+                    className={`pagination-button ${!hasMore ? 'opacity-50 cursor-not-allowed' : ''}`}
+                    disabled={!hasMore}
                   >
-                    Load More
+                    Next <span className="font-mono">→</span>
                   </button>
                 </div>
               )}

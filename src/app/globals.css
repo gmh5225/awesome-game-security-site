@@ -182,3 +182,26 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #3d3d3d transparent;
 }
+
+.pagination-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--card-background);
+  border: 1px solid var(--card-border);
+  color: var(--text-primary);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.pagination-button:not(:disabled):hover {
+  background: #333333;
+  border-color: var(--highlight);
+  color: var(--highlight);
+}
+
+.pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
