@@ -79,19 +79,13 @@ export default function CategoryNav({
         }
       }
 
-      // Sort categories: categories with subcategories come first
+      // Sort categories and subcategories alphabetically
       const categoriesArray = Array.from(categoriesMap.entries())
         .map(([name, subCategories]) => ({
           name,
-          subCategories: subCategories.sort((a, b) => a.localeCompare(b)),
+          subCategories: subCategories.sort((a, b) => a.localeCompare(b)), // Sort subcategories
         }))
-        .sort((a, b) => {
-          // First sort by whether they have subcategories
-          if (a.subCategories.length > 0 && b.subCategories.length === 0) return -1;
-          if (a.subCategories.length === 0 && b.subCategories.length > 0) return 1;
-          // Then sort alphabetically
-          return a.name.localeCompare(b.name);
-        });
+        .sort((a, b) => a.name.localeCompare(b.name)); // Sort main categories
 
       setCategories(categoriesArray);
 
@@ -122,13 +116,12 @@ export default function CategoryNav({
           bg-[#2d2d2d] hover:bg-[#3d3d3d]
           transition-all duration-200 ease-in-out
           flex items-center gap-2
-          pointer-events-auto
-          ${isVisible
-            ? "right-[288px] p-2"
-            : "right-4 px-3 py-2"
+          ${
+            isVisible
+              ? "right-[288px] p-2" // Smaller padding when only showing arrow
+              : "right-4 px-3 py-2" // Larger padding when showing text
           }
         `}
-        style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
         aria-label="Toggle categories"
       >
         {!isVisible && (
@@ -139,11 +132,11 @@ export default function CategoryNav({
 
       <nav
         className={`
-          w-72 h-screen overflow-y-auto fixed right-0 top-0 p-6 
-          bg-[#1e1e1e] border-l border-[#2d2d2d]
-          transition-transform duration-300 ease-in-out
-          ${isVisible ? "translate-x-0" : "translate-x-full"}
-        `}
+        w-72 h-screen overflow-y-auto fixed right-0 top-0 p-6 
+        bg-[#1e1e1e] border-l border-[#2d2d2d]
+        transition-transform duration-300 ease-in-out
+        ${isVisible ? "translate-x-0" : "translate-x-full"}
+      `}
       >
         <h2 className="text-xl font-semibold mb-6 text-[#d4d4d4] tracking-wide">
           Categories
@@ -153,13 +146,14 @@ export default function CategoryNav({
             <li key={category.name} className="mb-2">
               <div
                 className={`
-                  flex items-center gap-2 rounded px-1 py-1.5
-                  ${selectedCategory === category.name
-                    ? "bg-[#2d2d2d] text-[#569cd6]"
-                    : "text-[#d4d4d4] hover:bg-[#252525]"
+                  flex items-center gap-2 rounded px-2 py-1.5
+                  ${
+                    selectedCategory === category.name
+                      ? "bg-[#2d2d2d] text-[#569cd6]"
+                      : "text-[#d4d4d4] hover:bg-[#252525]"
                   }
                   transition-colors duration-150 ease-in-out cursor-pointer
-                  text-[15px] font-medium group
+                  text-[15px] font-medium
                 `}
                 onClick={() => {
                   if (category.subCategories.length > 0) {
@@ -168,56 +162,35 @@ export default function CategoryNav({
                   onSelectCategory(category.name);
                 }}
               >
-                {category.subCategories.length > 0 && (
-                  <div className="w-6 h-6 flex items-center justify-center -ml-1">
-                    <svg
-                      className={`
-                        w-5 h-5
-                        transform transition-transform duration-200
-                        ${expanded[category.name] ? 'rotate-90' : ''}
-                      `}
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <polyline points="9 18 15 12 9 6" />
-                    </svg>
-                  </div>
-                )}
-                <span className="flex-1">
-                  {category.name}
+                <span className="inline-block w-4 text-xs opacity-70">
+                  {category.subCategories.length > 0 &&
+                    (expanded[category.name] ? "▼" : "▶")}
                 </span>
+                <span className="flex-1">{category.name}</span>
               </div>
-              <div
-                className={`
-                  overflow-hidden transition-all duration-200 ease-in-out
-                  ${expanded[category.name] ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}
-                `}
-              >
-                {category.subCategories.length > 0 && (
-                  <ul className="mt-1 ml-4 border-l border-[#2d2d2d] pl-4">
-                    {category.subCategories.map((subCategory) => (
-                      <li
-                        key={subCategory}
-                        onClick={() => onSelectCategory(subCategory, category.name)}
-                        className={`
-                          py-1.5 px-2 rounded text-[14px]
-                          ${selectedCategory === subCategory
+              {expanded[category.name] && category.subCategories.length > 0 && (
+                <ul className="mt-1 ml-4 border-l border-[#2d2d2d] pl-4">
+                  {category.subCategories.map((subCategory) => (
+                    <li
+                      key={subCategory}
+                      onClick={() =>
+                        onSelectCategory(subCategory, category.name)
+                      }
+                      className={`
+                        py-1.5 px-2 rounded text-[14px]
+                        ${
+                          selectedCategory === subCategory
                             ? "text-[#569cd6] bg-[#2d2d2d]"
                             : "text-[#a7a7a7] hover:text-[#d4d4d4] hover:bg-[#252525]"
-                          }
-                          transition-colors duration-150 ease-in-out cursor-pointer
-                        `}
-                      >
-                        {subCategory}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
+                        }
+                        transition-colors duration-150 ease-in-out cursor-pointer
+                      `}
+                    >
+                      {subCategory}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
           ))}
         </ul>
