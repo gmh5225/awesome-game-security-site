@@ -198,30 +198,44 @@ export default function Home() {
           </div>
         ) : (
           <>
-            {paginatedResources.map((resource, index) => (
-              <div key={`${resource.url}-${index}`} className="mb-6 p-4 bg-card-background border border-card-border rounded-lg hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold mb-2 text-primary">{resource.title}</h3>
-                {resource.description !== resource.title && (
-                  <p className="text-secondary mb-2">{resource.description}</p>
-                )}
-                <p className="text-sm text-secondary mb-2 break-all">{resource.url}</p>
-                <div className="flex flex-wrap gap-2 mb-2">
-                  {resource.sections.map(section => (
-                    <span key={section} className="text-xs bg-highlight/10 text-highlight px-2 py-1 rounded">
-                      {section}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex justify-end">
-                  <a 
-                    href={resource.url}
-                    target="_blank"
-                    rel="noopener noreferrer" 
-                    className="text-highlight hover:underline"
-                  >
-                    View Details →
-                  </a>
-                </div>
+            {/* Group resources by parent section */}
+            {Object.entries(
+              paginatedResources.reduce((acc, resource) => {
+                const section = resource.parentSection || resource.sections[0]
+                if (!acc[section]) {
+                  acc[section] = []
+                }
+                acc[section].push(resource)
+                return acc
+              }, {} as Record<string, Resource[]>)
+            ).map(([section, sectionResources]) => (
+              <div key={section} className="mb-12">
+                {/* Section Title */}
+                <h2 className="text-2xl font-semibold mb-6 text-highlight">
+                  {section}
+                </h2>
+
+                {/* Resources in this section */}
+                {sectionResources.map((resource, index) => (
+                  <div key={`${resource.url}-${index}`} className="mb-6 p-4 bg-card-background border border-card-border rounded-lg hover:shadow-lg transition-shadow">
+                    <h3 className="text-xl font-semibold mb-2 text-primary">{resource.title}</h3>
+                    {resource.description !== resource.title && (
+                      <p className="text-secondary mb-2">{resource.description}</p>
+                    )}
+                    <p className="font-mono text-sm text-secondary mb-4 break-all">{resource.url}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {resource.sections.map(tag => (
+                        <button
+                          key={tag}
+                          onClick={() => setSearchQuery(tag)}
+                          className="text-xs bg-highlight/10 text-highlight px-2 py-1 rounded hover:bg-highlight/20 transition-colors cursor-pointer"
+                        >
+                          {tag}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
             ))}
             
