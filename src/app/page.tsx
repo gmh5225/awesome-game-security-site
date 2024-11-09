@@ -215,10 +215,39 @@ export default function Home() {
     return searchTerms.every((term) => contentToSearch.includes(term));
   });
 
+  // Modify the uniqueResources logic to merge descriptions and tags for same URL
   const uniqueResources = filteredResources.reduce((acc, resource) => {
-    if (!acc.some((r) => r.url === resource.url)) {
-      acc.push(resource);
+    const existingResource = acc.find((r) => r.url === resource.url);
+    
+    if (existingResource) {
+      // Merge descriptions if they're different
+      if (existingResource.description !== resource.description) {
+        existingResource.description = `${existingResource.description} | ${resource.description}`;
+      }
+      
+      // Merge sections (tags)
+      resource.sections.forEach(section => {
+        if (!existingResource.sections.includes(section)) {
+          existingResource.sections.push(section);
+        }
+      });
+      
+      // Update searchable content
+      existingResource.searchableContent = [
+        existingResource.searchableContent,
+        resource.searchableContent
+      ].join(" ");
+      
+      // Merge parent sections if different
+      if (resource.parentSection && !existingResource.parentSection?.includes(resource.parentSection)) {
+        existingResource.parentSection = existingResource.parentSection 
+          ? `${existingResource.parentSection} | ${resource.parentSection}`
+          : resource.parentSection;
+      }
+    } else {
+      acc.push({ ...resource });
     }
+    
     return acc;
   }, [] as Resource[]);
 
