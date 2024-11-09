@@ -101,14 +101,23 @@ export default function CategoryNav({ onSelectCategory, selectedCategory, isVisi
       <button
         onClick={onToggle}
         className={`
-          fixed right-4 top-4 z-50 p-2 rounded
+          fixed z-50 rounded
           bg-[#2d2d2d] hover:bg-[#3d3d3d]
           transition-all duration-200 ease-in-out
-          ${isVisible ? 'right-[288px]' : 'right-4'}
+          flex items-center gap-2
+          ${isVisible 
+            ? 'right-[288px] p-2' // Smaller padding when only showing arrow
+            : 'right-4 px-3 py-2' // Larger padding when showing text
+          }
         `}
         aria-label="Toggle categories"
       >
-        {isVisible ? '→' : '←'}
+        {!isVisible && (
+          <span className="text-sm text-[#d4d4d4]">Categories</span>
+        )}
+        <span className="text-[#808080]">
+          {isVisible ? '→' : '←'}
+        </span>
       </button>
 
       <nav className={`

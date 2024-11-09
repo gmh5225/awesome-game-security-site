@@ -367,6 +367,20 @@ export default function Home() {
               )}
             </>
           )}
+
+          <footer className="mt-16 pt-4 border-t border-[#2d2d2d] text-center">
+            <div className="text-sm text-[#808080]">
+              MIT License · Copyright (c) 2024 {" "}
+              <a 
+                href="https://x.com/gmhzxy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#569cd6] hover:text-[#4fc1ff] transition-colors"
+              >
+                gmh5225.eth
+              </a>
+            </div>
+          </footer>
         </div>
       </div>
     </div>
