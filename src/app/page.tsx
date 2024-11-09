@@ -177,17 +177,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen p-8 bg-background text-foreground">
-      <div className="flex justify-between items-center mb-8">
-        <h1 className="text-3xl font-bold text-center text-primary">
-          Awesome Game Security Resources
-        </h1>
-        <button 
-          onClick={fetchData}
-          className="px-4 py-2 bg-primary text-white rounded hover:bg-opacity-90"
-        >
-          Refresh Data
-        </button>
-      </div>
+      <h1 className="text-3xl font-bold text-center mb-8 text-primary">
+        Awesome Game Security Resources
+      </h1>
 
       <Search 
         onSearch={handleSearch} 
