@@ -293,7 +293,7 @@ export default function Home() {
 
   // Check if there are more resources to load
   const hasMore = sortedResources.some(
-    ([_, resources]) => resources.length > endIndex
+    (entry) => entry[1].length > endIndex
   );
 
   // Add this near the hasMore check
