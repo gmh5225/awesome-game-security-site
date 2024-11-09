@@ -20,118 +20,127 @@ export default function Home() {
   const [resources, setResources] = useState<Resource[]>([])
   const [page, setPage] = useState(1)
 
-  useEffect(() => {
-    fetch('https://raw.githubusercontent.com/gmh5225/awesome-game-security/refs/heads/main/README.md')
-      .then(res => res.text())
-      .then(content => {
-        const resources: Resource[] = []
-        const lines = content.split('\n')
-        let currentSection = ''
-        let currentSubSection = ''
-        let isInContents = false
-        const urlMap = new Map<string, Resource>()
+  // Add a function to fetch and parse data
+  const fetchData = async () => {
+    const res = await fetch('https://raw.githubusercontent.com/gmh5225/awesome-game-security/refs/heads/main/README.md')
+    const content = await res.text()
+    
+    const resources: Resource[] = []
+    const lines = content.split('\n')
+    let currentSection = ''
+    let currentSubSection = ''
+    let isInContents = false
+    const urlMap = new Map<string, Resource>()
 
-        for (const line of lines) {
-          const trimmedLine = line.trim()
-          
-          if (trimmedLine === '## Contents') {
-            isInContents = true
-            continue
-          } else if (trimmedLine.startsWith('## ')) {
-            isInContents = false
-          }
+    for (const line of lines) {
+      const trimmedLine = line.trim()
+      
+      if (trimmedLine === '## Contents') {
+        isInContents = true
+        continue
+      } else if (trimmedLine.startsWith('## ')) {
+        isInContents = false
+      }
 
-          if (isInContents && trimmedLine.startsWith('- [')) {
-            const sectionMatch = trimmedLine.match(/- \[(.*?)\]/)
-            if (sectionMatch) {
-              // Collect sections if needed
-            }
+      if (isInContents && trimmedLine.startsWith('- [')) {
+        const sectionMatch = trimmedLine.match(/- \[(.*?)\]/)
+        if (sectionMatch) {
+          // Collect sections if needed
+        }
+      }
+    }
+
+    // Second pass: collect resources
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i].trim()
+      
+      if (line.startsWith('## ')) {
+        const section = line.slice(2).trim()
+        if (section === 'How to contribute?' || section === 'Contents') {
+          currentSection = ''
+          currentSubSection = ''
+          continue
+        }
+        currentSection = section
+        currentSubSection = ''
+        continue
+      }
+
+      if (line.startsWith('> ')) {
+        currentSubSection = line.slice(2).trim()
+        continue
+      }
+
+      if ((currentSection || currentSubSection) && line.startsWith('- ')) {
+        let title = ''
+        let description = ''
+        let url = ''
+        let extraInfo = ''
+
+        const fullMatch = line.match(/- \[([^\]]+)\]\((https?:\/\/[^\s\)]+)\)(\s*\[([^\]]+)\])?/)
+        if (fullMatch) {
+          title = fullMatch[1]
+          url = fullMatch[2]
+          extraInfo = fullMatch[4] || ''
+          description = extraInfo || title
+        } else {
+          const directMatch = line.match(/- (https?:\/\/[^\s\]]+)(\s*\[([^\]]+)\])?/)
+          if (directMatch) {
+            url = directMatch[1]
+            extraInfo = directMatch[3] || ''
+            const urlParts = url.split('/')
+            title = urlParts[urlParts.length - 1]
+            description = extraInfo || title
           }
         }
 
-        // Second pass: collect resources
-        for (let i = 0; i < lines.length; i++) {
-          const line = lines[i].trim()
-          
-          if (line.startsWith('## ')) {
-            const section = line.slice(2).trim()
-            if (section === 'How to contribute?' || section === 'Contents') {
-              currentSection = ''
-              currentSubSection = ''
-              continue
-            }
-            currentSection = section
-            currentSubSection = ''
-            continue
-          }
+        if (url) {
+          const section = currentSubSection || currentSection
+          const searchableContent = [
+            title, 
+            description, 
+            url, 
+            extraInfo, 
+            currentSection,
+            currentSubSection
+          ].filter(Boolean).join(' ')
 
-          if (line.startsWith('> ')) {
-            currentSubSection = line.slice(2).trim()
-            continue
-          }
-
-          if ((currentSection || currentSubSection) && line.startsWith('- ')) {
-            let title = ''
-            let description = ''
-            let url = ''
-            let extraInfo = ''
-
-            const fullMatch = line.match(/- \[([^\]]+)\]\((https?:\/\/[^\s\)]+)\)(\s*\[([^\]]+)\])?/)
-            if (fullMatch) {
-              title = fullMatch[1]
-              url = fullMatch[2]
-              extraInfo = fullMatch[4] || ''
-              description = extraInfo || title
-            } else {
-              const directMatch = line.match(/- (https?:\/\/[^\s\]]+)(\s*\[([^\]]+)\])?/)
-              if (directMatch) {
-                url = directMatch[1]
-                extraInfo = directMatch[3] || ''
-                const urlParts = url.split('/')
-                title = urlParts[urlParts.length - 1]
-                description = extraInfo || title
-              }
-            }
-
-            if (url) {
-              const section = currentSubSection || currentSection
-              const searchableContent = [
-                title, 
-                description, 
-                url, 
-                extraInfo, 
-                currentSection,
-                currentSubSection
+          if (urlMap.has(url)) {
+            const existingResource = urlMap.get(url)!
+            if (!existingResource.sections.includes(section)) {
+              existingResource.sections.push(section)
+              existingResource.searchableContent = [
+                existingResource.searchableContent,
+                section
               ].filter(Boolean).join(' ')
-
-              if (urlMap.has(url)) {
-                const existingResource = urlMap.get(url)!
-                if (!existingResource.sections.includes(section)) {
-                  existingResource.sections.push(section)
-                  existingResource.searchableContent = [
-                    existingResource.searchableContent,
-                    section
-                  ].filter(Boolean).join(' ')
-                }
-              } else {
-                const resource = {
-                  title,
-                  description: description || extraInfo || title,
-                  url,
-                  sections: [section],
-                  searchableContent,
-                  isSubSection: !!currentSubSection,
-                  parentSection: currentSection
-                }
-                resources.push(resource)
-                urlMap.set(url, resource)
-              }
             }
+          } else {
+            const resource = {
+              title,
+              description: description || extraInfo || title,
+              url,
+              sections: [section],
+              searchableContent,
+              isSubSection: !!currentSubSection,
+              parentSection: currentSection
+            }
+            resources.push(resource)
+            urlMap.set(url, resource)
           }
         }
-        
-        setResources(Array.from(urlMap.values()))
-      })
+      }
+    }
+    
+    setResources(Array.from(urlMap.values()))
+  }
+
+  useEffect(() => {
+    fetchData() // Initial fetch
+
+    // Refresh every 5 minutes
+    const interval = setInterval(fetchData, 5 * 60 * 1000)
+
+    return () => clearInterval(interval)
   }, [])
 
   const filteredResources = resources.filter(resource => {
@@ -168,9 +177,17 @@ export default function Home() {
 
   return (
     <div className="min-h-screen p-8 bg-background text-foreground">
-      <h1 className="text-3xl font-bold text-center mb-8 text-primary">
-        Awesome Game Security Resources
-      </h1>
+      <div className="flex justify-between items-center mb-8">
+        <h1 className="text-3xl font-bold text-center text-primary">
+          Awesome Game Security Resources
+        </h1>
+        <button 
+          onClick={fetchData}
+          className="px-4 py-2 bg-primary text-white rounded hover:bg-opacity-90"
+        >
+          Refresh Data
+        </button>
+      </div>
 
       <Search 
         onSearch={handleSearch} 
