@@ -21,6 +21,7 @@ interface SearchContext {
   parentCategory?: string;
   isNavigationSearch?: boolean;
   isFromNavigation?: boolean;
+  isTagSearch?: boolean;
 }
 
 type SortedResource = [string, Resource[]];
@@ -189,6 +190,13 @@ export default function Home() {
 
     const searchLower = searchContext.query.toLowerCase();
 
+    // For tag search mode
+    if (searchContext.isTagSearch) {
+      return resource.sections.some(
+        (section) => section.toLowerCase() === searchLower
+      );
+    }
+
     // Only apply parent category filter for navigation searches
     if (searchContext.isFromNavigation && searchContext.parentCategory) {
       if (resource.parentSection !== searchContext.parentCategory) {
@@ -292,12 +300,13 @@ export default function Home() {
   const hasPrevious = page > 1;
 
   // Handle global search from search box
-  const handleGlobalSearch = (query: string): void => {
+  const handleGlobalSearch = (query: string, isTagSearch: boolean): void => {
     setSearchContext({
       query,
       parentCategory: undefined,
       isNavigationSearch: false,
       isFromNavigation: false,
+      isTagSearch,
     });
     setPage(1);
     setHasSearched(!!query);
@@ -375,12 +384,13 @@ export default function Home() {
 
         <Search
           onSearch={handleGlobalSearch}
-          onEnter={(query) => {
+          onEnter={(query, isTagSearch) => {
             setSearchContext({
               query,
               parentCategory: undefined,
               isNavigationSearch: false,
               isFromNavigation: false,
+              isTagSearch,
             });
             setPage(1);
             setHasSearched(!!query);
