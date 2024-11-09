@@ -143,3 +143,12 @@ body {
   background: #333333;
   border-color: var(--highlight);
 }
+
+/* Add these styles if you haven't already */
+.bg-card {
+  @apply bg-white dark:bg-gray-800;
+}
+
+.border-card-border {
+  @apply border-gray-200 dark:border-gray-700;
+}

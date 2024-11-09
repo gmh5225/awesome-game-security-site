@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Search from '@/components/Search'
+import CategoryNav from '@/components/CategoryNav'
 
 interface Resource {
   title: string
@@ -19,6 +20,7 @@ export default function Home() {
   const [searchQuery, setSearchQuery] = useState('')
   const [resources, setResources] = useState<Resource[]>([])
   const [page, setPage] = useState(1)
+  const [isNavVisible, setIsNavVisible] = useState(false)
 
   // Add a function to fetch and parse data
   const fetchData = async () => {
@@ -176,106 +178,119 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen p-8 bg-background text-foreground">
-      <h1 className="text-3xl font-bold text-center mb-8 text-primary">
-        Awesome Game Security Resources
-      </h1>
-
-      <Search 
-        onSearch={handleSearch} 
-        initialValue={searchQuery}
+    <div className="min-h-screen bg-background text-foreground">
+      <CategoryNav 
+        onSelectCategory={handleSearch}
+        selectedCategory={searchQuery}
+        isVisible={isNavVisible}
+        onToggle={() => setIsNavVisible(!isNavVisible)}
       />
+      
+      <div className={`
+        transition-all duration-300 ease-in-out
+        ${isNavVisible ? 'pr-80' : 'pr-8'}
+        p-8
+      `}>
+        <h1 className="text-3xl font-bold text-center mb-8 text-primary">
+          Awesome Game Security Resources
+        </h1>
 
-      <div className="max-w-6xl mx-auto">
-        {uniqueResources.length === 0 ? (
-          <div className="text-center text-secondary">
-            No resources found
-          </div>
-        ) : (
-          <>
-            {Object.entries(
-              paginatedResources.reduce((acc, resource) => {
-                const section = resource.parentSection || resource.sections[0]
-                if (!acc[section]) {
-                  acc[section] = []
-                }
-                acc[section].push(resource)
-                return acc
-              }, {} as Record<string, Resource[]>)
-            ).map(([section, sectionResources]) => (
-              <div key={section} className="mb-12">
-                <h2 className="section-title">
-                  {section}
-                </h2>
+        <Search 
+          onSearch={handleSearch} 
+          initialValue={searchQuery}
+        />
 
-                {sectionResources.map((resource, index) => (
-                  <div key={`${resource.url}-${index}`} className="resource-card mb-6">
-                    <div className="space-y-4">
-                      <div className="flex items-baseline">
-                        <span className="label">Name:</span>
-                        <span className="text-primary font-semibold flex-1">{resource.title}</span>
-                      </div>
-                      
-                      {resource.description !== resource.title && (
+        <div className="max-w-6xl mx-auto">
+          {uniqueResources.length === 0 ? (
+            <div className="text-center text-secondary">
+              No resources found
+            </div>
+          ) : (
+            <>
+              {Object.entries(
+                paginatedResources.reduce((acc, resource) => {
+                  const section = resource.parentSection || resource.sections[0]
+                  if (!acc[section]) {
+                    acc[section] = []
+                  }
+                  acc[section].push(resource)
+                  return acc
+                }, {} as Record<string, Resource[]>)
+              ).map(([section, sectionResources]) => (
+                <div key={section} className="mb-12">
+                  <h2 className="section-title">
+                    {section}
+                  </h2>
+
+                  {sectionResources.map((resource, index) => (
+                    <div key={`${resource.url}-${index}`} className="resource-card mb-6">
+                      <div className="space-y-4">
                         <div className="flex items-baseline">
-                          <span className="label">Desc:</span>
-                          <span className="text-secondary flex-1">{resource.description}</span>
+                          <span className="label">Name:</span>
+                          <span className="text-primary font-semibold flex-1">{resource.title}</span>
                         </div>
-                      )}
-                      
-                      <div className="flex items-baseline">
-                        <span className="label">URL:</span>
-                        <span className="url-text flex-1">{resource.url}</span>
-                      </div>
-                      
-                      <div className="flex items-baseline">
-                        <span className="label">Tags:</span>
-                        <div className="flex-1">
-                          <div className="flex flex-wrap gap-2">
-                            {resource.sections.map(tag => (
-                              <button
-                                key={tag}
-                                onClick={() => {
-                                  handleSearch(tag)
-                                }}
-                                className="tag"
-                              >
-                                {tag}
-                              </button>
-                            ))}
+                        
+                        {resource.description !== resource.title && (
+                          <div className="flex items-baseline">
+                            <span className="label">Desc:</span>
+                            <span className="text-secondary flex-1">{resource.description}</span>
+                          </div>
+                        )}
+                        
+                        <div className="flex items-baseline">
+                          <span className="label">URL:</span>
+                          <span className="url-text flex-1">{resource.url}</span>
+                        </div>
+                        
+                        <div className="flex items-baseline">
+                          <span className="label">Tags:</span>
+                          <div className="flex-1">
+                            <div className="flex flex-wrap gap-2">
+                              {resource.sections.map(tag => (
+                                <button
+                                  key={tag}
+                                  onClick={() => {
+                                    handleSearch(tag)
+                                  }}
+                                  className="tag"
+                                >
+                                  {tag}
+                                </button>
+                              ))}
+                            </div>
                           </div>
                         </div>
-                      </div>
 
-                      <div className="flex justify-end mt-4 pt-2 border-t border-card-border">
-                        <a 
-                          href={resource.url}
-                          target="_blank"
-                          rel="noopener noreferrer" 
-                          className="view-details"
-                        >
-                          View Details 
-                          <span className="font-mono">→</span>
-                        </a>
+                        <div className="flex justify-end mt-4 pt-2 border-t border-card-border">
+                          <a 
+                            href={resource.url}
+                            target="_blank"
+                            rel="noopener noreferrer" 
+                            className="view-details"
+                          >
+                            View Details 
+                            <span className="font-mono">→</span>
+                          </a>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
-              </div>
-            ))}
-            
-            {hasMore && (
-              <div className="text-center mt-8">
-                <button
-                  onClick={() => setPage(p => p + 1)}
-                  className="load-more-button"
-                >
-                  Load More
-                </button>
-              </div>
-            )}
-          </>
-        )}
+                  ))}
+                </div>
+              ))}
+              
+              {hasMore && (
+                <div className="text-center mt-8">
+                  <button
+                    onClick={() => setPage(p => p + 1)}
+                    className="load-more-button"
+                  >
+                    Load More
+                  </button>
+                </div>
+              )}
+            </>
+          )}
+        </div>
       </div>
     </div>
   )
