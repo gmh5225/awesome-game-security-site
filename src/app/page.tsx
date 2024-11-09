@@ -7,8 +7,10 @@ interface Resource {
   title: string
   description: string
   url: string
-  section: string
+  sections: string[]
   searchableContent?: string
+  isSubSection?: boolean
+  parentSection?: string
 }
 
 // Number of items to display per page
@@ -28,9 +30,11 @@ export default function Home() {
         const sections: string[] = []
         const lines = content.split('\n')
         let currentSection = ''
+        let currentSubSection = ''
         let isInContents = false
+        const urlMap = new Map<string, Resource>()
 
-        // First pass: collect all sections from Contents
+        // First pass: collect sections from Contents
         for(const line of lines) {
           const trimmedLine = line.trim()
           
@@ -41,7 +45,6 @@ export default function Home() {
             isInContents = false
           }
 
-          // Extract section names from Contents
           if(isInContents && trimmedLine.startsWith('- [')) {
             const sectionMatch = trimmedLine.match(/- \[(.*?)\]/)
             if(sectionMatch) {
@@ -59,17 +62,27 @@ export default function Home() {
           // Parse section headers
           if(line.startsWith('## ')) {
             const section = line.slice(2).trim()
-            // Skip unwanted sections
             if(section === 'How to contribute?' || section === 'Contents') {
               currentSection = ''
+              currentSubSection = ''
               continue
             }
             currentSection = section
+            currentSubSection = ''
+            continue
+          }
+
+          // Parse subsection headers
+          if(line.startsWith('> ')) {
+            currentSubSection = line.slice(2).trim()
+            if (currentSubSection) {
+              sections.push(currentSubSection)
+            }
             continue
           }
 
           // Parse resource links
-          if(currentSection && line.startsWith('- ')) {
+          if((currentSection || currentSubSection) && line.startsWith('- ')) {
             let title = ''
             let description = ''
             let url = ''
@@ -94,38 +107,44 @@ export default function Home() {
               }
             }
 
-            // Process resource if URL is found
             if(url) {
-              // Check next line for additional description
-              if(i + 1 < lines.length) {
-                const nextLine = lines[i + 1].trim()
-                if(nextLine && !nextLine.startsWith('-') && !nextLine.startsWith('#')) {
-                  description = `${description} - ${nextLine}`
-                  i++
-                }
-              }
-
-              // Build searchable content
+              const section = currentSubSection || currentSection
               const searchableContent = [
                 title, 
                 description, 
                 url, 
                 extraInfo, 
-                currentSection
+                currentSection,
+                currentSubSection
               ].filter(Boolean).join(' ')
 
-              resources.push({
-                title,
-                description: description || extraInfo || title,
-                url,
-                section: currentSection,
-                searchableContent
-              })
+              if (urlMap.has(url)) {
+                const existingResource = urlMap.get(url)!
+                if (!existingResource.sections.includes(section)) {
+                  existingResource.sections.push(section)
+                  existingResource.searchableContent = [
+                    existingResource.searchableContent,
+                    section
+                  ].filter(Boolean).join(' ')
+                }
+              } else {
+                const resource = {
+                  title,
+                  description: description || extraInfo || title,
+                  url,
+                  sections: [section],
+                  searchableContent,
+                  isSubSection: !!currentSubSection,
+                  parentSection: currentSection
+                }
+                resources.push(resource)
+                urlMap.set(url, resource)
+              }
             }
           }
         }
         
-        setResources(resources)
+        setResources(Array.from(urlMap.values()))
       })
   }, [])
 
@@ -135,25 +154,31 @@ export default function Home() {
     
     const searchLower = searchQuery.toLowerCase()
     
-    // Check if search query matches any section from Contents
-    const matchingSection = sections.find(section => 
-      section.toLowerCase().includes(searchLower)
-    )
-    
-    if (matchingSection) {
-      // Return all resources in matching section
-      return resource.section.toLowerCase() === matchingSection.toLowerCase()
+    // Check if query matches any section
+    if (resource.sections.some(section => 
+      section.toLowerCase() === searchLower ||
+      resource.parentSection?.toLowerCase() === searchLower
+    )) {
+      return true
     }
-    
-    // Perform normal search across all content
+
+    // Check if query matches any part of the searchable content
     const contentToSearch = (resource.searchableContent || '').toLowerCase()
     const searchTerms = searchLower.split(/\s+/).filter(Boolean)
     return searchTerms.every(term => contentToSearch.includes(term))
   })
 
-  // Calculate resources for current page
-  const paginatedResources = filteredResources.slice(0, page * ITEMS_PER_PAGE)
-  const hasMore = paginatedResources.length < filteredResources.length
+  // Remove duplicates and keep only one instance of each resource
+  const uniqueResources = filteredResources.reduce((acc, resource) => {
+    if (!acc.some(r => r.url === resource.url)) {
+      acc.push(resource)
+    }
+    return acc
+  }, [] as Resource[])
+
+  // Calculate paginated resources
+  const paginatedResources = uniqueResources.slice(0, page * ITEMS_PER_PAGE)
+  const hasMore = uniqueResources.length > page * ITEMS_PER_PAGE
 
   return (
     <div className="min-h-screen p-8 bg-background text-foreground">
@@ -167,20 +192,26 @@ export default function Home() {
       }} />
 
       <div className="max-w-6xl mx-auto">
-        {filteredResources.length === 0 ? (
+        {uniqueResources.length === 0 ? (
           <div className="text-center text-secondary">
             No resources found
           </div>
         ) : (
           <>
             {paginatedResources.map((resource, index) => (
-              <div key={index} className="mb-6 p-4 bg-card-background border border-card-border rounded-lg hover:shadow-lg transition-shadow">
-                <div className="text-sm text-highlight mb-1">{resource.section}</div>
-                <h2 className="text-xl font-semibold mb-2 text-primary">{resource.title}</h2>
+              <div key={`${resource.url}-${index}`} className="mb-6 p-4 bg-card-background border border-card-border rounded-lg hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold mb-2 text-primary">{resource.title}</h3>
                 {resource.description !== resource.title && (
                   <p className="text-secondary mb-2">{resource.description}</p>
                 )}
                 <p className="text-sm text-secondary mb-2 break-all">{resource.url}</p>
+                <div className="flex flex-wrap gap-2 mb-2">
+                  {resource.sections.map(section => (
+                    <span key={section} className="text-xs bg-highlight/10 text-highlight px-2 py-1 rounded">
+                      {section}
+                    </span>
+                  ))}
+                </div>
                 <div className="flex justify-end">
                   <a 
                     href={resource.url}
