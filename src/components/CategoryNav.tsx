@@ -147,7 +147,7 @@ export default function CategoryNav({
             <li key={category.name} className="mb-2">
               <div
                 className={`
-                  flex items-center gap-2 rounded px-2 py-1.5
+                  flex items-center gap-2 rounded px-1 py-1.5
                   ${selectedCategory === category.name
                     ? "bg-[#2d2d2d] text-[#569cd6]"
                     : "text-[#d4d4d4] hover:bg-[#252525]"
@@ -163,15 +163,22 @@ export default function CategoryNav({
                 }}
               >
                 {category.subCategories.length > 0 && (
-                  <div className="w-4 h-4 flex items-center justify-center">
-                    <div
+                  <div className="w-6 h-6 flex items-center justify-center -ml-1">
+                    <svg
                       className={`
+                        w-5 h-5
                         transform transition-transform duration-200
                         ${expanded[category.name] ? 'rotate-90' : ''}
                       `}
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     >
-                      ▶
-                    </div>
+                      <polyline points="9 18 15 12 9 6" />
+                    </svg>
                   </div>
                 )}
                 <span className="flex-1">
