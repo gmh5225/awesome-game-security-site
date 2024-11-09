@@ -47,7 +47,10 @@ export default function Home() {
     let currentSection = "";
     let currentSubSection = "";
     let isInContents = false;
-    const urlMap = new Map<string, Resource>();
+
+    // Modify: Use URL + description as unique identifier
+    const getResourceKey = (url: string, description: string) => `${url}|${description}`;
+    const resourceMap = new Map<string, Resource>();
 
     for (const line of lines) {
       const trimmedLine = line.trim();
@@ -116,7 +119,14 @@ export default function Home() {
         }
 
         if (url) {
-          const section = currentSubSection || currentSection;
+          const sections = [];
+          if (currentSubSection) {
+            sections.push(currentSubSection);
+          }
+          if (currentSection) {
+            sections.push(currentSection);
+          }
+
           const searchableContent = [
             title,
             description,
@@ -128,35 +138,41 @@ export default function Home() {
             .filter(Boolean)
             .join(" ");
 
-          if (urlMap.has(url)) {
-            const existingResource = urlMap.get(url)!;
-            if (!existingResource.sections.includes(section)) {
-              existingResource.sections.push(section);
-              existingResource.searchableContent = [
-                existingResource.searchableContent,
-                section,
-              ]
-                .filter(Boolean)
-                .join(" ");
-            }
+          // Use URL + description as unique identifier
+          const resourceKey = getResourceKey(url, description);
+
+          if (resourceMap.has(resourceKey)) {
+            const existingResource = resourceMap.get(resourceKey)!;
+            sections.forEach(section => {
+              if (!existingResource.sections.includes(section)) {
+                existingResource.sections.push(section);
+              }
+            });
+            existingResource.searchableContent = [
+              existingResource.searchableContent,
+              ...sections,
+            ]
+              .filter(Boolean)
+              .join(" ");
           } else {
             const resource = {
               title,
               description: description || extraInfo || title,
               url,
-              sections: [section],
+              sections: sections,
               searchableContent,
               isSubSection: !!currentSubSection,
               parentSection: currentSection,
             };
             resources.push(resource);
-            urlMap.set(url, resource);
+            resourceMap.set(resourceKey, resource);
           }
         }
       }
     }
 
-    setResources(Array.from(urlMap.values()));
+    // Use resourceMap instead of urlMap
+    setResources(Array.from(resourceMap.values()));
   };
 
   useEffect(() => {
