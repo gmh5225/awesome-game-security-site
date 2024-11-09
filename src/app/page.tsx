@@ -198,7 +198,6 @@ export default function Home() {
           </div>
         ) : (
           <>
-            {/* Group resources by parent section */}
             {Object.entries(
               paginatedResources.reduce((acc, resource) => {
                 const section = resource.parentSection || resource.sections[0]
@@ -210,15 +209,24 @@ export default function Home() {
               }, {} as Record<string, Resource[]>)
             ).map(([section, sectionResources]) => (
               <div key={section} className="mb-12">
-                {/* Section Title */}
                 <h2 className="text-2xl font-semibold mb-6 text-highlight">
                   {section}
                 </h2>
 
-                {/* Resources in this section */}
                 {sectionResources.map((resource, index) => (
                   <div key={`${resource.url}-${index}`} className="mb-6 p-4 bg-card-background border border-card-border rounded-lg hover:shadow-lg transition-shadow">
-                    <h3 className="text-xl font-semibold mb-2 text-primary">{resource.title}</h3>
+                    <div className="flex justify-between items-start mb-2">
+                      <h3 className="text-xl font-semibold text-primary">{resource.title}</h3>
+                      <a 
+                        href={resource.url}
+                        target="_blank"
+                        rel="noopener noreferrer" 
+                        className="text-highlight hover:underline ml-4"
+                      >
+                        View Details →
+                      </a>
+                    </div>
+                    
                     {resource.description !== resource.title && (
                       <p className="text-secondary mb-2">{resource.description}</p>
                     )}
