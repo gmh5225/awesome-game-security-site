@@ -33,6 +33,7 @@ export default function Home() {
   const [resources, setResources] = useState<Resource[]>([])
   const [page, setPage] = useState(1)
   const [isNavVisible, setIsNavVisible] = useState(false)
+  const [hasSearched, setHasSearched] = useState(false)
 
   // Add a function to fetch and parse data
   const fetchData = async () => {
@@ -196,19 +197,19 @@ export default function Home() {
   const hasMore = uniqueResources.length > page * ITEMS_PER_PAGE
 
   // Handle global search from search box
-  const handleGlobalSearch = (query: string) => {
-    // Reset all search context when using search box
+  const handleGlobalSearch = (query: string): void => {
     setSearchContext({ 
       query,
-      parentCategory: undefined, // Clear parent category
+      parentCategory: undefined,
       isNavigationSearch: false,
       isFromNavigation: false
     })
     setPage(1)
+    setHasSearched(!!query)
   }
 
   // Handle category navigation search
-  const handleNavigationSearch = (category: string, parentCategory?: string) => {
+  const handleNavigationSearch = (category: string, parentCategory?: string): void => {
     setSearchContext({ 
       query: category,
       parentCategory,
@@ -216,6 +217,7 @@ export default function Home() {
       isFromNavigation: true
     })
     setPage(1)
+    setHasSearched(true)
   }
 
   // Sort resources by section name alphabetically
@@ -284,12 +286,17 @@ export default function Home() {
               isFromNavigation: false
             })
             setPage(1)
+            setHasSearched(!!query)
           }}
           initialValue={searchContext.query}
         />
 
         <div className="max-w-6xl mx-auto">
-          {uniqueResources.length === 0 ? (
+          {!hasSearched || !searchContext.query ? (
+            <div className="text-center text-secondary">
+              Start searching or select a category to view resources
+            </div>
+          ) : uniqueResources.length === 0 ? (
             <div className="text-center text-secondary">
               No resources found
             </div>
