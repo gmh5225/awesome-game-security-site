@@ -8,6 +8,7 @@ interface Resource {
   description: string
   url: string
   section: string
+  searchableContent?: string
 }
 
 const ITEMS_PER_PAGE = 10 // Items per page
@@ -44,52 +45,58 @@ export default function Home() {
             let title = ''
             let description = ''
             let url = ''
+            let extraInfo = '' // For text in square brackets after URL
 
-            // Try to match markdown link format
-            const markdownLink = line.match(/- \[([^\]]+)\]\((https?:\/\/[^\s\)]+)\)/)
-            if(markdownLink) {
-              title = markdownLink[1]
-              url = markdownLink[2]
-              description = title
+            // Try to match markdown link format with optional trailing brackets
+            const fullMatch = line.match(/- \[([^\]]+)\]\((https?:\/\/[^\s\)]+)\)(\s*\[([^\]]+)\])?/)
+            if(fullMatch) {
+              title = fullMatch[1]
+              url = fullMatch[2]
+              extraInfo = fullMatch[4] || '' // Text from trailing brackets if exists
+              description = extraInfo || title
             } else {
-              // Try to match direct URL format
-              const directUrl = line.match(/- (https?:\/\/[^\s]+)/)
-              if(directUrl) {
-                url = directUrl[1]
+              // Try to match direct URL format with optional trailing brackets
+              const directMatch = line.match(/- (https?:\/\/[^\s\]]+)(\s*\[([^\]]+)\])?/)
+              if(directMatch) {
+                url = directMatch[1]
+                extraInfo = directMatch[3] || ''
                 const urlParts = url.split('/')
                 title = urlParts[urlParts.length - 1]
-                description = title
+                description = extraInfo || title
               }
             }
 
-            // If URL is found, try to get description from next line
+            // If URL is found, try to get additional description from next line
             if(url) {
               if(i + 1 < lines.length) {
                 const nextLine = lines[i + 1].trim()
                 if(nextLine && !nextLine.startsWith('-') && !nextLine.startsWith('#')) {
-                  description = nextLine
+                  description = `${description} - ${nextLine}`
                   i++
                 }
               }
 
+              // Include extraInfo in the searchable content
+              const searchableContent = [title, description, url, extraInfo].filter(Boolean).join(' ')
+
               resources.push({
                 title,
-                description,
+                description: description || extraInfo || title,
                 url,
-                section: currentSection
+                section: currentSection,
+                searchableContent // Add this to the resource object
               })
             }
           }
         }
         
         setResources(resources)
-        console.log('Parsed resources:', resources)
       })
   }, [])
 
   const filteredResources = resources.filter(resource => {
     const searchLower = searchQuery.toLowerCase()
-    const contentToSearch = `${resource.title} ${resource.description} ${resource.url} ${resource.section}`.toLowerCase()
+    const contentToSearch = (resource.searchableContent || '').toLowerCase()
     
     const searchTerms = searchLower.split(/\s+/).filter(Boolean)
     return searchTerms.every(term => contentToSearch.includes(term))
