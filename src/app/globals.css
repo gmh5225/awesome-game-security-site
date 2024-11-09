@@ -12,6 +12,7 @@
   --text-secondary: #808080;
   --label-color: #4fc1ff;
   --section-color: #ce9178;
+  --glow-color: rgba(86, 156, 214, 0.15);
 }
 
 body {
@@ -37,6 +38,30 @@ body {
   border-radius: 6px;
   padding: 1.5rem;
   margin-bottom: 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.resource-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.resource-card:hover::before {
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border-color: var(--highlight);
+  box-shadow: 0 0 20px var(--glow-color);
 }
 
 /* Label styles */

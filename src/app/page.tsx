@@ -225,7 +225,7 @@ export default function Home() {
                       {/* Description */}
                       {resource.description !== resource.title && (
                         <div className="flex items-baseline">
-                          <span className="label">Description:</span>
+                          <span className="label">Desc:</span>
                           <span className="text-secondary flex-1">{resource.description}</span>
                         </div>
                       )}
