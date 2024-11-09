@@ -361,7 +361,14 @@ export default function Home() {
           </div>
           <div className="flex items-center gap-4 text-[#808080] text-sm">
             <span className="w-12 h-[1px] bg-[#2d2d2d]"></span>
-            <span className="italic font-medium">What drives your life?</span>
+            <a
+              href="https://opensea.io/assets/ethereum/0x1c5ffb607ef75158b435bd21a898d848620b4b13/1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="italic font-medium hover:cursor-pointer"
+            >
+              What drives your life?
+            </a>
             <span className="w-12 h-[1px] bg-[#2d2d2d]"></span>
           </div>
         </div>
