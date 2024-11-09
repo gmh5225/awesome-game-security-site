@@ -79,13 +79,19 @@ export default function CategoryNav({
         }
       }
 
-      // Sort categories and subcategories alphabetically
+      // Sort categories: categories with subcategories come first
       const categoriesArray = Array.from(categoriesMap.entries())
         .map(([name, subCategories]) => ({
           name,
-          subCategories: subCategories.sort((a, b) => a.localeCompare(b)), // Sort subcategories
+          subCategories: subCategories.sort((a, b) => a.localeCompare(b)),
         }))
-        .sort((a, b) => a.name.localeCompare(b.name)); // Sort main categories
+        .sort((a, b) => {
+          // First sort by whether they have subcategories
+          if (a.subCategories.length > 0 && b.subCategories.length === 0) return -1;
+          if (a.subCategories.length === 0 && b.subCategories.length > 0) return 1;
+          // Then sort alphabetically
+          return a.name.localeCompare(b.name);
+        });
 
       setCategories(categoriesArray);
 

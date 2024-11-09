@@ -236,7 +236,7 @@ export default function Home() {
     setHasSearched(true);
   };
 
-  // Sort resources by section name alphabetically
+  // Sort resources by section name: sections with subsections come first
   const sortedResources: SortedResource[] = Object.entries(
     paginatedResources.reduce((acc, resource) => {
       const section = resource.parentSection || resource.sections[0];
@@ -247,13 +247,22 @@ export default function Home() {
       return acc;
     }, {} as Record<string, Resource[]>)
   )
-    .sort(([a], [b]) => a.localeCompare(b))
-    .map(
-      ([section, resources]): SortedResource => [
-        section,
-        resources.sort((a, b) => a.title.localeCompare(b.title)),
-      ]
-    );
+    .sort(([sectionA, resourcesA], [sectionB, resourcesB]) => {
+      // Check if sections have subsections
+      const hasSubA = resourcesA.some(r => r.isSubSection);
+      const hasSubB = resourcesB.some(r => r.isSubSection);
+      
+      // Sort by whether they have subsections
+      if (hasSubA && !hasSubB) return -1;
+      if (!hasSubA && hasSubB) return 1;
+      
+      // Then sort alphabetically
+      return sectionA.localeCompare(sectionB);
+    })
+    .map(([section, resources]): SortedResource => [
+      section,
+      resources.sort((a, b) => a.title.localeCompare(b.title)),
+    ]);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
