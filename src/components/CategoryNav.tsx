@@ -83,9 +83,9 @@ export default function CategoryNav({
       const categoriesArray = Array.from(categoriesMap.entries())
         .map(([name, subCategories]) => ({
           name,
-          subCategories: subCategories.sort((a, b) => a.localeCompare(b)), // Sort subcategories
+          subCategories: subCategories,
         }))
-        .sort((a, b) => a.name.localeCompare(b.name)); // Sort main categories
+        .sort((a, b) => a.name.localeCompare(b.name));
 
       setCategories(categoriesArray);
 
