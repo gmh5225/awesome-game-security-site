@@ -16,8 +16,14 @@ interface Resource {
 
 const ITEMS_PER_PAGE = 10
 
+interface SearchContext {
+  query: string;
+  parentCategory?: string;
+  isNavigationSearch?: boolean;  // Add flag to distinguish search types
+}
+
 export default function Home() {
-  const [searchQuery, setSearchQuery] = useState('')
+  const [searchContext, setSearchContext] = useState<SearchContext>({ query: '' })
   const [resources, setResources] = useState<Resource[]>([])
   const [page, setPage] = useState(1)
   const [isNavVisible, setIsNavVisible] = useState(false)
@@ -146,10 +152,21 @@ export default function Home() {
   }, [])
 
   const filteredResources = resources.filter(resource => {
-    if (!searchQuery) return true
+    if (!searchContext.query) return true
     
-    const searchLower = searchQuery.toLowerCase()
+    const searchLower = searchContext.query.toLowerCase()
     
+    // Only apply parent category filter for navigation searches
+    if (searchContext.isNavigationSearch && searchContext.parentCategory) {
+      if (resource.parentSection !== searchContext.parentCategory) {
+        return false
+      }
+      return resource.sections.some(section => 
+        section.toLowerCase() === searchLower
+      )
+    }
+    
+    // For global searches (search box), use broader matching
     if (resource.sections.some(section => 
       section.toLowerCase() === searchLower ||
       resource.parentSection?.toLowerCase() === searchLower
@@ -172,16 +189,30 @@ export default function Home() {
   const paginatedResources = uniqueResources.slice(0, page * ITEMS_PER_PAGE)
   const hasMore = uniqueResources.length > page * ITEMS_PER_PAGE
 
-  const handleSearch = (query: string) => {
-    setSearchQuery(query)
+  // Handle global search from search box
+  const handleGlobalSearch = (query: string) => {
+    setSearchContext({ 
+      query,
+      isNavigationSearch: false 
+    })
+    setPage(1)
+  }
+
+  // Handle category navigation search
+  const handleNavigationSearch = (category: string, parentCategory?: string) => {
+    setSearchContext({ 
+      query: category,
+      parentCategory,
+      isNavigationSearch: true 
+    })
     setPage(1)
   }
 
   return (
     <div className="min-h-screen bg-background text-foreground">
       <CategoryNav 
-        onSelectCategory={handleSearch}
-        selectedCategory={searchQuery}
+        onSelectCategory={handleNavigationSearch}
+        selectedCategory={searchContext.query}
         isVisible={isNavVisible}
         onToggle={() => setIsNavVisible(!isNavVisible)}
       />
@@ -196,8 +227,8 @@ export default function Home() {
         </h1>
 
         <Search 
-          onSearch={handleSearch} 
-          initialValue={searchQuery}
+          onSearch={handleGlobalSearch}
+          initialValue={searchContext.query}
         />
 
         <div className="max-w-6xl mx-auto">
@@ -250,7 +281,7 @@ export default function Home() {
                                 <button
                                   key={tag}
                                   onClick={() => {
-                                    handleSearch(tag)
+                                    handleNavigationSearch(tag, resource.parentSection)
                                   }}
                                   className="tag"
                                 >

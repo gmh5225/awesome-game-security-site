@@ -6,7 +6,7 @@ interface Category {
 }
 
 interface CategoryNavProps {
-  onSelectCategory: (category: string) => void
+  onSelectCategory: (category: string, parentCategory?: string) => void
   selectedCategory?: string
   isVisible: boolean
   onToggle: () => void
@@ -154,7 +154,7 @@ export default function CategoryNav({ onSelectCategory, selectedCategory, isVisi
                   {category.subCategories.map(subCategory => (
                     <li 
                       key={subCategory}
-                      onClick={() => onSelectCategory(subCategory)}
+                      onClick={() => onSelectCategory(subCategory, category.name)}
                       className={`
                         py-1.5 px-2 rounded text-[14px]
                         ${selectedCategory === subCategory 
