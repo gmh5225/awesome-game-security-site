@@ -161,16 +161,21 @@ export default function Home() {
   const paginatedResources = uniqueResources.slice(0, page * ITEMS_PER_PAGE)
   const hasMore = uniqueResources.length > page * ITEMS_PER_PAGE
 
+  const handleSearch = (query: string) => {
+    setSearchQuery(query)
+    setPage(1)
+  }
+
   return (
     <div className="min-h-screen p-8 bg-background text-foreground">
       <h1 className="text-3xl font-bold text-center mb-8 text-primary">
         Awesome Game Security Resources
       </h1>
 
-      <Search onSearch={(query) => {
-        setSearchQuery(query)
-        setPage(1)
-      }} />
+      <Search 
+        onSearch={handleSearch} 
+        initialValue={searchQuery}
+      />
 
       <div className="max-w-6xl mx-auto">
         {uniqueResources.length === 0 ? (
@@ -222,8 +227,7 @@ export default function Home() {
                               <button
                                 key={tag}
                                 onClick={() => {
-                                  setSearchQuery(tag)
-                                  setPage(1)
+                                  handleSearch(tag)
                                 }}
                                 className="tag"
                               >
