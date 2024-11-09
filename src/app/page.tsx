@@ -316,33 +316,39 @@ export default function Home() {
                         window.open(resource.url, '_blank', 'noopener,noreferrer')
                       }}
                     >
-                      <div className="space-y-4">
-                        <div className="flex items-baseline">
-                          <span className="label">Name:</span>
-                          <span className="text-primary font-semibold flex-1">{resource.title}</span>
+                      <div className="space-y-2">
+                        <div className="flex">
+                          <span className="label min-w-[6rem] pt-1">Name:</span>
+                          <div className="flex-1">
+                            <span className="text-primary font-semibold">{resource.title}</span>
+                          </div>
                         </div>
                         
                         {resource.description !== resource.title && (
-                          <div className="flex items-baseline">
-                            <span className="label">Desc:</span>
-                            <span className="text-secondary flex-1">{resource.description}</span>
+                          <div className="flex">
+                            <span className="label min-w-[6rem] pt-1">Desc:</span>
+                            <div className="flex-1">
+                              <span className="text-secondary">{resource.description}</span>
+                            </div>
                           </div>
                         )}
                         
-                        <div className="flex items-baseline">
-                          <span className="label">URL:</span>
-                          <span className="url-text flex-1">{resource.url}</span>
+                        <div className="flex">
+                          <span className="label min-w-[6rem] pt-1">URL:</span>
+                          <div className="flex-1">
+                            <span className="url-text break-all">{resource.url}</span>
+                          </div>
                         </div>
                         
-                        <div className="flex items-baseline">
-                          <span className="label">Tags:</span>
+                        <div className="flex">
+                          <span className="label min-w-[6rem] pt-1">Tags:</span>
                           <div className="flex-1">
                             <div className="flex flex-wrap gap-2">
                               {resource.sections.map(tag => (
                                 <button
                                   key={tag}
                                   onClick={(e) => {
-                                    e.stopPropagation() // Prevent double click from triggering
+                                    e.stopPropagation()
                                     handleNavigationSearch(tag, resource.parentSection)
                                   }}
                                   className="tag"
@@ -354,13 +360,13 @@ export default function Home() {
                           </div>
                         </div>
 
-                        <div className="flex justify-end mt-4 pt-2 border-t border-card-border">
+                        <div className="flex justify-end mt-2 pt-2 border-t border-card-border">
                           <a 
                             href={resource.url}
                             target="_blank"
                             rel="noopener noreferrer" 
                             className="view-details"
-                            onClick={(e) => e.stopPropagation()} // Prevent double click from triggering
+                            onClick={(e) => e.stopPropagation()}
                           >
                             View Details 
                             <span className="font-mono">→</span>
