@@ -152,3 +152,33 @@ body {
 .border-card-border {
   @apply border-gray-200 dark:border-gray-700;
 }
+
+/* Custom scrollbar styles */
+.scrollbar-custom::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background: #3d3d3d;
+  border-radius: 4px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  background: #4d4d4d;
+}
+
+/* Hide scrollbar when inactive */
+.scrollbar-custom {
+  scrollbar-width: thin;
+  scrollbar-color: #3d3d3d transparent;
+}
+
+/* Firefox scrollbar styles */
+.scrollbar-custom {
+  scrollbar-width: thin;
+  scrollbar-color: #3d3d3d transparent;
+}

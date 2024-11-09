@@ -135,6 +135,7 @@ export default function CategoryNav({
         w-72 h-screen overflow-y-auto fixed right-0 top-0 p-6 
         bg-[#1e1e1e] border-l border-[#2d2d2d]
         transition-transform duration-300 ease-in-out
+        scrollbar-custom
         ${isVisible ? "translate-x-0" : "translate-x-full"}
       `}
       >
