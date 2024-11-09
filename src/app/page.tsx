@@ -208,6 +208,23 @@ export default function Home() {
     setPage(1)
   }
 
+  // Sort resources by section name alphabetically
+  const sortedResources = Object.entries(
+    paginatedResources.reduce((acc, resource) => {
+      const section = resource.parentSection || resource.sections[0]
+      if (!acc[section]) {
+        acc[section] = []
+      }
+      acc[section].push(resource)
+      return acc
+    }, {} as Record<string, Resource[]>)
+  )
+  .sort(([a], [b]) => a.localeCompare(b)) // Sort sections alphabetically
+  .map(([section, resources]) => [
+    section,
+    resources.sort((a, b) => a.title.localeCompare(b.title)) // Sort resources within each section
+  ])
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <CategoryNav 
@@ -238,16 +255,7 @@ export default function Home() {
             </div>
           ) : (
             <>
-              {Object.entries(
-                paginatedResources.reduce((acc, resource) => {
-                  const section = resource.parentSection || resource.sections[0]
-                  if (!acc[section]) {
-                    acc[section] = []
-                  }
-                  acc[section].push(resource)
-                  return acc
-                }, {} as Record<string, Resource[]>)
-              ).map(([section, sectionResources]) => (
+              {sortedResources.map(([section, sectionResources]) => (
                 <div key={section} className="mb-12">
                   <h2 className="section-title">
                     {section}

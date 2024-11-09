@@ -68,17 +68,19 @@ export default function CategoryNav({ onSelectCategory, selectedCategory, isVisi
         }
       }
 
+      // Sort categories and subcategories alphabetically
       const categoriesArray = Array.from(categoriesMap.entries())
         .map(([name, subCategories]) => ({
           name,
-          subCategories
+          subCategories: subCategories.sort((a, b) => a.localeCompare(b)) // Sort subcategories
         }))
+        .sort((a, b) => a.name.localeCompare(b.name)) // Sort main categories
 
       setCategories(categoriesArray)
       
       // Initialize expanded state
       const initialExpanded = categoriesArray.reduce((acc, category) => {
-        acc[category.name] = false // Default to collapsed
+        acc[category.name] = false
         return acc
       }, {} as Record<string, boolean>)
       setExpanded(initialExpanded)
@@ -96,7 +98,6 @@ export default function CategoryNav({ onSelectCategory, selectedCategory, isVisi
 
   return (
     <>
-      {/* Toggle button */}
       <button
         onClick={onToggle}
         className={`
@@ -110,7 +111,6 @@ export default function CategoryNav({ onSelectCategory, selectedCategory, isVisi
         {isVisible ? '→' : '←'}
       </button>
 
-      {/* Navigation panel */}
       <nav className={`
         w-72 h-screen overflow-y-auto fixed right-0 top-0 p-6 
         bg-[#1e1e1e] border-l border-[#2d2d2d]
@@ -121,7 +121,6 @@ export default function CategoryNav({ onSelectCategory, selectedCategory, isVisi
         <ul className="space-y-1">
           {categories.map(category => (
             <li key={category.name} className="mb-2">
-              {/* Category header */}
               <div 
                 className={`
                   flex items-center gap-2 rounded px-2 py-1.5
@@ -148,7 +147,6 @@ export default function CategoryNav({ onSelectCategory, selectedCategory, isVisi
                   {category.name}
                 </span>
               </div>
-              {/* Subcategories */}
               {expanded[category.name] && category.subCategories.length > 0 && (
                 <ul className="mt-1 ml-4 border-l border-[#2d2d2d] pl-4">
                   {category.subCategories.map(subCategory => (
