@@ -13,56 +13,49 @@ interface Resource {
   parentSection?: string
 }
 
-// Number of items to display per page
 const ITEMS_PER_PAGE = 10
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('')
   const [resources, setResources] = useState<Resource[]>([])
   const [page, setPage] = useState(1)
-  const [sections, setSections] = useState<string[]>([])
 
   useEffect(() => {
     fetch('https://raw.githubusercontent.com/gmh5225/awesome-game-security/refs/heads/main/README.md')
       .then(res => res.text())
       .then(content => {
         const resources: Resource[] = []
-        const sections: string[] = []
         const lines = content.split('\n')
         let currentSection = ''
         let currentSubSection = ''
         let isInContents = false
         const urlMap = new Map<string, Resource>()
 
-        // First pass: collect sections from Contents
-        for(const line of lines) {
+        for (const line of lines) {
           const trimmedLine = line.trim()
           
-          if(trimmedLine === '## Contents') {
+          if (trimmedLine === '## Contents') {
             isInContents = true
             continue
-          } else if(trimmedLine.startsWith('## ')) {
+          } else if (trimmedLine.startsWith('## ')) {
             isInContents = false
           }
 
-          if(isInContents && trimmedLine.startsWith('- [')) {
+          if (isInContents && trimmedLine.startsWith('- [')) {
             const sectionMatch = trimmedLine.match(/- \[(.*?)\]/)
-            if(sectionMatch) {
-              sections.push(sectionMatch[1])
+            if (sectionMatch) {
+              // Collect sections if needed
             }
           }
         }
 
-        setSections(sections)
-
         // Second pass: collect resources
-        for(let i = 0; i < lines.length; i++) {
+        for (let i = 0; i < lines.length; i++) {
           const line = lines[i].trim()
           
-          // Parse section headers
-          if(line.startsWith('## ')) {
+          if (line.startsWith('## ')) {
             const section = line.slice(2).trim()
-            if(section === 'How to contribute?' || section === 'Contents') {
+            if (section === 'How to contribute?' || section === 'Contents') {
               currentSection = ''
               currentSubSection = ''
               continue
@@ -72,33 +65,26 @@ export default function Home() {
             continue
           }
 
-          // Parse subsection headers
-          if(line.startsWith('> ')) {
+          if (line.startsWith('> ')) {
             currentSubSection = line.slice(2).trim()
-            if (currentSubSection) {
-              sections.push(currentSubSection)
-            }
             continue
           }
 
-          // Parse resource links
-          if((currentSection || currentSubSection) && line.startsWith('- ')) {
+          if ((currentSection || currentSubSection) && line.startsWith('- ')) {
             let title = ''
             let description = ''
             let url = ''
             let extraInfo = ''
 
-            // Try to match markdown link format with optional trailing brackets
             const fullMatch = line.match(/- \[([^\]]+)\]\((https?:\/\/[^\s\)]+)\)(\s*\[([^\]]+)\])?/)
-            if(fullMatch) {
+            if (fullMatch) {
               title = fullMatch[1]
               url = fullMatch[2]
               extraInfo = fullMatch[4] || ''
               description = extraInfo || title
             } else {
-              // Try to match direct URL format with optional trailing brackets
               const directMatch = line.match(/- (https?:\/\/[^\s\]]+)(\s*\[([^\]]+)\])?/)
-              if(directMatch) {
+              if (directMatch) {
                 url = directMatch[1]
                 extraInfo = directMatch[3] || ''
                 const urlParts = url.split('/')
@@ -107,7 +93,7 @@ export default function Home() {
               }
             }
 
-            if(url) {
+            if (url) {
               const section = currentSubSection || currentSection
               const searchableContent = [
                 title, 
@@ -148,13 +134,11 @@ export default function Home() {
       })
   }, [])
 
-  // Filter resources based on search query
   const filteredResources = resources.filter(resource => {
     if (!searchQuery) return true
     
     const searchLower = searchQuery.toLowerCase()
     
-    // Check if query matches any section
     if (resource.sections.some(section => 
       section.toLowerCase() === searchLower ||
       resource.parentSection?.toLowerCase() === searchLower
@@ -162,13 +146,11 @@ export default function Home() {
       return true
     }
 
-    // Check if query matches any part of the searchable content
     const contentToSearch = (resource.searchableContent || '').toLowerCase()
     const searchTerms = searchLower.split(/\s+/).filter(Boolean)
     return searchTerms.every(term => contentToSearch.includes(term))
   })
 
-  // Remove duplicates and keep only one instance of each resource
   const uniqueResources = filteredResources.reduce((acc, resource) => {
     if (!acc.some(r => r.url === resource.url)) {
       acc.push(resource)
@@ -176,7 +158,6 @@ export default function Home() {
     return acc
   }, [] as Resource[])
 
-  // Calculate paginated resources
   const paginatedResources = uniqueResources.slice(0, page * ITEMS_PER_PAGE)
   const hasMore = uniqueResources.length > page * ITEMS_PER_PAGE
 
@@ -216,13 +197,11 @@ export default function Home() {
                 {sectionResources.map((resource, index) => (
                   <div key={`${resource.url}-${index}`} className="resource-card mb-6">
                     <div className="space-y-4">
-                      {/* Name */}
                       <div className="flex items-baseline">
                         <span className="label">Name:</span>
                         <span className="text-primary font-semibold flex-1">{resource.title}</span>
                       </div>
                       
-                      {/* Description */}
                       {resource.description !== resource.title && (
                         <div className="flex items-baseline">
                           <span className="label">Desc:</span>
@@ -230,13 +209,11 @@ export default function Home() {
                         </div>
                       )}
                       
-                      {/* URL */}
                       <div className="flex items-baseline">
                         <span className="label">URL:</span>
                         <span className="url-text flex-1">{resource.url}</span>
                       </div>
                       
-                      {/* Tags */}
                       <div className="flex items-baseline">
                         <span className="label">Tags:</span>
                         <div className="flex-1">
@@ -244,7 +221,10 @@ export default function Home() {
                             {resource.sections.map(tag => (
                               <button
                                 key={tag}
-                                onClick={() => setSearchQuery(tag)}
+                                onClick={() => {
+                                  setSearchQuery(tag)
+                                  setPage(1)
+                                }}
                                 className="tag"
                               >
                                 {tag}
@@ -254,7 +234,6 @@ export default function Home() {
                         </div>
                       </div>
 
-                      {/* View Details Link */}
                       <div className="flex justify-end mt-4 pt-2 border-t border-card-border">
                         <a 
                           href={resource.url}
