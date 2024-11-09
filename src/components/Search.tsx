@@ -2,21 +2,26 @@ import { useState, useEffect } from 'react'
 
 interface SearchProps {
   onSearch: (query: string) => void;
-  initialValue?: string; // Add prop for initial/updated value from parent
+  initialValue?: string;
+  onEnter?: (query: string) => void;
 }
 
-export default function Search({ onSearch, initialValue = '' }: SearchProps) {
+export default function Search({ onSearch, onEnter, initialValue = '' }: SearchProps) {
     const [searchValue, setSearchValue] = useState(initialValue)
 
-    // Listen to initialValue changes from parent
     useEffect(() => {
         setSearchValue(initialValue)
     }, [initialValue])
 
-    // Handle input changes and trigger search
     const handleSearch = (value: string) => {
         setSearchValue(value)
         onSearch(value)
+    }
+
+    const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Enter') {
+            onEnter?.(searchValue)
+        }
     }
 
     return (
@@ -27,6 +32,7 @@ export default function Search({ onSearch, initialValue = '' }: SearchProps) {
           className="search-input"
           value={searchValue}
           onChange={(e) => handleSearch(e.target.value)}
+          onKeyPress={handleKeyPress}
         />
       </div>
     )

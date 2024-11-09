@@ -19,11 +19,15 @@ const ITEMS_PER_PAGE = 10
 interface SearchContext {
   query: string;
   parentCategory?: string;
-  isNavigationSearch?: boolean;  // Add flag to distinguish search types
+  isNavigationSearch?: boolean;
+  isFromNavigation?: boolean;
 }
 
 export default function Home() {
-  const [searchContext, setSearchContext] = useState<SearchContext>({ query: '' })
+  const [searchContext, setSearchContext] = useState<SearchContext>({ 
+    query: '',
+    isFromNavigation: false
+  })
   const [resources, setResources] = useState<Resource[]>([])
   const [page, setPage] = useState(1)
   const [isNavVisible, setIsNavVisible] = useState(false)
@@ -157,7 +161,7 @@ export default function Home() {
     const searchLower = searchContext.query.toLowerCase()
     
     // Only apply parent category filter for navigation searches
-    if (searchContext.isNavigationSearch && searchContext.parentCategory) {
+    if (searchContext.isFromNavigation && searchContext.parentCategory) {
       if (resource.parentSection !== searchContext.parentCategory) {
         return false
       }
@@ -166,7 +170,7 @@ export default function Home() {
       )
     }
     
-    // For global searches (search box), use broader matching
+    // For global searches (search box), show all matches regardless of parent category
     if (resource.sections.some(section => 
       section.toLowerCase() === searchLower ||
       resource.parentSection?.toLowerCase() === searchLower
@@ -191,9 +195,12 @@ export default function Home() {
 
   // Handle global search from search box
   const handleGlobalSearch = (query: string) => {
+    // Reset all search context when using search box
     setSearchContext({ 
       query,
-      isNavigationSearch: false 
+      parentCategory: undefined, // Clear parent category
+      isNavigationSearch: false,
+      isFromNavigation: false
     })
     setPage(1)
   }
@@ -203,7 +210,8 @@ export default function Home() {
     setSearchContext({ 
       query: category,
       parentCategory,
-      isNavigationSearch: true 
+      isNavigationSearch: true,
+      isFromNavigation: true
     })
     setPage(1)
   }
@@ -245,6 +253,16 @@ export default function Home() {
 
         <Search 
           onSearch={handleGlobalSearch}
+          onEnter={(query) => {
+            // Reset all context and perform global search on Enter
+            setSearchContext({ 
+              query,
+              parentCategory: undefined,
+              isNavigationSearch: false,
+              isFromNavigation: false
+            })
+            setPage(1)
+          }}
           initialValue={searchContext.query}
         />
 
