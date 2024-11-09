@@ -5,17 +5,54 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --card-background: #ffffff;
+  --card-border: #e5e7eb;
+  --highlight: #61dafb;
+  --text-primary: #171717;
+  --text-secondary: #6b7280;
+  --button-primary: #4a5568;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1e1e1e;
+    --foreground: #d4d4d4;
+    --card-background: #252526;
+    --card-border: #3e3e42;
+    --highlight: #00b4d8;
+    --text-primary: #d4d4d4;
+    --text-secondary: #808080;
+    --button-primary: #4c566a;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+}
+
+/* Link hover effects */
+a.text-highlight:hover {
+  color: #48cae4;
+  text-shadow: 0 0 8px rgba(0, 180, 216, 0.3);
+}
+
+/* Button hover effects */
+.bg-highlight:hover {
+  background-color: #48cae4;
+  box-shadow: 0 0 12px rgba(0, 180, 216, 0.4);
+}
+
+/* Custom Load More button styles */
+.load-more-button {
+  background-color: var(--button-primary);
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.load-more-button:hover {
+  background-color: #2d3748;
+  box-shadow: 0 0 12px rgba(74, 85, 104, 0.4);
+  transform: translateY(-1px);
 }

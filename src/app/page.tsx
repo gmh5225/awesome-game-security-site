@@ -11,6 +11,7 @@ interface Resource {
   searchableContent?: string
 }
 
+// Number of items to display per page
 const ITEMS_PER_PAGE = 10
 
 export default function Home() {
@@ -40,6 +41,7 @@ export default function Home() {
             isInContents = false
           }
 
+          // Extract section names from Contents
           if(isInContents && trimmedLine.startsWith('- [')) {
             const sectionMatch = trimmedLine.match(/- \[(.*?)\]/)
             if(sectionMatch) {
@@ -57,6 +59,7 @@ export default function Home() {
           // Parse section headers
           if(line.startsWith('## ')) {
             const section = line.slice(2).trim()
+            // Skip unwanted sections
             if(section === 'How to contribute?' || section === 'Contents') {
               currentSection = ''
               continue
@@ -91,7 +94,9 @@ export default function Home() {
               }
             }
 
+            // Process resource if URL is found
             if(url) {
+              // Check next line for additional description
               if(i + 1 < lines.length) {
                 const nextLine = lines[i + 1].trim()
                 if(nextLine && !nextLine.startsWith('-') && !nextLine.startsWith('#')) {
@@ -100,7 +105,7 @@ export default function Home() {
                 }
               }
 
-              // Include section in searchable content
+              // Build searchable content
               const searchableContent = [
                 title, 
                 description, 
@@ -124,6 +129,7 @@ export default function Home() {
       })
   }, [])
 
+  // Filter resources based on search query
   const filteredResources = resources.filter(resource => {
     if (!searchQuery) return true
     
@@ -135,52 +141,52 @@ export default function Home() {
     )
     
     if (matchingSection) {
-      // If searching for a section, return all resources in that section
+      // Return all resources in matching section
       return resource.section.toLowerCase() === matchingSection.toLowerCase()
     }
     
-    // Otherwise perform normal search
+    // Perform normal search across all content
     const contentToSearch = (resource.searchableContent || '').toLowerCase()
     const searchTerms = searchLower.split(/\s+/).filter(Boolean)
     return searchTerms.every(term => contentToSearch.includes(term))
   })
 
-  // Calculate paginated resources
+  // Calculate resources for current page
   const paginatedResources = filteredResources.slice(0, page * ITEMS_PER_PAGE)
   const hasMore = paginatedResources.length < filteredResources.length
 
   return (
-    <div className="min-h-screen p-8">
-      <h1 className="text-3xl font-bold text-center mb-8">
+    <div className="min-h-screen p-8 bg-background text-foreground">
+      <h1 className="text-3xl font-bold text-center mb-8 text-primary">
         Awesome Game Security Resources
       </h1>
 
       <Search onSearch={(query) => {
         setSearchQuery(query)
-        setPage(1) // Reset page when searching
+        setPage(1)
       }} />
 
       <div className="max-w-6xl mx-auto">
         {filteredResources.length === 0 ? (
-          <div className="text-center text-gray-500 dark:text-gray-400">
+          <div className="text-center text-secondary">
             No resources found
           </div>
         ) : (
           <>
             {paginatedResources.map((resource, index) => (
-              <div key={index} className="mb-6 p-4 border rounded-lg hover:shadow-lg transition-shadow">
-                <div className="text-sm text-blue-500 mb-1">{resource.section}</div>
-                <h2 className="text-xl font-semibold mb-2">{resource.title}</h2>
+              <div key={index} className="mb-6 p-4 bg-card-background border border-card-border rounded-lg hover:shadow-lg transition-shadow">
+                <div className="text-sm text-highlight mb-1">{resource.section}</div>
+                <h2 className="text-xl font-semibold mb-2 text-primary">{resource.title}</h2>
                 {resource.description !== resource.title && (
-                  <p className="text-gray-600 dark:text-gray-300 mb-2">{resource.description}</p>
+                  <p className="text-secondary mb-2">{resource.description}</p>
                 )}
-                <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 break-all">{resource.url}</p>
+                <p className="text-sm text-secondary mb-2 break-all">{resource.url}</p>
                 <div className="flex justify-end">
                   <a 
                     href={resource.url}
                     target="_blank"
                     rel="noopener noreferrer" 
-                    className="text-blue-500 hover:underline"
+                    className="text-highlight hover:underline"
                   >
                     View Details →
                   </a>
@@ -192,7 +198,7 @@ export default function Home() {
               <div className="text-center mt-8">
                 <button
                   onClick={() => setPage(p => p + 1)}
-                  className="px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-colors"
+                  className="px-6 py-2 load-more-button rounded-full"
                 >
                   Load More
                 </button>

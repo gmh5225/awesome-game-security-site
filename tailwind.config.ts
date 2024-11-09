@@ -11,6 +11,15 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        card: {
+          background: "var(--card-background)",
+          border: "var(--card-border)",
+        },
+        highlight: "var(--highlight)",
+        text: {
+          primary: "var(--text-primary)",
+          secondary: "var(--text-secondary)",
+        }
       },
     },
   },
