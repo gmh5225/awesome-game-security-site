@@ -1,101 +1,156 @@
-import Image from "next/image";
+'use client'
+
+import { useState, useEffect } from 'react'
+import Search from '@/components/Search'
+
+interface Resource {
+  title: string
+  description: string
+  url: string
+  section: string
+}
+
+const ITEMS_PER_PAGE = 10 // Items per page
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [searchQuery, setSearchQuery] = useState('')
+  const [resources, setResources] = useState<Resource[]>([])
+  const [page, setPage] = useState(1)
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+  useEffect(() => {
+    fetch('https://raw.githubusercontent.com/gmh5225/awesome-game-security/refs/heads/main/README.md')
+      .then(res => res.text())
+      .then(content => {
+        const resources: Resource[] = []
+        const lines = content.split('\n')
+        let currentSection = ''
+
+        for(let i = 0; i < lines.length; i++) {
+          const line = lines[i].trim()
+          
+          // Parse section headers
+          if(line.startsWith('## ')) {
+            const section = line.slice(2).trim()
+            if(section === 'How to contribute?' || section === 'Contents') {
+              currentSection = ''
+              continue
+            }
+            currentSection = section
+            continue
+          }
+
+          // Parse resource links
+          if(currentSection && line.startsWith('- ')) {
+            let title = ''
+            let description = ''
+            let url = ''
+
+            // Try to match markdown link format
+            const markdownLink = line.match(/- \[([^\]]+)\]\((https?:\/\/[^\s\)]+)\)/)
+            if(markdownLink) {
+              title = markdownLink[1]
+              url = markdownLink[2]
+              description = title
+            } else {
+              // Try to match direct URL format
+              const directUrl = line.match(/- (https?:\/\/[^\s]+)/)
+              if(directUrl) {
+                url = directUrl[1]
+                const urlParts = url.split('/')
+                title = urlParts[urlParts.length - 1]
+                description = title
+              }
+            }
+
+            // If URL is found, try to get description from next line
+            if(url) {
+              if(i + 1 < lines.length) {
+                const nextLine = lines[i + 1].trim()
+                if(nextLine && !nextLine.startsWith('-') && !nextLine.startsWith('#')) {
+                  description = nextLine
+                  i++
+                }
+              }
+
+              resources.push({
+                title,
+                description,
+                url,
+                section: currentSection
+              })
+            }
+          }
+        }
+        
+        setResources(resources)
+        console.log('Parsed resources:', resources)
+      })
+  }, [])
+
+  const filteredResources = resources.filter(resource => {
+    const searchLower = searchQuery.toLowerCase()
+    const contentToSearch = `${resource.title} ${resource.description} ${resource.url} ${resource.section}`.toLowerCase()
+    
+    const searchTerms = searchLower.split(/\s+/).filter(Boolean)
+    return searchTerms.every(term => contentToSearch.includes(term))
+  })
+
+  // Calculate paginated resources
+  const paginatedResources = filteredResources.slice(0, page * ITEMS_PER_PAGE)
+  const hasMore = paginatedResources.length < filteredResources.length
+
+  return (
+    <div className="min-h-screen p-8">
+      <h1 className="text-3xl font-bold text-center mb-8">
+        Awesome Game Security Resources
+      </h1>
+
+      <Search onSearch={(query) => {
+        setSearchQuery(query)
+        setPage(1) // Reset page when searching
+      }} />
+
+      <div className="max-w-6xl mx-auto">
+        {filteredResources.length === 0 ? (
+          <div className="text-center text-gray-500 dark:text-gray-400">
+            No resources found
+          </div>
+        ) : (
+          <>
+            {paginatedResources.map((resource, index) => (
+              <div key={index} className="mb-6 p-4 border rounded-lg hover:shadow-lg transition-shadow">
+                <div className="text-sm text-blue-500 mb-1">{resource.section}</div>
+                <h2 className="text-xl font-semibold mb-2">{resource.title}</h2>
+                {resource.description !== resource.title && (
+                  <p className="text-gray-600 dark:text-gray-300 mb-2">{resource.description}</p>
+                )}
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 break-all">{resource.url}</p>
+                <div className="flex justify-end">
+                  <a 
+                    href={resource.url}
+                    target="_blank"
+                    rel="noopener noreferrer" 
+                    className="text-blue-500 hover:underline"
+                  >
+                    View Details →
+                  </a>
+                </div>
+              </div>
+            ))}
+            
+            {hasMore && (
+              <div className="text-center mt-8">
+                <button
+                  onClick={() => setPage(p => p + 1)}
+                  className="px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-colors"
+                >
+                  Load More
+                </button>
+              </div>
+            )}
+          </>
+        )}
+      </div>
     </div>
-  );
+  )
 }
