@@ -209,38 +209,63 @@ export default function Home() {
               }, {} as Record<string, Resource[]>)
             ).map(([section, sectionResources]) => (
               <div key={section} className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-highlight">
+                <h2 className="section-title">
                   {section}
                 </h2>
 
                 {sectionResources.map((resource, index) => (
-                  <div key={`${resource.url}-${index}`} className="mb-6 p-4 bg-card-background border border-card-border rounded-lg hover:shadow-lg transition-shadow">
-                    <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-xl font-semibold text-primary">{resource.title}</h3>
-                      <a 
-                        href={resource.url}
-                        target="_blank"
-                        rel="noopener noreferrer" 
-                        className="text-highlight hover:underline ml-4"
-                      >
-                        View Details →
-                      </a>
-                    </div>
-                    
-                    {resource.description !== resource.title && (
-                      <p className="text-secondary mb-2">{resource.description}</p>
-                    )}
-                    <p className="font-mono text-sm text-secondary mb-4 break-all">{resource.url}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {resource.sections.map(tag => (
-                        <button
-                          key={tag}
-                          onClick={() => setSearchQuery(tag)}
-                          className="text-xs bg-highlight/10 text-highlight px-2 py-1 rounded hover:bg-highlight/20 transition-colors cursor-pointer"
+                  <div key={`${resource.url}-${index}`} className="resource-card mb-6">
+                    <div className="space-y-4">
+                      {/* Name */}
+                      <div className="flex items-baseline">
+                        <span className="label">Name:</span>
+                        <span className="text-primary font-semibold flex-1">{resource.title}</span>
+                      </div>
+                      
+                      {/* Description */}
+                      {resource.description !== resource.title && (
+                        <div className="flex items-baseline">
+                          <span className="label">Description:</span>
+                          <span className="text-secondary flex-1">{resource.description}</span>
+                        </div>
+                      )}
+                      
+                      {/* URL */}
+                      <div className="flex items-baseline">
+                        <span className="label">URL:</span>
+                        <span className="url-text flex-1">{resource.url}</span>
+                      </div>
+                      
+                      {/* Tags */}
+                      <div className="flex items-baseline">
+                        <span className="label">Tags:</span>
+                        <div className="flex-1">
+                          <div className="flex flex-wrap gap-2">
+                            {resource.sections.map(tag => (
+                              <button
+                                key={tag}
+                                onClick={() => setSearchQuery(tag)}
+                                className="tag"
+                              >
+                                {tag}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* View Details Link */}
+                      <div className="flex justify-end mt-4 pt-2 border-t border-card-border">
+                        <a 
+                          href={resource.url}
+                          target="_blank"
+                          rel="noopener noreferrer" 
+                          className="view-details"
                         >
-                          {tag}
-                        </button>
-                      ))}
+                          View Details 
+                          <span className="font-mono">→</span>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -251,7 +276,7 @@ export default function Home() {
               <div className="text-center mt-8">
                 <button
                   onClick={() => setPage(p => p + 1)}
-                  className="px-6 py-2 load-more-button rounded-full"
+                  className="load-more-button"
                 >
                   Load More
                 </button>
