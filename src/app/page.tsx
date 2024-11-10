@@ -202,23 +202,14 @@ function HomeContent() {
       );
     }
 
-    if (searchContext.parentCategory) {
-      return (
-        resource.parentSection === searchContext.parentCategory && 
-        resource.sections.some(
-          (section) => section.toLowerCase() === searchLower
-        )
-      );
-    }
-
-    if (
-      resource.sections.some(
-        (section) =>
-          section.toLowerCase() === searchLower ||
-          resource.parentSection?.toLowerCase() === searchLower
-      )
-    ) {
-      return true;
+    if (searchContext.isFromNavigation) {
+      if (searchContext.parentCategory) {
+        return resource.parentSection === searchContext.parentCategory &&
+               resource.sections.some(section => 
+                 section.toLowerCase() === searchLower
+               );
+      }
+      return resource.parentSection?.toLowerCase() === searchLower;
     }
 
     const contentToSearch = (resource.searchableContent || "").toLowerCase();
