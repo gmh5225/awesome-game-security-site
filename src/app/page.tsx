@@ -31,9 +31,9 @@ function HomeContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  const initialQuery = searchParams.get('q') || '';
-  const initialIsTag = searchParams.get('isTag') === 'true';
-  const initialParentCategory = searchParams.get('parent') || undefined;
+  const initialQuery = searchParams.get("q") || "";
+  const initialIsTag = searchParams.get("isTag") === "true";
+  const initialParentCategory = searchParams.get("parent") || undefined;
 
   const [searchContext, setSearchContext] = useState<SearchContext>({
     query: initialQuery,
@@ -204,10 +204,12 @@ function HomeContent() {
 
     if (searchContext.isFromNavigation) {
       if (searchContext.parentCategory) {
-        return resource.parentSection === searchContext.parentCategory &&
-               resource.sections.some(section => 
-                 section.toLowerCase() === searchLower
-               );
+        return (
+          resource.parentSection === searchContext.parentCategory &&
+          resource.sections.some(
+            (section) => section.toLowerCase() === searchLower
+          )
+        );
       }
       return resource.parentSection?.toLowerCase() === searchLower;
     }
@@ -287,14 +289,20 @@ function HomeContent() {
 
   const hasPrevious = page > 1;
 
-  const updateURL = (query: string, isTag: boolean, parentCategory?: string) => {
+  const updateURL = (
+    query: string,
+    isTag: boolean,
+    parentCategory?: string
+  ) => {
     const params = new URLSearchParams();
-    if (query) params.set('q', query);
-    if (isTag) params.set('isTag', 'true');
-    if (parentCategory) params.set('parent', parentCategory);
-    
-    const newURL = `${window.location.pathname}${params.toString() ? '?' + params.toString() : ''}`;
-    window.history.pushState({}, '', newURL);
+    if (query) params.set("q", query);
+    if (isTag) params.set("isTag", "true");
+    if (parentCategory) params.set("parent", parentCategory);
+
+    const newURL = `${window.location.pathname}${
+      params.toString() ? "?" + params.toString() : ""
+    }`;
+    window.history.pushState({}, "", newURL);
   };
 
   const handleGlobalSearch = (query: string, isTagSearch: boolean): void => {
@@ -556,11 +564,13 @@ function HomeContent() {
 
 export default function Home() {
   return (
-    <Suspense fallback={
-      <div className="min-h-screen bg-background text-foreground flex items-center justify-center">
-        <div className="text-center text-secondary">Loading...</div>
-      </div>
-    }>
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-background text-foreground flex items-center justify-center">
+          <div className="text-center text-secondary">Loading...</div>
+        </div>
+      }
+    >
       <HomeContent />
     </Suspense>
   );
