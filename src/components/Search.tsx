@@ -28,12 +28,12 @@ export default function Search({
         );
         const content = await res.text();
         const lines = content.split("\n");
-        
+
         const tags = new Set<string>();
 
         for (const line of lines) {
           const trimmedLine = line.trim();
-          
+
           if (trimmedLine.startsWith("## ")) {
             const section = trimmedLine.slice(2).trim();
             if (section !== "Contents" && section !== "How to contribute?") {
@@ -60,32 +60,39 @@ export default function Search({
   const filteredTags = useMemo(() => {
     if (!isTagSearch || !searchValue) return allTags;
     const searchLower = searchValue.toLowerCase();
-    return allTags.filter(tag => 
-      tag.toLowerCase().includes(searchLower)
-    );
+    return allTags.filter((tag) => tag.toLowerCase().includes(searchLower));
   }, [searchValue, isTagSearch, allTags]);
 
-  const handleSearch = useCallback((value: string) => {
-    setSearchValue(value);
-    onSearch(value, isTagSearch);
-    setShowDropdown(true);
-  }, [isTagSearch, onSearch]);
+  const handleSearch = useCallback(
+    (value: string) => {
+      setSearchValue(value);
+      onSearch(value, isTagSearch);
+      setShowDropdown(true);
+    },
+    [isTagSearch, onSearch]
+  );
 
-  const handleTagSelect = useCallback((tag: string) => {
-    setSearchValue(tag);
-    onSearch(tag, isTagSearch);
-    setShowDropdown(false);
-  }, [isTagSearch, onSearch]);
-
-  const handleKeyPress = useCallback((e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
-      onEnter?.(searchValue, isTagSearch);
+  const handleTagSelect = useCallback(
+    (tag: string) => {
+      setSearchValue(tag);
+      onSearch(tag, isTagSearch);
       setShowDropdown(false);
-    }
-  }, [onEnter, searchValue, isTagSearch]);
+    },
+    [isTagSearch, onSearch]
+  );
+
+  const handleKeyPress = useCallback(
+    (e: React.KeyboardEvent<HTMLInputElement>) => {
+      if (e.key === "Enter") {
+        onEnter?.(searchValue, isTagSearch);
+        setShowDropdown(false);
+      }
+    },
+    [onEnter, searchValue, isTagSearch]
+  );
 
   const handleTagModeChange = useCallback(() => {
-    setIsTagSearch(prev => !prev);
+    setIsTagSearch((prev) => !prev);
     onSearch(searchValue, !isTagSearch);
     setShowDropdown(true);
   }, [isTagSearch, searchValue, onSearch]);
@@ -93,13 +100,13 @@ export default function Search({
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
-      if (!target.closest('.search-container')) {
+      if (!target.closest(".search-container")) {
         setShowDropdown(false);
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
@@ -108,14 +115,16 @@ export default function Search({
         <div className="flex-1 relative">
           <input
             type="search"
-            placeholder={isTagSearch ? "Search by tag..." : "Search resources..."}
+            placeholder={
+              isTagSearch ? "Search by tag..." : "Search resources..."
+            }
             className="search-input"
             value={searchValue}
             onChange={(e) => handleSearch(e.target.value)}
             onKeyPress={handleKeyPress}
             onFocus={() => isTagSearch && setShowDropdown(true)}
           />
-          
+
           {isTagSearch && showDropdown && filteredTags.length > 0 && (
             <div className="absolute z-50 w-full mt-1 max-h-60 overflow-y-auto bg-[#252526] border border-[#3e3e42] rounded-md shadow-lg">
               {filteredTags.map((tag) => (
@@ -132,8 +141,10 @@ export default function Search({
         </div>
         <button
           onClick={handleTagModeChange}
-          className={`search-mode-button ${isTagSearch ? 'active' : ''}`}
-          title={isTagSearch ? "Switch to normal search" : "Switch to tag search"}
+          className={`search-mode-button ${isTagSearch ? "active" : ""}`}
+          title={
+            isTagSearch ? "Switch to normal search" : "Switch to tag search"
+          }
         >
           <svg
             viewBox="0 0 24 24"

@@ -142,22 +142,23 @@ export default function CategoryNav({
         <h2 className="text-xl font-semibold mb-6 text-[#d4d4d4] tracking-wide">
           Categories
         </h2>
-        
+
         <div className="mb-6">
           <div className="text-[#808080] text-xs uppercase tracking-wider mb-2 px-2">
             Categories with subcategories
           </div>
           <ul className="space-y-1">
             {categories
-              .filter(category => category.subCategories.length > 0)
+              .filter((category) => category.subCategories.length > 0)
               .map((category) => (
                 <li key={category.name} className="mb-2">
                   <div
                     className={`
                       flex items-center gap-2 rounded px-2 py-1.5
-                      ${selectedCategory === category.name
-                        ? "bg-[#2d2d2d] text-[#569cd6]"
-                        : "text-[#d4d4d4] hover:bg-[#252525]"
+                      ${
+                        selectedCategory === category.name
+                          ? "bg-[#2d2d2d] text-[#569cd6]"
+                          : "text-[#d4d4d4] hover:bg-[#252525]"
                       }
                       transition-colors duration-150 ease-in-out cursor-pointer
                       text-[15px] font-medium
@@ -177,12 +178,15 @@ export default function CategoryNav({
                       {category.subCategories.map((subCategory) => (
                         <li
                           key={subCategory}
-                          onClick={() => onSelectCategory(subCategory, category.name)}
+                          onClick={() =>
+                            onSelectCategory(subCategory, category.name)
+                          }
                           className={`
                             py-1.5 px-2 rounded text-[14px]
-                            ${selectedCategory === subCategory
-                              ? "text-[#569cd6] bg-[#2d2d2d]"
-                              : "text-[#a7a7a7] hover:text-[#d4d4d4] hover:bg-[#252525]"
+                            ${
+                              selectedCategory === subCategory
+                                ? "text-[#569cd6] bg-[#2d2d2d]"
+                                : "text-[#a7a7a7] hover:text-[#d4d4d4] hover:bg-[#252525]"
                             }
                             transition-colors duration-150 ease-in-out cursor-pointer
                           `}
@@ -203,15 +207,16 @@ export default function CategoryNav({
           </div>
           <ul className="space-y-1">
             {categories
-              .filter(category => category.subCategories.length === 0)
+              .filter((category) => category.subCategories.length === 0)
               .map((category) => (
                 <li key={category.name} className="mb-2">
                   <div
                     className={`
                       flex items-center gap-2 rounded px-2 py-1.5
-                      ${selectedCategory === category.name
-                        ? "bg-[#2d2d2d] text-[#569cd6]"
-                        : "text-[#d4d4d4] hover:bg-[#252525]"
+                      ${
+                        selectedCategory === category.name
+                          ? "bg-[#2d2d2d] text-[#569cd6]"
+                          : "text-[#d4d4d4] hover:bg-[#252525]"
                       }
                       transition-colors duration-150 ease-in-out cursor-pointer
                       text-[15px] font-medium

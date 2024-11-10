@@ -50,7 +50,8 @@ export default function Home() {
     let isInContents = false;
 
     // Modify: Use URL + description as unique identifier
-    const getResourceKey = (url: string, description: string) => `${url}|${description}`;
+    const getResourceKey = (url: string, description: string) =>
+      `${url}|${description}`;
     const resourceMap = new Map<string, Resource>();
 
     for (const line of lines) {
@@ -144,7 +145,7 @@ export default function Home() {
 
           if (resourceMap.has(resourceKey)) {
             const existingResource = resourceMap.get(resourceKey)!;
-            sections.forEach(section => {
+            sections.forEach((section) => {
               if (!existingResource.sections.includes(section)) {
                 existingResource.sections.push(section);
               }
@@ -226,36 +227,39 @@ export default function Home() {
   // Modify the uniqueResources logic to merge descriptions and tags for same URL
   const uniqueResources = filteredResources.reduce((acc, resource) => {
     const existingResource = acc.find((r) => r.url === resource.url);
-    
+
     if (existingResource) {
       // Merge descriptions if they're different
       if (existingResource.description !== resource.description) {
         existingResource.description = `${existingResource.description} | ${resource.description}`;
       }
-      
+
       // Merge sections (tags)
-      resource.sections.forEach(section => {
+      resource.sections.forEach((section) => {
         if (!existingResource.sections.includes(section)) {
           existingResource.sections.push(section);
         }
       });
-      
+
       // Update searchable content
       existingResource.searchableContent = [
         existingResource.searchableContent,
-        resource.searchableContent
+        resource.searchableContent,
       ].join(" ");
-      
+
       // Merge parent sections if different
-      if (resource.parentSection && !existingResource.parentSection?.includes(resource.parentSection)) {
-        existingResource.parentSection = existingResource.parentSection 
+      if (
+        resource.parentSection &&
+        !existingResource.parentSection?.includes(resource.parentSection)
+      ) {
+        existingResource.parentSection = existingResource.parentSection
           ? `${existingResource.parentSection} | ${resource.parentSection}`
           : resource.parentSection;
       }
     } else {
       acc.push({ ...resource });
     }
-    
+
     return acc;
   }, [] as Resource[]);
 
@@ -274,7 +278,7 @@ export default function Home() {
     .map(
       ([section, resources]): SortedResource => [
         section,
-        resources.sort((a, b) => a.title.localeCompare(b.title))
+        resources.sort((a, b) => a.title.localeCompare(b.title)),
       ]
     );
 
@@ -283,18 +287,19 @@ export default function Home() {
   const endIndex = page * ITEMS_PER_PAGE;
 
   // Get resources for current page
-  const currentPageResources = sortedResources.reduce((acc, [section, resources]) => {
-    const pageResources = resources.slice(startIndex, endIndex);
-    if (pageResources.length > 0) {
-      acc.push([section, pageResources]);
-    }
-    return acc;
-  }, [] as SortedResource[]);
+  const currentPageResources = sortedResources.reduce(
+    (acc, [section, resources]) => {
+      const pageResources = resources.slice(startIndex, endIndex);
+      if (pageResources.length > 0) {
+        acc.push([section, pageResources]);
+      }
+      return acc;
+    },
+    [] as SortedResource[]
+  );
 
   // Check if there are more resources to load
-  const hasMore = sortedResources.some(
-    (entry) => entry[1].length > endIndex
-  );
+  const hasMore = sortedResources.some((entry) => entry[1].length > endIndex);
 
   // Add this near the hasMore check
   const hasPrevious = page > 1;
@@ -407,115 +412,121 @@ export default function Home() {
             <div className="text-center text-secondary">No resources found</div>
           ) : (
             <>
-              {currentPageResources.map(([section, sectionResources]: SortedResource) => (
-                <div key={section} className="mb-12">
-                  <h2 className="section-title">{section}</h2>
+              {currentPageResources.map(
+                ([section, sectionResources]: SortedResource) => (
+                  <div key={section} className="mb-12">
+                    <h2 className="section-title">{section}</h2>
 
-                  {sectionResources.map(
-                    (resource: Resource, index: number) => (
-                      <div
-                        key={`${resource.url}-${index}`}
-                        className="resource-card mb-6 cursor-pointer"
-                        onDoubleClick={() => {
-                          window.open(
-                            resource.url,
-                            "_blank",
-                            "noopener,noreferrer"
-                          );
-                        }}
-                      >
-                        <div className="space-y-2">
-                          <div className="flex">
-                            <span className="label min-w-[6rem] pt-1">
-                              Name:
-                            </span>
-                            <div className="flex-1">
-                              <span className="text-primary font-semibold">
-                                {resource.title}
-                              </span>
-                            </div>
-                          </div>
-
-                          {resource.description !== resource.title && (
+                    {sectionResources.map(
+                      (resource: Resource, index: number) => (
+                        <div
+                          key={`${resource.url}-${index}`}
+                          className="resource-card mb-6 cursor-pointer"
+                          onDoubleClick={() => {
+                            window.open(
+                              resource.url,
+                              "_blank",
+                              "noopener,noreferrer"
+                            );
+                          }}
+                        >
+                          <div className="space-y-2">
                             <div className="flex">
                               <span className="label min-w-[6rem] pt-1">
-                                Desc:
+                                Name:
                               </span>
                               <div className="flex-1">
-                                <span className="text-secondary">
-                                  {resource.description}
+                                <span className="text-primary font-semibold">
+                                  {resource.title}
                                 </span>
                               </div>
                             </div>
-                          )}
 
-                          <div className="flex">
-                            <span className="label min-w-[6rem] pt-1">
-                              URL:
-                            </span>
-                            <div className="flex-1">
-                              <span className="url-text break-all">
-                                {resource.url}
+                            {resource.description !== resource.title && (
+                              <div className="flex">
+                                <span className="label min-w-[6rem] pt-1">
+                                  Desc:
+                                </span>
+                                <div className="flex-1">
+                                  <span className="text-secondary">
+                                    {resource.description}
+                                  </span>
+                                </div>
+                              </div>
+                            )}
+
+                            <div className="flex">
+                              <span className="label min-w-[6rem] pt-1">
+                                URL:
                               </span>
-                            </div>
-                          </div>
-
-                          <div className="flex">
-                            <span className="label min-w-[6rem] pt-1">
-                              Tags:
-                            </span>
-                            <div className="flex-1">
-                              <div className="flex flex-wrap gap-2">
-                                {resource.sections.map((tag) => (
-                                  <button
-                                    key={tag}
-                                    onClick={(e) => {
-                                      e.stopPropagation();
-                                      handleNavigationSearch(
-                                        tag,
-                                        resource.parentSection
-                                      );
-                                    }}
-                                    className="tag"
-                                  >
-                                    {tag}
-                                  </button>
-                                ))}
+                              <div className="flex-1">
+                                <span className="url-text break-all">
+                                  {resource.url}
+                                </span>
                               </div>
                             </div>
-                          </div>
 
-                          <div className="flex justify-end mt-2 pt-2 border-t border-card-border">
-                            <a
-                              href={resource.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="view-details"
-                              onClick={(e) => e.stopPropagation()}
-                            >
-                              View Details
-                              <span className="font-mono">→</span>
-                            </a>
+                            <div className="flex">
+                              <span className="label min-w-[6rem] pt-1">
+                                Tags:
+                              </span>
+                              <div className="flex-1">
+                                <div className="flex flex-wrap gap-2">
+                                  {resource.sections.map((tag) => (
+                                    <button
+                                      key={tag}
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        handleNavigationSearch(
+                                          tag,
+                                          resource.parentSection
+                                        );
+                                      }}
+                                      className="tag"
+                                    >
+                                      {tag}
+                                    </button>
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+
+                            <div className="flex justify-end mt-2 pt-2 border-t border-card-border">
+                              <a
+                                href={resource.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="view-details"
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                View Details
+                                <span className="font-mono">→</span>
+                              </a>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    )
-                  )}
-                </div>
-              ))}
+                      )
+                    )}
+                  </div>
+                )
+              )}
 
               {(hasPrevious || hasMore) && (
                 <div className="text-center mt-8 flex justify-center gap-4">
                   <button
                     onClick={() => setPage((p) => Math.max(1, p - 1))}
-                    className={`pagination-button ${!hasPrevious ? 'opacity-50 cursor-not-allowed' : ''}`}
+                    className={`pagination-button ${
+                      !hasPrevious ? "opacity-50 cursor-not-allowed" : ""
+                    }`}
                     disabled={!hasPrevious}
                   >
                     <span className="font-mono">←</span> Previous
                   </button>
                   <button
                     onClick={() => setPage((p) => p + 1)}
-                    className={`pagination-button ${!hasMore ? 'opacity-50 cursor-not-allowed' : ''}`}
+                    className={`pagination-button ${
+                      !hasMore ? "opacity-50 cursor-not-allowed" : ""
+                    }`}
                     disabled={!hasMore}
                   >
                     Next <span className="font-mono">→</span>
