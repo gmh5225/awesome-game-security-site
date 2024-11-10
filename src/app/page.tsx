@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import Search from "@/components/Search";
 import CategoryNav from "@/components/CategoryNav";
 
@@ -27,16 +28,25 @@ interface SearchContext {
 type SortedResource = [string, Resource[]];
 
 export default function Home() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const initialQuery = searchParams.get('q') || '';
+  const initialIsTag = searchParams.get('isTag') === 'true';
+  const initialParentCategory = searchParams.get('parent') || undefined;
+
   const [searchContext, setSearchContext] = useState<SearchContext>({
-    query: "",
+    query: initialQuery,
+    parentCategory: initialParentCategory,
+    isNavigationSearch: false,
     isFromNavigation: false,
+    isTagSearch: initialIsTag,
   });
   const [resources, setResources] = useState<Resource[]>([]);
   const [page, setPage] = useState(1);
   const [isNavVisible, setIsNavVisible] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
 
-  // Add a function to fetch and parse data
   const fetchData = async () => {
     const res = await fetch(
       "https://raw.githubusercontent.com/gmh5225/awesome-game-security/refs/heads/main/README.md"
@@ -49,7 +59,6 @@ export default function Home() {
     let currentSubSection = "";
     let isInContents = false;
 
-    // Modify: Use URL + description as unique identifier
     const getResourceKey = (url: string, description: string) =>
       `${url}|${description}`;
     const resourceMap = new Map<string, Resource>();
@@ -72,7 +81,6 @@ export default function Home() {
       }
     }
 
-    // Second pass: collect resources
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i].trim();
 
@@ -140,7 +148,6 @@ export default function Home() {
             .filter(Boolean)
             .join(" ");
 
-          // Use URL + description as unique identifier
           const resourceKey = getResourceKey(url, description);
 
           if (resourceMap.has(resourceKey)) {
@@ -173,14 +180,12 @@ export default function Home() {
       }
     }
 
-    // Use resourceMap instead of urlMap
     setResources(Array.from(resourceMap.values()));
   };
 
   useEffect(() => {
-    fetchData(); // Initial fetch
+    fetchData();
 
-    // Refresh every 5 minutes
     const interval = setInterval(fetchData, 5 * 60 * 1000);
 
     return () => clearInterval(interval);
@@ -191,24 +196,21 @@ export default function Home() {
 
     const searchLower = searchContext.query.toLowerCase();
 
-    // For tag search mode
     if (searchContext.isTagSearch) {
       return resource.sections.some(
         (section) => section.toLowerCase() === searchLower
       );
     }
 
-    // Only apply parent category filter for navigation searches
-    if (searchContext.isFromNavigation && searchContext.parentCategory) {
-      if (resource.parentSection !== searchContext.parentCategory) {
-        return false;
-      }
-      return resource.sections.some(
-        (section) => section.toLowerCase() === searchLower
+    if (searchContext.parentCategory) {
+      return (
+        resource.parentSection === searchContext.parentCategory && 
+        resource.sections.some(
+          (section) => section.toLowerCase() === searchLower
+        )
       );
     }
 
-    // For global searches (search box), show all matches regardless of parent category
     if (
       resource.sections.some(
         (section) =>
@@ -224,30 +226,25 @@ export default function Home() {
     return searchTerms.every((term) => contentToSearch.includes(term));
   });
 
-  // Modify the uniqueResources logic to merge descriptions and tags for same URL
   const uniqueResources = filteredResources.reduce((acc, resource) => {
     const existingResource = acc.find((r) => r.url === resource.url);
 
     if (existingResource) {
-      // Merge descriptions if they're different
       if (existingResource.description !== resource.description) {
         existingResource.description = `${existingResource.description} | ${resource.description}`;
       }
 
-      // Merge sections (tags)
       resource.sections.forEach((section) => {
         if (!existingResource.sections.includes(section)) {
           existingResource.sections.push(section);
         }
       });
 
-      // Update searchable content
       existingResource.searchableContent = [
         existingResource.searchableContent,
         resource.searchableContent,
       ].join(" ");
 
-      // Merge parent sections if different
       if (
         resource.parentSection &&
         !existingResource.parentSection?.includes(resource.parentSection)
@@ -263,7 +260,6 @@ export default function Home() {
     return acc;
   }, [] as Resource[]);
 
-  // Sort resources by section name alphabetically
   const sortedResources: SortedResource[] = Object.entries(
     uniqueResources.reduce((acc, resource) => {
       const section = resource.parentSection || resource.sections[0];
@@ -282,11 +278,9 @@ export default function Home() {
       ]
     );
 
-  // Calculate start and end indices for current page
   const startIndex = (page - 1) * ITEMS_PER_PAGE;
   const endIndex = page * ITEMS_PER_PAGE;
 
-  // Get resources for current page
   const currentPageResources = sortedResources.reduce(
     (acc, [section, resources]) => {
       const pageResources = resources.slice(startIndex, endIndex);
@@ -298,13 +292,20 @@ export default function Home() {
     [] as SortedResource[]
   );
 
-  // Check if there are more resources to load
   const hasMore = sortedResources.some((entry) => entry[1].length > endIndex);
 
-  // Add this near the hasMore check
   const hasPrevious = page > 1;
 
-  // Handle global search from search box
+  const updateURL = (query: string, isTag: boolean, parentCategory?: string) => {
+    const params = new URLSearchParams();
+    if (query) params.set('q', query);
+    if (isTag) params.set('isTag', 'true');
+    if (parentCategory) params.set('parent', parentCategory);
+    
+    const newURL = `${window.location.pathname}${params.toString() ? '?' + params.toString() : ''}`;
+    window.history.pushState({}, '', newURL);
+  };
+
   const handleGlobalSearch = (query: string, isTagSearch: boolean): void => {
     setSearchContext({
       query,
@@ -315,9 +316,9 @@ export default function Home() {
     });
     setPage(1);
     setHasSearched(!!query);
+    updateURL(query, isTagSearch);
   };
 
-  // Handle category navigation search
   const handleNavigationSearch = (
     category: string,
     parentCategory?: string
@@ -330,7 +331,14 @@ export default function Home() {
     });
     setPage(1);
     setHasSearched(true);
+    updateURL(category, false, parentCategory);
   };
+
+  useEffect(() => {
+    if (initialQuery) {
+      setHasSearched(true);
+    }
+  }, [initialQuery]);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
