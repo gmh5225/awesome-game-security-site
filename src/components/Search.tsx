@@ -22,38 +22,39 @@ export default function Search({
 
   useEffect(() => {
     const fetchTags = async () => {
-      const res = await fetch(
-        "https://raw.githubusercontent.com/gmh5225/awesome-game-security/refs/heads/main/README.md"
-      );
-      const content = await res.text();
-      const lines = content.split("\n");
-      
-      const tags = new Set<string>();
-      let currentSection = "";
-      let currentSubSection = "";
-
-      for (const line of lines) {
-        const trimmedLine = line.trim();
+      try {
+        const res = await fetch(
+          "https://raw.githubusercontent.com/gmh5225/awesome-game-security/refs/heads/main/README.md"
+        );
+        const content = await res.text();
+        const lines = content.split("\n");
         
-        if (trimmedLine.startsWith("## ")) {
-          const section = trimmedLine.slice(2).trim();
-          if (section !== "Contents" && section !== "How to contribute?") {
-            currentSection = section;
-            tags.add(section);
-          }
-          currentSubSection = "";
-        } else if (trimmedLine.startsWith("> ")) {
-          currentSubSection = trimmedLine.slice(2).trim();
-          if (currentSubSection) {
-            tags.add(currentSubSection);
+        const tags = new Set<string>();
+
+        for (const line of lines) {
+          const trimmedLine = line.trim();
+          
+          if (trimmedLine.startsWith("## ")) {
+            const section = trimmedLine.slice(2).trim();
+            if (section !== "Contents" && section !== "How to contribute?") {
+              tags.add(section);
+            }
+          } else if (trimmedLine.startsWith("> ")) {
+            const subSection = trimmedLine.slice(2).trim();
+            if (subSection) {
+              tags.add(subSection);
+            }
           }
         }
-      }
 
-      setAllTags(Array.from(tags).sort());
+        setAllTags(Array.from(tags).sort());
+      } catch (error) {
+        console.error("Error fetching tags:", error);
+        setAllTags([]);
+      }
     };
 
-    fetchTags();
+    void fetchTags();
   }, []);
 
   const filteredTags = useMemo(() => {
@@ -70,18 +71,18 @@ export default function Search({
     setShowDropdown(true);
   }, [isTagSearch, onSearch]);
 
-  const handleTagSelect = (tag: string) => {
+  const handleTagSelect = useCallback((tag: string) => {
     setSearchValue(tag);
     onSearch(tag, isTagSearch);
     setShowDropdown(false);
-  };
+  }, [isTagSearch, onSearch]);
 
-  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleKeyPress = useCallback((e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       onEnter?.(searchValue, isTagSearch);
       setShowDropdown(false);
     }
-  };
+  }, [onEnter, searchValue, isTagSearch]);
 
   const handleTagModeChange = useCallback(() => {
     setIsTagSearch(prev => !prev);
