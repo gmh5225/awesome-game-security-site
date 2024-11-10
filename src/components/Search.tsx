@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 
 interface SearchProps {
   onSearch: (query: string, isTagSearch: boolean) => void;
@@ -13,29 +13,96 @@ export default function Search({
 }: SearchProps) {
   const [searchValue, setSearchValue] = useState(initialValue);
   const [isTagSearch, setIsTagSearch] = useState(false);
+  const [allTags, setAllTags] = useState<string[]>([]);
+  const [showDropdown, setShowDropdown] = useState(false);
 
   useEffect(() => {
     setSearchValue(initialValue);
   }, [initialValue]);
 
+  useEffect(() => {
+    const fetchTags = async () => {
+      const res = await fetch(
+        "https://raw.githubusercontent.com/gmh5225/awesome-game-security/refs/heads/main/README.md"
+      );
+      const content = await res.text();
+      const lines = content.split("\n");
+      
+      const tags = new Set<string>();
+      let currentSection = "";
+      let currentSubSection = "";
+
+      for (const line of lines) {
+        const trimmedLine = line.trim();
+        
+        if (trimmedLine.startsWith("## ")) {
+          const section = trimmedLine.slice(2).trim();
+          if (section !== "Contents" && section !== "How to contribute?") {
+            currentSection = section;
+            tags.add(section);
+          }
+          currentSubSection = "";
+        } else if (trimmedLine.startsWith("> ")) {
+          currentSubSection = trimmedLine.slice(2).trim();
+          if (currentSubSection) {
+            tags.add(currentSubSection);
+          }
+        }
+      }
+
+      setAllTags(Array.from(tags).sort());
+    };
+
+    fetchTags();
+  }, []);
+
+  const filteredTags = useMemo(() => {
+    if (!isTagSearch || !searchValue) return allTags;
+    const searchLower = searchValue.toLowerCase();
+    return allTags.filter(tag => 
+      tag.toLowerCase().includes(searchLower)
+    );
+  }, [searchValue, isTagSearch, allTags]);
+
   const handleSearch = useCallback((value: string) => {
     setSearchValue(value);
     onSearch(value, isTagSearch);
+    setShowDropdown(true);
   }, [isTagSearch, onSearch]);
+
+  const handleTagSelect = (tag: string) => {
+    setSearchValue(tag);
+    onSearch(tag, isTagSearch);
+    setShowDropdown(false);
+  };
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       onEnter?.(searchValue, isTagSearch);
+      setShowDropdown(false);
     }
   };
 
   const handleTagModeChange = useCallback(() => {
     setIsTagSearch(prev => !prev);
     onSearch(searchValue, !isTagSearch);
+    setShowDropdown(true);
   }, [isTagSearch, searchValue, onSearch]);
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (!target.closest('.search-container')) {
+        setShowDropdown(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   return (
-    <div className="w-full max-w-2xl mx-auto mb-8">
+    <div className="w-full max-w-2xl mx-auto mb-8 search-container">
       <div className="flex gap-2">
         <div className="flex-1 relative">
           <input
@@ -45,7 +112,22 @@ export default function Search({
             value={searchValue}
             onChange={(e) => handleSearch(e.target.value)}
             onKeyPress={handleKeyPress}
+            onFocus={() => isTagSearch && setShowDropdown(true)}
           />
+          
+          {isTagSearch && showDropdown && filteredTags.length > 0 && (
+            <div className="absolute z-50 w-full mt-1 max-h-60 overflow-y-auto bg-[#252526] border border-[#3e3e42] rounded-md shadow-lg">
+              {filteredTags.map((tag) => (
+                <div
+                  key={tag}
+                  className="px-4 py-2 hover:bg-[#2d2d2d] cursor-pointer text-[#d4d4d4]"
+                  onClick={() => handleTagSelect(tag)}
+                >
+                  {tag}
+                </div>
+              ))}
+            </div>
+          )}
         </div>
         <button
           onClick={handleTagModeChange}

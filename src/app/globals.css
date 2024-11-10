@@ -236,3 +236,26 @@ body {
 .search-mode-button.active svg {
   opacity: 1;
 }
+
+/* Add scrollbar styles for tag dropdown list */
+.search-container .absolute {
+  scrollbar-width: thin;
+  scrollbar-color: #3d3d3d transparent;
+}
+
+.search-container .absolute::-webkit-scrollbar {
+  width: 8px;
+}
+
+.search-container .absolute::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.search-container .absolute::-webkit-scrollbar-thumb {
+  background: #3d3d3d;
+  border-radius: 4px;
+}
+
+.search-container .absolute::-webkit-scrollbar-thumb:hover {
+  background: #4d4d4d;
+}
