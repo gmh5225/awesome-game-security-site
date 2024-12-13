@@ -36,7 +36,11 @@ export default function Search({
 
           if (trimmedLine.startsWith("## ")) {
             const section = trimmedLine.slice(2).trim();
-            if (section !== "Contents" && section !== "How to contribute?") {
+            if (
+              section !== "Contents" &&
+              section !== "忠告" &&
+              section !== "How to contribute?"
+            ) {
               tags.add(section);
             }
           } else if (trimmedLine.startsWith("> ")) {
