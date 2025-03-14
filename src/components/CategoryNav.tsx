@@ -118,9 +118,10 @@ export default function CategoryNav({
           flex items-center gap-2
           ${
             isVisible
-              ? "right-[288px] p-2" // Smaller padding when only showing arrow
-              : "right-4 px-3 py-2" // Larger padding when showing text
+              ? "right-[288px] p-2 sm:right-[288px]" // not display text on mobile
+              : "right-4 px-3 py-2" // keep text on desktop
           }
+          bottom-4 sm:bottom-auto sm:top-4 // 移动端在底部，桌面端在顶部
         `}
         aria-label="Toggle categories"
       >
@@ -132,11 +133,12 @@ export default function CategoryNav({
 
       <nav
         className={`
-        w-72 h-screen overflow-y-auto fixed right-0 top-0 p-6 
+        w-full sm:w-72 h-screen overflow-y-auto fixed right-0 top-0 p-4 sm:p-6 
         bg-[#1e1e1e] border-l border-[#2d2d2d]
         transition-transform duration-300 ease-in-out
         scrollbar-custom
         ${isVisible ? "translate-x-0" : "translate-x-full"}
+        z-40
       `}
       >
         <h2 className="text-xl font-semibold mb-6 text-[#d4d4d4] tracking-wide">

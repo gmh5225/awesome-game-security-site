@@ -115,7 +115,7 @@ export default function Search({
 
   return (
     <div className="w-full max-w-2xl mx-auto mb-8 search-container">
-      <div className="flex gap-2">
+      <div className="flex flex-col sm:flex-row gap-2">
         <div className="flex-1 relative">
           <input
             type="search"
@@ -145,7 +145,7 @@ export default function Search({
         </div>
         <button
           onClick={handleTagModeChange}
-          className={`search-mode-button ${isTagSearch ? "active" : ""}`}
+          className={`search-mode-button ${isTagSearch ? "active" : ""} mt-0 sm:mt-0`}
           title={
             isTagSearch ? "Switch to normal search" : "Switch to tag search"
           }

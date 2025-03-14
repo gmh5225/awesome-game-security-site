@@ -351,66 +351,57 @@ function HomeContent() {
       <div
         className={`
         transition-all duration-300 ease-in-out
-        ${isNavVisible ? "pr-80" : "pr-8"}
-        p-8
+        ${isNavVisible ? "pr-0 sm:pr-80" : "pr-0 sm:pr-8"}
+        p-4 sm:p-8
       `}
       >
-        <div className="flex flex-col items-center justify-center gap-2 mb-8">
-          <div className="flex items-center gap-4">
-            <h1 className="text-3xl font-bold text-primary">
-              Awesome Game Security Resources
-            </h1>
-            <a
-              href="https://github.com/gmh5225/awesome-game-security"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#d4d4d4] hover:text-[#569cd6] transition-colors"
-              title="View on GitHub"
-            >
-              <svg
-                height="32"
-                aria-hidden="true"
-                viewBox="0 0 16 16"
-                version="1.1"
-                width="32"
-                data-view-component="true"
-                className="fill-current"
+        <header className="mb-8">
+          <div className="flex flex-col items-center justify-center gap-2 mb-6">
+            <div className="flex items-center gap-4">
+              <h1 className="text-2xl sm:text-3xl font-bold text-primary">
+                Awesome Game Security
+              </h1>
+              <a
+                href="https://github.com/gmh5225/awesome-game-security"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#d4d4d4] hover:text-[#569cd6] transition-colors"
+                title="View on GitHub"
               >
-                <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
-              </svg>
-            </a>
+                <svg
+                  height="32"
+                  aria-hidden="true"
+                  viewBox="0 0 16 16"
+                  version="1.1"
+                  width="32"
+                  data-view-component="true"
+                  className="fill-current"
+                >
+                  <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+                </svg>
+              </a>
+            </div>
+            <div className="flex items-center gap-4 text-[#808080] text-sm">
+              <span className="w-12 h-[1px] bg-[#2d2d2d]"></span>
+              <a
+                href="https://opensea.io/assets/ethereum/0x1c5ffb607ef75158b435bd21a898d848620b4b13/1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="italic font-medium hover:cursor-pointer"
+              >
+                What drives your life?
+              </a>
+              <span className="w-12 h-[1px] bg-[#2d2d2d]"></span>
+            </div>
           </div>
-          <div className="flex items-center gap-4 text-[#808080] text-sm">
-            <span className="w-12 h-[1px] bg-[#2d2d2d]"></span>
-            <a
-              href="https://opensea.io/assets/ethereum/0x1c5ffb607ef75158b435bd21a898d848620b4b13/1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="italic font-medium hover:cursor-pointer"
-            >
-              What drives your life?
-            </a>
-            <span className="w-12 h-[1px] bg-[#2d2d2d]"></span>
-          </div>
-        </div>
+          <Search
+            onSearch={handleGlobalSearch}
+            initialValue={searchContext.query}
+            onEnter={handleGlobalSearch}
+          />
+        </header>
 
-        <Search
-          onSearch={handleGlobalSearch}
-          onEnter={(query, isTagSearch) => {
-            setSearchContext({
-              query,
-              parentCategory: undefined,
-              isNavigationSearch: false,
-              isFromNavigation: false,
-              isTagSearch,
-            });
-            setPage(1);
-            setHasSearched(!!query);
-          }}
-          initialValue={searchContext.query}
-        />
-
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto px-2 sm:px-0">
           {!hasSearched || !searchContext.query ? (
             <div className="text-center text-secondary">
               Start searching or select a category to view resources
@@ -438,8 +429,8 @@ function HomeContent() {
                           }}
                         >
                           <div className="space-y-2">
-                            <div className="flex">
-                              <span className="label min-w-[6rem] pt-1">
+                            <div className="flex flex-col sm:flex-row">
+                              <span className="label min-w-[6rem] pt-1 mb-1 sm:mb-0">
                                 Name:
                               </span>
                               <div className="flex-1">
@@ -450,8 +441,8 @@ function HomeContent() {
                             </div>
 
                             {resource.description !== resource.title && (
-                              <div className="flex">
-                                <span className="label min-w-[6rem] pt-1">
+                              <div className="flex flex-col sm:flex-row">
+                                <span className="label min-w-[6rem] pt-1 mb-1 sm:mb-0">
                                   Desc:
                                 </span>
                                 <div className="flex-1">
@@ -462,8 +453,8 @@ function HomeContent() {
                               </div>
                             )}
 
-                            <div className="flex">
-                              <span className="label min-w-[6rem] pt-1">
+                            <div className="flex flex-col sm:flex-row">
+                              <span className="label min-w-[6rem] pt-1 mb-1 sm:mb-0">
                                 URL:
                               </span>
                               <div className="flex-1">
@@ -473,8 +464,8 @@ function HomeContent() {
                               </div>
                             </div>
 
-                            <div className="flex">
-                              <span className="label min-w-[6rem] pt-1">
+                            <div className="flex flex-col sm:flex-row">
+                              <span className="label min-w-[6rem] pt-1 mb-1 sm:mb-0">
                                 Tags:
                               </span>
                               <div className="flex-1">
@@ -519,7 +510,7 @@ function HomeContent() {
               )}
 
               {(hasPrevious || hasMore) && (
-                <div className="text-center mt-8 flex justify-center gap-4">
+                <div className="text-center mt-8 flex justify-center gap-2 sm:gap-4">
                   <button
                     onClick={() => setPage((p) => Math.max(1, p - 1))}
                     className={`pagination-button ${
@@ -543,8 +534,8 @@ function HomeContent() {
             </>
           )}
 
-          <footer className="mt-16 pt-4 border-t border-[#2d2d2d] text-center">
-            <div className="text-sm text-[#808080]">
+          <footer className="mt-16 pt-4 border-t border-[#2d2d2d] text-center text-xs sm:text-sm">
+            <div className="text-[#808080]">
               MIT License · Copyright (c) 2024{" "}
               <a
                 href="https://x.com/gmhzxy"

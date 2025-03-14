@@ -288,3 +288,62 @@ body {
 .search-container .absolute::-webkit-scrollbar-thumb:hover {
   background: #4d4d4d;
 }
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .resource-card {
+    padding: 1rem;
+  }
+
+  .label {
+    width: 4.5rem;
+    font-size: 0.75rem;
+  }
+
+  .url-text {
+    font-size: 0.75rem;
+  }
+
+  .tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .search-input {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .search-mode-button {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .search-mode-button span {
+    display: none;
+  }
+
+  .pagination-button {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .resource-card {
+    padding: 0.75rem;
+  }
+
+  .view-details {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .resource-card {
+    margin-bottom: 0.75rem;
+  }
+}
