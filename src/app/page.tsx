@@ -434,7 +434,7 @@ function HomeContent() {
                                 Name:
                               </span>
                               <div className="flex-1">
-                                <span className="text-primary font-semibold">
+                                <span className="text-primary font-semibold break-words">
                                   {resource.title}
                                 </span>
                               </div>
@@ -446,7 +446,7 @@ function HomeContent() {
                                   Desc:
                                 </span>
                                 <div className="flex-1">
-                                  <span className="text-secondary">
+                                  <span className="text-secondary break-words">
                                     {resource.description}
                                   </span>
                                 </div>

@@ -298,6 +298,8 @@ body {
 
   .resource-card {
     padding: 1rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
 
   .label {
@@ -307,6 +309,8 @@ body {
 
   .url-text {
     font-size: 0.75rem;
+    word-break: break-all;
+    overflow-wrap: break-word;
   }
 
   .tag {
@@ -316,10 +320,15 @@ body {
 
   .search-input {
     padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
   }
 
   .search-mode-button {
-    padding: 0.5rem 0.75rem;
+    padding: 0.5rem;
+    min-width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .search-mode-button span {
@@ -329,6 +338,14 @@ body {
   .pagination-button {
     padding: 0.4rem 0.75rem;
     font-size: 0.875rem;
+  }
+  
+  /* 确保所有文本在移动端正确换行 */
+  .text-primary, .text-secondary {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
   }
 }
 
