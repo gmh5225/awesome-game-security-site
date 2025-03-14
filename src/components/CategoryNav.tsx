@@ -117,11 +117,13 @@ export default function CategoryNav({
           bg-[#2d2d2d] hover:bg-[#3d3d3d]
           transition-all duration-200 ease-in-out
           flex items-center justify-center
-          right-4 top-4 p-2
           sm:hidden
+          bottom-4 left-1/2 transform -translate-x-1/2
+          px-4 py-2
         `}
         aria-label="Toggle categories mobile"
       >
+        <span className="text-sm text-[#d4d4d4] mr-1">分类</span>
         <span className="text-[#808080] text-lg">{isVisible ? "←" : "→"}</span>
       </button>
 
