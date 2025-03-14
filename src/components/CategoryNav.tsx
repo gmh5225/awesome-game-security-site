@@ -123,7 +123,7 @@ export default function CategoryNav({
         `}
         aria-label="Toggle categories mobile"
       >
-        <span className="text-sm text-[#d4d4d4] mr-1">Categories</span>
+        {/* <span className="text-sm text-[#d4d4d4] mr-1">Categories</span> */}
         <span className="text-[#808080] text-lg">{isVisible ? "←" : "→"}</span>
       </button>
 
