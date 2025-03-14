@@ -115,20 +115,19 @@ export default function CategoryNav({
           fixed z-50 rounded
           bg-[#2d2d2d] hover:bg-[#3d3d3d]
           transition-all duration-200 ease-in-out
-          flex items-center gap-2
+          flex items-center justify-center
           ${
             isVisible
-              ? "right-[288px] p-2 sm:right-[288px]" // not display text on mobile
-              : "right-4 px-3 py-2" // keep text on desktop
+              ? "right-[288px] sm:right-[288px] top-4 p-2" 
+              : "right-4 top-4 px-3 py-2"
           }
-          bottom-4 sm:bottom-auto sm:top-4 // 移动端在底部，桌面端在顶部
         `}
         aria-label="Toggle categories"
       >
         {!isVisible && (
-          <span className="text-sm text-[#d4d4d4]">Categories</span>
+          <span className="text-sm text-[#d4d4d4] hidden sm:inline">Categories</span>
         )}
-        <span className="text-[#808080]">{isVisible ? "→" : "←"}</span>
+        <span className="text-[#808080] text-lg">{isVisible ? "→" : "←"}</span>
       </button>
 
       <nav
@@ -141,95 +140,97 @@ export default function CategoryNav({
         z-40
       `}
       >
-        <h2 className="text-xl font-semibold mb-6 text-[#d4d4d4] tracking-wide">
-          Categories
-        </h2>
+        <div className="pt-14 sm:pt-0">
+          <h2 className="text-xl font-semibold mb-6 text-[#d4d4d4] tracking-wide">
+            Categories
+          </h2>
 
-        <div className="mb-6">
-          <div className="text-[#808080] text-xs uppercase tracking-wider mb-2 px-2">
-            Categories with subcategories
-          </div>
-          <ul className="space-y-1">
-            {categories
-              .filter((category) => category.subCategories.length > 0)
-              .map((category) => (
-                <li key={category.name} className="mb-2">
-                  <div
-                    className={`
-                      flex items-center gap-2 rounded px-2 py-1.5
-                      ${
-                        selectedCategory === category.name
-                          ? "bg-[#2d2d2d] text-[#569cd6]"
-                          : "text-[#d4d4d4] hover:bg-[#252525]"
-                      }
-                      transition-colors duration-150 ease-in-out cursor-pointer
-                      text-[15px] font-medium
-                    `}
-                    onClick={() => {
-                      toggleCategory(category.name);
-                      onSelectCategory(category.name);
-                    }}
-                  >
-                    <span className="inline-block w-4 text-xs opacity-70">
-                      {expanded[category.name] ? "▼" : "▶"}
-                    </span>
-                    <span className="flex-1">{category.name}</span>
-                  </div>
-                  {expanded[category.name] && (
-                    <ul className="mt-1 ml-4 border-l border-[#2d2d2d] pl-4">
-                      {category.subCategories.map((subCategory) => (
-                        <li
-                          key={subCategory}
-                          onClick={() =>
-                            onSelectCategory(subCategory, category.name)
-                          }
-                          className={`
-                            py-1.5 px-2 rounded text-[14px]
-                            ${
-                              selectedCategory === subCategory
-                                ? "text-[#569cd6] bg-[#2d2d2d]"
-                                : "text-[#a7a7a7] hover:text-[#d4d4d4] hover:bg-[#252525]"
+          <div className="mb-6">
+            <div className="text-[#808080] text-xs uppercase tracking-wider mb-2 px-2">
+              Categories with subcategories
+            </div>
+            <ul className="space-y-1">
+              {categories
+                .filter((category) => category.subCategories.length > 0)
+                .map((category) => (
+                  <li key={category.name} className="mb-2">
+                    <div
+                      className={`
+                        flex items-center gap-2 rounded px-2 py-1.5
+                        ${
+                          selectedCategory === category.name
+                            ? "bg-[#2d2d2d] text-[#569cd6]"
+                            : "text-[#d4d4d4] hover:bg-[#252525]"
+                        }
+                        transition-colors duration-150 ease-in-out cursor-pointer
+                        text-[15px] font-medium
+                      `}
+                      onClick={() => {
+                        toggleCategory(category.name);
+                        onSelectCategory(category.name);
+                      }}
+                    >
+                      <span className="inline-block w-4 text-xs opacity-70">
+                        {expanded[category.name] ? "▼" : "▶"}
+                      </span>
+                      <span className="flex-1">{category.name}</span>
+                    </div>
+                    {expanded[category.name] && (
+                      <ul className="mt-1 ml-4 border-l border-[#2d2d2d] pl-4">
+                        {category.subCategories.map((subCategory) => (
+                          <li
+                            key={subCategory}
+                            onClick={() =>
+                              onSelectCategory(subCategory, category.name)
                             }
-                            transition-colors duration-150 ease-in-out cursor-pointer
-                          `}
-                        >
-                          {subCategory}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-              ))}
-          </ul>
-        </div>
-
-        <div>
-          <div className="text-[#808080] text-xs uppercase tracking-wider mb-2 px-2">
-            Other categories
+                            className={`
+                              py-1.5 px-2 rounded text-[14px]
+                              ${
+                                selectedCategory === subCategory
+                                  ? "text-[#569cd6] bg-[#2d2d2d]"
+                                  : "text-[#a7a7a7] hover:text-[#d4d4d4] hover:bg-[#252525]"
+                              }
+                              transition-colors duration-150 ease-in-out cursor-pointer
+                            `}
+                          >
+                            {subCategory}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
+                ))}
+            </ul>
           </div>
-          <ul className="space-y-1">
-            {categories
-              .filter((category) => category.subCategories.length === 0)
-              .map((category) => (
-                <li key={category.name} className="mb-2">
-                  <div
-                    className={`
-                      flex items-center gap-2 rounded px-2 py-1.5
-                      ${
-                        selectedCategory === category.name
-                          ? "bg-[#2d2d2d] text-[#569cd6]"
-                          : "text-[#d4d4d4] hover:bg-[#252525]"
-                      }
-                      transition-colors duration-150 ease-in-out cursor-pointer
-                      text-[15px] font-medium
-                    `}
-                    onClick={() => onSelectCategory(category.name)}
-                  >
-                    <span className="flex-1">{category.name}</span>
-                  </div>
-                </li>
-              ))}
-          </ul>
+
+          <div>
+            <div className="text-[#808080] text-xs uppercase tracking-wider mb-2 px-2">
+              Other categories
+            </div>
+            <ul className="space-y-1">
+              {categories
+                .filter((category) => category.subCategories.length === 0)
+                .map((category) => (
+                  <li key={category.name} className="mb-2">
+                    <div
+                      className={`
+                        flex items-center gap-2 rounded px-2 py-1.5
+                        ${
+                          selectedCategory === category.name
+                            ? "bg-[#2d2d2d] text-[#569cd6]"
+                            : "text-[#d4d4d4] hover:bg-[#252525]"
+                        }
+                        transition-colors duration-150 ease-in-out cursor-pointer
+                        text-[15px] font-medium
+                      `}
+                      onClick={() => onSelectCategory(category.name)}
+                    >
+                      <span className="flex-1">{category.name}</span>
+                    </div>
+                  </li>
+                ))}
+            </ul>
+          </div>
         </div>
       </nav>
     </>

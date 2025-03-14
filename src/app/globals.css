@@ -347,6 +347,14 @@ body {
     word-break: break-word;
     hyphens: auto;
   }
+  
+  /* 移动端分类导航按钮样式 */
+  button[aria-label="Toggle categories"] {
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    font-size: 1.25rem;
+  }
 }
 
 @media (max-width: 640px) {
