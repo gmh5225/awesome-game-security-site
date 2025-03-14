@@ -109,6 +109,7 @@ export default function CategoryNav({
 
   return (
     <>
+      {/* 移动端按钮 */}
       <button
         onClick={onToggle}
         className={`
@@ -116,16 +117,29 @@ export default function CategoryNav({
           bg-[#2d2d2d] hover:bg-[#3d3d3d]
           transition-all duration-200 ease-in-out
           flex items-center justify-center
-          ${
-            isVisible
-              ? "right-[288px] sm:right-[288px] top-4 p-2" 
-              : "right-4 top-4 px-3 py-2"
-          }
+          right-4 top-4 p-2
+          sm:hidden
         `}
-        aria-label="Toggle categories"
+        aria-label="Toggle categories mobile"
+      >
+        <span className="text-[#808080] text-lg">{isVisible ? "←" : "→"}</span>
+      </button>
+
+      {/* 桌面端按钮 */}
+      <button
+        onClick={onToggle}
+        className={`
+          fixed z-50 rounded
+          bg-[#2d2d2d] hover:bg-[#3d3d3d]
+          transition-all duration-200 ease-in-out
+          flex items-center justify-center
+          hidden sm:flex
+          ${isVisible ? "right-[288px]" : "right-4"} top-4 px-3 py-2
+        `}
+        aria-label="Toggle categories desktop"
       >
         {!isVisible && (
-          <span className="text-sm text-[#d4d4d4] hidden sm:inline">Categories</span>
+          <span className="text-sm text-[#d4d4d4]">Categories</span>
         )}
         <span className="text-[#808080] text-lg">{isVisible ? "→" : "←"}</span>
       </button>
@@ -140,7 +154,7 @@ export default function CategoryNav({
         z-40
       `}
       >
-        <div className="pt-14 sm:pt-0">
+        <div className="pt-14 sm:pt-0 pr-12">
           <h2 className="text-xl font-semibold mb-6 text-[#d4d4d4] tracking-wide">
             Categories
           </h2>
