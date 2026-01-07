@@ -1,0 +1,64 @@
+name: Auto update Next.js / React (daily)
+
+on:
+  schedule:
+    - cron: "20 3 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: auto-update-nextjs
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Update deps
+        # 这里显式使用 text lockfile，避免 Bun 默认行为变化导致生成 bun.lockb
+        run: bun add --save-text-lockfile next@latest react@latest react-dom@latest
+
+      - name: Commit & push if changed
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ -z "$(git status --porcelain)" ]]; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          branch="$(git rev-parse --abbrev-ref HEAD)"
+          git pull --rebase --autostash origin "$branch"
+          
+          git reset
+          if [[ -f bun.lock && -f bun.lockb ]]; then
+            rm -f bun.lockb
+          fi
+
+          [[ -f package.json ]] && git add package.json
+          [[ -f bun.lock ]] && git add bun.lock
+          [[ -f bun.lockb ]] && git add bun.lockb
+
+          if git diff --cached --quiet; then
+            echo "No staged changes to commit."
+            exit 0
+          fi
+
+          git commit -m "chore(deps): bump next/react/react-dom to latest"
+          git push origin "$branch"
