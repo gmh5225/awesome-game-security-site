@@ -2,6 +2,7 @@ import { spawn, type ChildProcess } from 'node:child_process';
 import { access } from 'node:fs/promises';
 import { createServer } from 'node:net';
 import path from 'node:path';
+import { parse, type DefaultTreeAdapterTypes } from 'parse5';
 import { getResource, getResourceByUrl } from '../src/lib/catalog';
 import { getDictionary } from '../src/lib/i18n';
 import { LOCALES, type Locale } from '../src/lib/types';
@@ -52,21 +53,36 @@ async function boundedBody(response: Response, maximum = 16 * 1024 * 1024): Prom
   return result;
 }
 
-function htmlAttribute(tag: string, name: string): string | undefined {
-  return new RegExp(`\\b${name}\\s*=\\s*["']([^"']*)["']`, 'i').exec(tag)?.[1];
+type HtmlNode = DefaultTreeAdapterTypes.Node;
+type HtmlElement = DefaultTreeAdapterTypes.Element;
+type HtmlDocument = DefaultTreeAdapterTypes.Document;
+
+function* elements(node: HtmlNode): Generator<HtmlElement> {
+  if ('tagName' in node) yield node;
+  if ('childNodes' in node) {
+    for (const child of node.childNodes) yield* elements(child);
+  }
 }
 
-function assertLocale(markup: string, locale: Locale, route: string) {
-  const htmlTag = /<html\b[^>]*>/i.exec(markup)?.[0] || '';
-  assert(htmlAttribute(htmlTag, 'lang') === locale, `${route}: expected html lang=${locale}.`);
+function htmlAttribute(element: HtmlElement | undefined, name: string): string | undefined {
+  return element?.attrs.find(attribute => attribute.name === name)?.value;
 }
 
-function headingText(markup: string): string {
-  // Only rendered markup counts; a translated title in an RSC script is not SSR UI.
-  const document = markup.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '');
-  const heading = /<h1\b[^>]*>([\s\S]*?)<\/h1>/i.exec(document)?.[1] || '';
-  return heading.replace(/<[^>]*>/g, '').replace(/&#(?:x([\da-f]+)|(\d+));/gi, (_match, hex: string | undefined, decimal: string | undefined) => String.fromCodePoint(parseInt(hex || decimal || '0', hex ? 16 : 10)))
-    .replace(/&quot;/g, '"').replace(/&#x27;|&apos;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+function assertLocale(document: HtmlDocument, locale: Locale, route: string) {
+  const html = [...elements(document)].find(element => element.tagName === 'html');
+  assert(htmlAttribute(html, 'lang') === locale, `${route}: expected html lang=${locale}.`);
+}
+
+function textContent(node: HtmlNode): string {
+  if (node.nodeName === '#text' && 'value' in node) return node.value;
+  if ('tagName' in node && ['script', 'style', 'template'].includes(node.tagName)) return '';
+  return 'childNodes' in node ? node.childNodes.map(textContent).join('') : '';
+}
+
+function headingText(document: HtmlDocument): string {
+  // Script text and template contents cannot masquerade as rendered h1 elements.
+  const heading = [...elements(document)].find(element => element.tagName === 'h1');
+  return heading ? textContent(heading).replace(/\s+/g, ' ').trim() : '';
 }
 
 async function main() {
@@ -74,9 +90,14 @@ async function main() {
   let child: ChildProcess | undefined;
   let logs = '';
   let deadlineTimer: ReturnType<typeof setTimeout> | undefined;
+  let rejectRun: (error: Error) => void = () => {};
   const deadline = new Promise<never>((_resolve, reject) => {
+    rejectRun = reject;
     deadlineTimer = setTimeout(() => { controller.abort(); reject(new Error('Production smoke test exceeded 55 seconds.')); }, 55_000);
   });
+  const interrupt = () => { controller.abort(); rejectRun(new Error('Production smoke test was interrupted.')); };
+  process.once('SIGINT', interrupt);
+  process.once('SIGTERM', interrupt);
   // Reserve five seconds for finally cleanup, even if an I/O operation stalls.
   const watchdog = setTimeout(() => {
     terminate(child, 'SIGKILL');
@@ -92,7 +113,7 @@ async function main() {
     const response = await request(route);
     assert(response.status === status, `${route}: expected HTTP ${status}, received ${response.status}.`);
     assert(response.headers.get('content-type')?.includes('text/html'), `${route}: expected an HTML response.`);
-    return new TextDecoder().decode(await boundedBody(response));
+    return parse(new TextDecoder().decode(await boundedBody(response)));
   };
 
   try {
@@ -131,7 +152,8 @@ async function main() {
           const markup = await document(missing, 404);
           assertLocale(markup, locale, missing);
           assert(headingText(markup) === getDictionary(locale).notFoundTitle, `${missing}: missing or incorrectly localized SSR h1.`);
-          const noindex = (markup.match(/<meta\b[^>]*>/gi) || []).some(tag => htmlAttribute(tag, 'name')?.toLowerCase() === 'robots' && /\bnoindex\b/i.test(htmlAttribute(tag, 'content') || ''));
+          const noindex = [...elements(markup)].some(element => element.tagName === 'meta' && htmlAttribute(element, 'name')?.toLowerCase() === 'robots'
+            && (htmlAttribute(element, 'content') || '').toLowerCase().split(/[\s,]+/).includes('noindex'));
           assert(noindex, `${missing}: missing robots noindex metadata.`);
         }
       }
@@ -161,6 +183,8 @@ async function main() {
     terminate(child, 'SIGKILL');
     if (closed) await Promise.race([closed, pause(1000)]);
     clearTimeout(watchdog);
+    process.removeListener('SIGINT', interrupt);
+    process.removeListener('SIGTERM', interrupt);
   }
 }
 
