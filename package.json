@@ -3,18 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "bun --bun next dev",
-    "build": "bun --bun next build",
-    "start": "bun --bun next start",
-    "lint": "bun --bun next lint"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint src scripts tests --ext .ts,.tsx --max-warnings 0",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "sync:data": "bun scripts/sync-catalog.ts",
+    "check:links": "bun scripts/check-links.ts",
+    "check:metadata": "bun scripts/check-metadata.ts"
   },
   "dependencies": {
-    "next": "^16.1.6",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "next": "^16.3.4",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.9",
+    "@types/bun": "^1.4.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
