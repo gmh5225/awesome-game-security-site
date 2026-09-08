@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { getDictionary } from '@/lib/i18n';
 import { SITE_URL } from '@/lib/seo';
 import { NotFoundDocument } from './_not-found/content';
-import './globals.css';
+import './directory.css';
 
 const d = getDictionary('en');
 export const metadata: Metadata = {

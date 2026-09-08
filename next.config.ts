@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   experimental: {
     globalNotFound: true,
+    turbopackFileSystemCacheForBuild: false,
   },
   async headers() {
     return [{source:'/:path*',headers:[

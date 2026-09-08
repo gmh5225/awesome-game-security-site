@@ -9,7 +9,7 @@ import { getCatalog } from '@/lib/catalog';
 import { formatDate, pageMetadata, SOURCE_URL } from '@/lib/seo';
 import SiteHeader from '@/components/SiteHeader';
 import Icon from '@/components/Icon';
-import '../globals.css';
+import '../directory.css';
 const sans = localFont({ src: '../fonts/GeistVF.woff', variable: '--font-geist-sans', weight: '100 900', display: 'swap' });
 const mono = localFont({ src: '../fonts/GeistMonoVF.woff', variable: '--font-geist-mono', weight: '100 900', display: 'swap' });
 export const viewport: Viewport = { width: 'device-width', initialScale: 1, themeColor: '#101716' };
