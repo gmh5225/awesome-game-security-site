@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: `404 · ${d.notFoundTitle}`,
     description: d.notFoundMessage,
     robots: { index: false, follow: true },
-    alternates: { canonical: null, languages: null },
+    alternates: { canonical: null, languages: {} },
     openGraph: {
       title: `404 · ${d.notFoundTitle}`,
       description: d.notFoundMessage,
