@@ -1,0 +1,71 @@
+name: Sync source catalog
+
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  # Shared with auto-update-nextjs.yml; checkout happens after this lock is acquired.
+  group: maintenance-default-branch
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      TARGET_BRANCH: ${{ github.event.repository.default_branch }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: '1.2.13'
+      - run: bun install --frozen-lockfile
+      - name: Import pinned source and multilingual descriptions
+        run: bun run sync:data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check a bounded rotation of public links
+        run: bun run check:links --limit 40 --concurrency 3
+      - name: Check a bounded rotation of repository metadata
+        run: bun run check:metadata --limit 40 --concurrency 2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: bun run typecheck
+      - run: bun run lint
+      - run: bun test
+      - run: bun run build
+      - name: Smoke-test built localized routes
+        run: bun run test:smoke
+      - name: Commit validated snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          while IFS= read -r -d '' record; do
+            case "${record:3}" in
+              src/data/catalog.json) ;;
+              *) echo '::error::Unexpected file changes outside the catalog snapshot.'; exit 1 ;;
+            esac
+          done < <(git status --porcelain=v1 --untracked-files=all -z)
+
+          if git diff --quiet -- src/data/catalog.json; then
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- src/data/catalog.json
+          git diff --cached --check
+          git commit -m 'chore: sync verified source catalog'
+          # Fast-forward only: reject a changed remote rather than mixing in an
+          # untested pull or rebase after validation.
+          git push origin "HEAD:refs/heads/$TARGET_BRANCH"
