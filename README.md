@@ -46,9 +46,10 @@ bun run dev
 | `bun run test` | Run parser, search, observation history, dictionary, and editorial integrity tests. |
 | `bun run typecheck` | Check TypeScript without emitting application files. |
 | `bun run build` | Produce the production Next.js build. |
+| `bun run test:smoke` | Start the production build temporarily and verify localized home pages, real localized 404 responses, a resource page, RSS, and the share image. |
 | `bun run start` | Serve an existing production build locally. |
 
-Run `bun run typecheck`, `bun run test`, and `bun run build` before deploying a change. Tests require the actual checked-in `src/data/catalog.json`, so missing snapshot data fails rather than silently skipping editorial membership checks.
+Run `bun run typecheck`, `bun run lint`, `bun run test`, `bun run build`, and `bun run test:smoke` before deploying a change. Tests require the actual checked-in `src/data/catalog.json`, so missing snapshot data fails rather than silently skipping editorial membership checks. All three publishing workflows run the production HTTP smoke checks after building.
 
 ## Snapshot and update model
 

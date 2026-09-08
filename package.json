@@ -9,6 +9,7 @@
     "lint": "eslint src scripts tests --ext .ts,.tsx --max-warnings 0",
     "typecheck": "tsc --noEmit",
     "test": "bun test",
+    "test:smoke": "bun scripts/smoke-site.ts",
     "sync:data": "bun scripts/sync-catalog.ts",
     "check:links": "bun scripts/check-links.ts",
     "check:metadata": "bun scripts/check-metadata.ts"

@@ -24,3 +24,5 @@ jobs:
       - run: bun run lint
       - run: bun test
       - run: bun run build
+      - name: Smoke-test built localized routes
+        run: bun run test:smoke

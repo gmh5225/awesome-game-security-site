@@ -51,6 +51,8 @@ jobs:
         run: bun test
       - name: Build with Node.js
         run: bun run build
+      - name: Smoke-test built localized routes
+        run: bun run test:smoke
 
       - name: Commit validated dependency files
         shell: bash
