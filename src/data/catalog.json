@@ -1,7 +1,7 @@
 {
   "version": 1,
   "sourceCommit": "99580749d9c8757317599aa9e9ef6cab4f57ece4",
-  "syncedAt": "2026-09-08T19:05:49.869Z",
+  "syncedAt": "2026-09-08T20:17:02.640Z",
   "baselineAt": "2026-09-08T18:47:01.871Z",
   "resources": [
     {
@@ -994,10 +994,10 @@
         "zh-CN": "该项目是面向 Unreal Engine 5 游戏的调试菜单插件。它将 C++ 模块代码与 Blueprint/UI 资源相结合，提供游戏内调试界面。主要功能包括执行控制台命令、编辑玩法属性和函数、处理本地化，以及保存菜单状态数据。主要面向需要运行时测试与调优工具的游戏开发者和 QA 团队。",
         "zh-TW": "此專案是面向 Unreal Engine 5 遊戲的除錯選單外掛。它將 C++ 模組程式碼與 Blueprint/UI 資源相結合，提供遊戲內除錯介面。主要功能包括執行主控台命令、編輯玩法屬性與函式、處理本地化，以及儲存選單狀態資料。主要面向需要執行階段測試與調校工具的遊戲開發者與 QA 團隊。"
       },
+      "upstreamUpdatedAt": "2026-01-20T23:17:50.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:20.621Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:20.621Z",
-      "upstreamUpdatedAt": "2026-01-20T23:17:50.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:20.621Z"
     },
     {
       "id": "e4e06ede3eaf6a1b",
@@ -1023,10 +1023,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2015-09-01T16:37:08.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:20.685Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:20.685Z",
-      "upstreamUpdatedAt": "2015-09-01T16:37:08.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:20.685Z"
     },
     {
       "id": "6a2c0308f76ec28e",
@@ -1049,10 +1049,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2021-11-06T18:41:51.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:20.971Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:20.971Z",
-      "upstreamUpdatedAt": "2021-11-06T18:41:51.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:20.971Z"
     },
     {
       "id": "08e1983da9c82045",
@@ -1075,10 +1075,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2021-01-02T10:45:23.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:21.023Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:21.023Z",
-      "upstreamUpdatedAt": "2021-01-02T10:45:23.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:21.023Z"
     },
     {
       "id": "279a7fb03a7fa1fe",
@@ -1101,10 +1101,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-07-17T19:28:35.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:21.341Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:21.341Z",
-      "upstreamUpdatedAt": "2026-07-17T19:28:35.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:21.341Z"
     },
     {
       "id": "288b9d7da766e32b",
@@ -1127,10 +1127,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2021-02-05T07:01:38.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:21.409Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:21.409Z",
-      "upstreamUpdatedAt": "2021-02-05T07:01:38.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:21.409Z"
     },
     {
       "id": "a0316c1dc39d53b8",
@@ -1153,10 +1153,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2024-05-26T17:15:36.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:21.679Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:21.679Z",
-      "upstreamUpdatedAt": "2024-05-26T17:15:36.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:21.679Z"
     },
     {
       "id": "e5bdfe9d16a69ab1",
@@ -1179,10 +1179,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2023-10-12T22:59:07.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:21.770Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:21.770Z",
-      "upstreamUpdatedAt": "2023-10-12T22:59:07.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:21.770Z"
     },
     {
       "id": "bfe8a816e6fa1c3c",
@@ -1205,10 +1205,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2023-03-16T14:32:49.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:22.025Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:22.025Z",
-      "upstreamUpdatedAt": "2023-03-16T14:32:49.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:22.025Z"
     },
     {
       "id": "2c50c037ff3f185a",
@@ -1231,10 +1231,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2025-10-05T17:39:53.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:22.110Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:22.110Z",
-      "upstreamUpdatedAt": "2025-10-05T17:39:53.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:22.110Z"
     },
     {
       "id": "76a6d39126a80294",
@@ -1257,10 +1257,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2025-09-14T22:06:36.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:22.378Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:22.378Z",
-      "upstreamUpdatedAt": "2025-09-14T22:06:36.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:22.378Z"
     },
     {
       "id": "a247af5f112bb09c",
@@ -1283,10 +1283,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-08-11T14:41:14.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:22.460Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:22.460Z",
-      "upstreamUpdatedAt": "2026-08-11T14:41:14.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:22.460Z"
     },
     {
       "id": "3de6d87ff6e741e2",
@@ -1309,10 +1309,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "archived",
+      "upstreamUpdatedAt": "2024-05-06T04:10:57.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:22.732Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:22.732Z",
-      "upstreamUpdatedAt": "2024-05-06T04:10:57.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:22.732Z"
     },
     {
       "id": "ffc5cb788f301247",
@@ -1335,10 +1335,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2025-10-03T04:01:00.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:22.802Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:22.802Z",
-      "upstreamUpdatedAt": "2025-10-03T04:01:00.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:22.802Z"
     },
     {
       "id": "084e84e79b59d417",
@@ -1361,10 +1361,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-08-28T04:00:10.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:23.083Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:23.083Z",
-      "upstreamUpdatedAt": "2026-08-28T04:00:10.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:23.083Z"
     },
     {
       "id": "359808d7ce0b692e",
@@ -1404,10 +1404,10 @@
         "zh-CN": "Codex 技能，用于通过 AI 图像生成制作可用于游戏的 2D 精灵图与分层地图，并配合本地后期处理流水线完成清理、拆分、校验，以及导出至 Godot、Unity 或原生 2D 工作流。",
         "zh-TW": "Codex 技能，用於透過 AI 圖像生成製作可用於遊戲的 2D 精靈圖與分層地圖，並搭配本機後處理管線完成清理、拆分、驗證，以及匯出至 Godot、Unity 或原生 2D 工作流程。"
       },
+      "upstreamUpdatedAt": "2026-07-12T19:00:42.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:23.157Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:23.157Z",
-      "upstreamUpdatedAt": "2026-07-12T19:00:42.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:23.157Z"
     },
     {
       "id": "4825aa5d339b9c94",
@@ -1435,10 +1435,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2024-04-23T14:12:07.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:23.445Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:23.445Z",
-      "upstreamUpdatedAt": "2024-04-23T14:12:07.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:23.445Z"
     },
     {
       "id": "e38090f92810822d",
@@ -1464,10 +1464,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2022-11-20T03:43:12.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:23.507Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:23.507Z",
-      "upstreamUpdatedAt": "2022-11-20T03:43:12.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:23.507Z"
     },
     {
       "id": "c62965e7d00a3fab",
@@ -1490,10 +1490,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-08-17T01:50:51.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:23.794Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:23.794Z",
-      "upstreamUpdatedAt": "2026-08-17T01:50:51.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:23.794Z"
     },
     {
       "id": "6f0563e7aa34f8ae",
@@ -1519,10 +1519,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-08-03T16:36:44.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:23.895Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:23.895Z",
-      "upstreamUpdatedAt": "2026-08-03T16:36:44.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:23.895Z"
     },
     {
       "id": "87e2c32b43265d6e",
@@ -1545,10 +1545,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-06-13T13:58:01.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:24.158Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:24.158Z",
-      "upstreamUpdatedAt": "2026-06-13T13:58:01.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:24.158Z"
     },
     {
       "id": "3a265f52adaac3ad",
@@ -1574,10 +1574,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2025-04-24T10:14:08.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:24.270Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:24.270Z",
-      "upstreamUpdatedAt": "2025-04-24T10:14:08.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:24.270Z"
     },
     {
       "id": "8608e0ccaaa2dd9e",
@@ -1605,10 +1605,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-02-08T20:06:58.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:24.518Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:24.518Z",
-      "upstreamUpdatedAt": "2026-02-08T20:06:58.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:24.518Z"
     },
     {
       "id": "6df3004cebacd5db",
@@ -1634,10 +1634,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2020-02-22T14:55:39.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:24.632Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:24.632Z",
-      "upstreamUpdatedAt": "2020-02-22T14:55:39.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:24.632Z"
     },
     {
       "id": "82ac772084c7f30b",
@@ -1663,10 +1663,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2019-11-06T14:08:37.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:24.861Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:24.861Z",
-      "upstreamUpdatedAt": "2019-11-06T14:08:37.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:24.861Z"
     },
     {
       "id": "7654569e455496e4",
@@ -1692,10 +1692,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-04-27T16:24:02.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:24.982Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:24.982Z",
-      "upstreamUpdatedAt": "2026-04-27T16:24:02.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:24.982Z"
     },
     {
       "id": "5a3eab9b1320467d",
@@ -1718,10 +1718,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-09-05T06:10:19.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:25.213Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:25.213Z",
-      "upstreamUpdatedAt": "2026-09-05T06:10:19.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:25.213Z"
     },
     {
       "id": "ef2087cc37383837",
@@ -1744,10 +1744,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-08-02T21:39:51.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:25.351Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:25.351Z",
-      "upstreamUpdatedAt": "2026-08-02T21:39:51.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:25.351Z"
     },
     {
       "id": "714169e261f95ccd",
@@ -1770,10 +1770,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-09-04T09:43:07.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:25.571Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:25.571Z",
-      "upstreamUpdatedAt": "2026-09-04T09:43:07.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:25.571Z"
     },
     {
       "id": "54cbf00860ed9c20",
@@ -1796,10 +1796,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-09-08T00:35:45.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:25.695Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:25.695Z",
-      "upstreamUpdatedAt": "2026-09-08T00:35:45.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:25.695Z"
     },
     {
       "id": "a884bc0fa76d03d5",
@@ -1834,10 +1834,10 @@
         "zh-CN": "本项目是一款 AI 辅助的 WinDbg 扩展，可回答调试问题并自动执行调试器命令。它支持多种模型提供方、持久化对话上下文、带解释的命令执行，以及面向反编译的辅助能力。C++ 代码库还提供 HTTP 与 MCP 风格接口，并配有配套 CLI，便于外部工具集成。该项目面向崩溃分诊、漏洞利用调试以及高级 Windows 安全分析工作流。",
         "zh-TW": "本專案是一款 AI 輔助的 WinDbg 擴充功能，可回答除錯問題並自動執行除錯器命令。它支援多種模型供應商、持久化對話內容、附說明的命令執行，以及面向反編譯的輔助能力。C++ 程式碼庫還提供 HTTP 與 MCP 風格介面，並附有配套 CLI，便於外部工具整合。該專案面向當機分流、漏洞利用除錯以及進階 Windows 安全分析工作流程。"
       },
+      "upstreamUpdatedAt": "2026-07-19T18:39:30.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:26.223Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:26.223Z",
-      "upstreamUpdatedAt": "2026-07-19T18:39:30.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:26.223Z"
     },
     {
       "id": "99a10ca561f32570",
@@ -1863,10 +1863,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2024-08-23T01:54:39.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:26.068Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:26.068Z",
-      "upstreamUpdatedAt": "2024-08-23T01:54:39.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:26.068Z"
     },
     {
       "id": "50260723f8d637f4",
@@ -1889,10 +1889,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2020-06-18T23:47:46.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:26.408Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:26.408Z",
-      "upstreamUpdatedAt": "2020-06-18T23:47:46.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:26.408Z"
     },
     {
       "id": "f92e2e7d27fa0280",
@@ -1915,10 +1915,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "archived",
+      "upstreamUpdatedAt": "2026-03-24T18:38:04.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:26.572Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:26.572Z",
-      "upstreamUpdatedAt": "2026-03-24T18:38:04.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:26.572Z"
     },
     {
       "id": "e124f18167f67738",
@@ -1941,10 +1941,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2025-03-10T14:21:33.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:26.763Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:26.763Z",
-      "upstreamUpdatedAt": "2025-03-10T14:21:33.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:26.763Z"
     },
     {
       "id": "9812bf8e13cbb29e",
@@ -1967,10 +1967,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2020-06-08T21:21:07.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:26.940Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:26.940Z",
-      "upstreamUpdatedAt": "2020-06-08T21:21:07.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:26.940Z"
     },
     {
       "id": "9529ef40071c3a0d",
@@ -1996,10 +1996,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2025-12-26T16:53:04.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:27.125Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:27.125Z",
-      "upstreamUpdatedAt": "2025-12-26T16:53:04.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:27.125Z"
     },
     {
       "id": "62becfd9472420d0",
@@ -2022,10 +2022,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-05-22T19:03:59.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:27.295Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:27.295Z",
-      "upstreamUpdatedAt": "2026-05-22T19:03:59.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:27.295Z"
     },
     {
       "id": "0bb95ad8b48e315c",
@@ -2048,10 +2048,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-03-14T10:19:08.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:27.495Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:27.495Z",
-      "upstreamUpdatedAt": "2026-03-14T10:19:08.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:27.495Z"
     },
     {
       "id": "73ab22b5e0fdd50d",
@@ -2074,10 +2074,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2025-08-21T12:17:21.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:27.669Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:27.669Z",
-      "upstreamUpdatedAt": "2025-08-21T12:17:21.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:27.669Z"
     },
     {
       "id": "495f65794d2d5e5d",
@@ -2100,10 +2100,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2025-08-21T12:17:21.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:27.669Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:27.669Z",
-      "upstreamUpdatedAt": "2025-08-21T12:17:21.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:27.669Z"
     },
     {
       "id": "58f77e492f7c101d",
@@ -2126,10 +2126,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2025-08-21T12:17:21.000Z",
       "metadataCheckedAt": "2026-09-08T19:06:27.669Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:06:27.669Z",
-      "upstreamUpdatedAt": "2025-08-21T12:17:21.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:06:27.669Z"
     },
     {
       "id": "0f0406427d52e633",
@@ -2151,7 +2151,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:09.573Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:09.573Z",
+      "upstreamUpdatedAt": "2025-08-21T12:17:02.000Z"
     },
     {
       "id": "415da1114aa8e644",
@@ -2176,7 +2180,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:09.576Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:09.576Z",
+      "upstreamUpdatedAt": "2026-06-06T10:52:34.000Z"
     },
     {
       "id": "6162efd7558abee8",
@@ -2201,7 +2209,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:09.779Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:09.779Z",
+      "upstreamUpdatedAt": "2022-12-26T16:42:51.000Z"
     },
     {
       "id": "262a5aca02774791",
@@ -2226,7 +2238,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:09.764Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:09.764Z",
+      "upstreamUpdatedAt": "2026-09-01T15:51:38.000Z"
     },
     {
       "id": "8bdb25cacf90a387",
@@ -2248,7 +2264,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:09.976Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:09.976Z",
+      "upstreamUpdatedAt": "2023-02-25T03:59:03.000Z"
     },
     {
       "id": "b7eddbb5468cfb85",
@@ -2270,7 +2290,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:10.054Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:10.054Z",
+      "upstreamUpdatedAt": "2026-07-28T08:15:17.000Z"
     },
     {
       "id": "d16c5cd0acaee533",
@@ -2292,7 +2316,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "archived",
+      "metadataCheckedAt": "2026-09-08T20:17:10.152Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:10.152Z",
+      "upstreamUpdatedAt": "2024-10-30T15:52:32.000Z"
     },
     {
       "id": "ad4d84d919366965",
@@ -2317,7 +2345,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:10.254Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:10.254Z",
+      "upstreamUpdatedAt": "2026-09-02T10:34:35.000Z"
     },
     {
       "id": "16eaa5b876abb60f",
@@ -2342,7 +2374,9 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "metadataCheckedAt": "2026-09-08T20:17:10.302Z",
+      "metadataStatus": "unavailable"
     },
     {
       "id": "526fc6e6be6bd0cc",
@@ -2364,7 +2398,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:10.433Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:10.433Z",
+      "upstreamUpdatedAt": "2025-04-23T13:01:22.000Z"
     },
     {
       "id": "6e2648a26be88c6a",
@@ -2386,7 +2424,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:10.531Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:10.531Z",
+      "upstreamUpdatedAt": "2026-07-20T23:13:01.000Z"
     },
     {
       "id": "1124a81daac586e8",
@@ -2408,7 +2450,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:10.772Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:10.772Z",
+      "upstreamUpdatedAt": "2026-03-16T09:42:55.000Z"
     },
     {
       "id": "7440d9c9b1745aca",
@@ -2433,7 +2479,9 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "metadataCheckedAt": "2026-09-08T20:17:10.649Z",
+      "metadataStatus": "unavailable"
     },
     {
       "id": "419271df7a992718",
@@ -2458,7 +2506,9 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "metadataCheckedAt": "2026-09-08T20:17:10.789Z",
+      "metadataStatus": "unavailable"
     },
     {
       "id": "7e08054fa72cc3b3",
@@ -2480,7 +2530,9 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "metadataCheckedAt": "2026-09-08T20:17:10.976Z",
+      "metadataStatus": "unavailable"
     },
     {
       "id": "9b8ab4ea11bd06f2",
@@ -2505,7 +2557,9 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "metadataCheckedAt": "2026-09-08T20:17:10.933Z",
+      "metadataStatus": "unavailable"
     },
     {
       "id": "c0dbb1f21d45f99f",
@@ -2530,7 +2584,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:11.203Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:11.203Z",
+      "upstreamUpdatedAt": "2026-07-20T10:52:34.000Z"
     },
     {
       "id": "0ad5f8ab8a6e78ac",
@@ -2552,7 +2610,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:11.195Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:11.195Z",
+      "upstreamUpdatedAt": "2026-09-08T19:49:30.000Z"
     },
     {
       "id": "64b476c674bf4713",
@@ -2577,7 +2639,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:11.388Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:11.388Z",
+      "upstreamUpdatedAt": "2026-05-08T13:54:03.000Z"
     },
     {
       "id": "f7b4f6e513efb526",
@@ -2599,7 +2665,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:11.423Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:11.423Z",
+      "upstreamUpdatedAt": "2025-11-18T22:14:28.000Z"
     },
     {
       "id": "63dae665aac0a10a",
@@ -2626,7 +2696,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:11.567Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:11.567Z",
+      "upstreamUpdatedAt": "2022-01-09T10:44:06.000Z"
     },
     {
       "id": "95d593b2f392245a",
@@ -2648,7 +2722,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:11.616Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:11.616Z",
+      "upstreamUpdatedAt": "2023-03-22T16:33:34.000Z"
     },
     {
       "id": "2ed6a0f59054bb0e",
@@ -2670,7 +2748,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:11.864Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:11.864Z",
+      "upstreamUpdatedAt": "2025-01-13T16:09:01.000Z"
     },
     {
       "id": "5c4c755e966fbd56",
@@ -2695,7 +2777,7 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown",
+      "maintenance": "archived",
       "summaries": {
         "de": "Dieses Projekt ist ein One-Click-Shell-Skript zum Bereitstellen dedizierter Source-Engine-Server unter Linux.\nEs automatisiert Umgebungsprüfungen, die Installation von Abhängigkeiten, die SteamCMD-Einrichtung und den Download des Spielservers für Distributionen wie Debian, Ubuntu und CentOS.\nDas Skript hilft außerdem bei der Installation gängiger Source-Server-Komponenten wie Sourcemod und Metamod und bietet Tipps zur Fehlerbehebung typischer Deployment-Probleme.\nDer Hauptzweck ist, die Servereinrichtung für Einsteiger zu vereinfachen und wiederholte manuelle Arbeit für erfahrene Community-Server-Betreiber zu reduzieren.",
         "en": "This project is a one-click shell script for deploying Source engine dedicated servers on Linux.\nIt automates environment checks, dependency installation, SteamCMD setup, and game server download steps for distributions like Debian, Ubuntu, and CentOS.\nThe script also helps install common Source server components such as Sourcemod and Metamod while providing troubleshooting guidance for typical deployment errors.\nIts primary use case is simplifying server setup for beginners and reducing repetitive manual work for experienced community server operators.",
@@ -2707,7 +2789,11 @@
         "ru": "Этот проект — однокликовый shell-скрипт для развёртывания выделенных серверов на движке Source в Linux.\nОн автоматизирует проверку окружения, установку зависимостей, настройку SteamCMD и загрузку игрового сервера для дистрибутивов вроде Debian, Ubuntu и CentOS.\nСкрипт также помогает установить распространённые компоненты Source-серверов, такие как Sourcemod и Metamod, и даёт рекомендации по устранению типичных ошибок развёртывания.\nОсновное назначение — упростить настройку сервера для новичков и сократить повторяющуюся ручную работу для опытных операторов community-серверов.",
         "zh-CN": "本项目是一套用于在 Linux 上部署 Source 引擎专用服务器的一键 shell 脚本。\n它可自动完成环境检查、依赖安装、SteamCMD 配置以及游戏服务器下载等步骤，支持 Debian、Ubuntu、CentOS 等发行版。\n脚本还可协助安装 Sourcemod、Metamod 等常见 Source 服务器组件，并为典型部署错误提供排障指导。\n主要用途是简化新手的服务器搭建流程，同时减少经验丰富的社区服运维人员的重复手工操作。",
         "zh-TW": "本專案是一套用於在 Linux 上部署 Source 引擎專用伺服器的一鍵 shell 腳本。\n它可自動完成環境檢查、相依套件安裝、SteamCMD 設定以及遊戲伺服器下載等步驟，支援 Debian、Ubuntu、CentOS 等發行版。\n腳本亦可協助安裝 Sourcemod、Metamod 等常見 Source 伺服器元件，並為典型部署錯誤提供疑難排解指引。\n主要用途是簡化新手的伺服器架設流程，同時減少經驗豐富的社群伺服器維運人員的重複手動作業。"
-      }
+      },
+      "metadataCheckedAt": "2026-09-08T20:17:11.844Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:11.844Z",
+      "upstreamUpdatedAt": "2022-08-31T06:53:02.000Z"
     },
     {
       "id": "d7771256e54a6ae0",
@@ -2729,7 +2815,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:12.064Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:12.064Z",
+      "upstreamUpdatedAt": "2026-09-07T10:12:07.000Z"
     },
     {
       "id": "96de6cd6f75706a0",
@@ -2754,7 +2844,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:12.150Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:12.150Z",
+      "upstreamUpdatedAt": "2026-05-23T10:21:48.000Z"
     },
     {
       "id": "6d697eb46c1b4e0a",
@@ -2779,7 +2873,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:12.297Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:12.297Z",
+      "upstreamUpdatedAt": "2025-05-12T23:21:11.000Z"
     },
     {
       "id": "c9dca96d1e4dd82d",
@@ -2804,7 +2902,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:12.386Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:12.386Z",
+      "upstreamUpdatedAt": "2026-07-26T05:06:54.000Z"
     },
     {
       "id": "bf6d7eea0aba4c3f",
@@ -2827,7 +2929,7 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown",
+      "maintenance": "active",
       "summaries": {
         "de": "Dieses Projekt ist ein All-in-One-Bundle aus Shell-Skript und komprimiertem Archiv, das eine vorgejailbreakte vphone-iOS-Emulator-Instanz mit vollständig installiertem Bootstrap einrichtet. Es automatisiert das Herunterladen, Zusammenführen und Entpacken der vphone-cli-Umgebung unter macOS und setzt voraus, dass SIP deaktiviert und AMFI umgangen ist. Es eignet sich vor allem für iOS-Sicherheitsforscher und Emulator-Nutzer, die eine einsatzbereite, jailbreakte iOS-Umgebung für App-Analyse und Tests benötigen.",
         "en": "This project is an all-in-one shell script and compressed archive bundle that sets up a pre-jailbroken vphone iOS emulator instance with full bootstrap installed. It automates downloading, merging, and extracting the vphone-cli environment on macOS, requiring SIP disabled and AMFI bypassed. It is mainly useful for iOS security researchers and emulator users who need a ready-to-use jailbroken iOS environment for app analysis and testing.",
@@ -2839,7 +2941,11 @@
         "ru": "Этот проект — комплексный набор shell-скриптов и сжатых архивов для развёртывания заранее джейлброкнутого экземпляра эмулятора iOS vphone с установленным полным bootstrap. Он автоматизирует загрузку, объединение и распаковку окружения vphone-cli на macOS и требует отключённого SIP и обхода AMFI. В первую очередь полезен исследователям безопасности iOS и пользователям эмуляторов, которым нужна готовая джейлброкнутая среда iOS для анализа и тестирования приложений.",
         "zh-CN": "本项目是一套一体化 shell 脚本与压缩归档包，用于搭建已预越狱、并安装完整 bootstrap 的 vphone iOS 模拟器实例。它可在 macOS 上自动完成 vphone-cli 环境的下载、合并与解压，需禁用 SIP 并绕过 AMFI。主要面向需要即用型越狱 iOS 环境进行应用分析与测试的 iOS 安全研究人员及模拟器用户。",
         "zh-TW": "本專案是一套一體化 shell 腳本與壓縮封存套件，用於建置已預先越獄、並安裝完整 bootstrap 的 vphone iOS 模擬器實例。它可在 macOS 上自動完成 vphone-cli 環境的下載、合併與解壓，需停用 SIP 並繞過 AMFI。主要適用於需要即用型越獄 iOS 環境進行應用程式分析與測試的 iOS 安全研究人員及模擬器使用者。"
-      }
+      },
+      "metadataCheckedAt": "2026-09-08T20:17:12.570Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:12.570Z",
+      "upstreamUpdatedAt": "2026-08-27T09:22:49.000Z"
     },
     {
       "id": "49d62c99b5d4f322",
@@ -2861,7 +2967,9 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "metadataCheckedAt": "2026-09-08T20:17:12.512Z",
+      "metadataStatus": "unavailable"
     },
     {
       "id": "12e0fdf042983cbb",
@@ -2883,7 +2991,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:12.676Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:12.676Z",
+      "upstreamUpdatedAt": "2024-09-26T17:52:20.000Z"
     },
     {
       "id": "6ac93044a2374cff",
@@ -2905,7 +3017,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:12.775Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:12.775Z",
+      "upstreamUpdatedAt": "2025-01-03T19:12:13.000Z"
     },
     {
       "id": "365ca10fe96448b8",
@@ -2927,7 +3043,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:12.969Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:12.969Z",
+      "upstreamUpdatedAt": "2024-04-22T22:00:11.000Z"
     },
     {
       "id": "c91293c4ce3fe233",
@@ -2949,7 +3069,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:13.080Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:13.080Z",
+      "upstreamUpdatedAt": "2023-02-04T21:54:42.000Z"
     },
     {
       "id": "62fd950f5c4aff1e",
@@ -2971,7 +3095,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:13.141Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:13.141Z",
+      "upstreamUpdatedAt": "2022-10-02T18:11:32.000Z"
     },
     {
       "id": "45995bbdc53b2ee0",
@@ -2996,7 +3124,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:13.365Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:13.365Z",
+      "upstreamUpdatedAt": "2026-09-08T00:26:40.000Z"
     },
     {
       "id": "5b2e271386ecb062",
@@ -3021,7 +3153,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:13.500Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:13.500Z",
+      "upstreamUpdatedAt": "2025-08-07T19:46:49.000Z"
     },
     {
       "id": "7d6be0f26adb0914",
@@ -3046,7 +3182,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:13.575Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:13.575Z",
+      "upstreamUpdatedAt": "2026-08-02T15:25:17.000Z"
     },
     {
       "id": "cf2bff2f8fa934c5",
@@ -3071,7 +3211,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:13.703Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:13.703Z",
+      "upstreamUpdatedAt": "2020-06-04T13:03:18.000Z"
     },
     {
       "id": "4789b20e32ba0e54",
@@ -3093,7 +3237,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-08T20:17:13.750Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-08T20:17:13.750Z",
+      "upstreamUpdatedAt": "2024-06-23T16:38:18.000Z"
     },
     {
       "id": "11a0158bf9c0b816",
@@ -4638,10 +4786,10 @@
         "zh-CN": "本项目是一个面向游戏与移动应用的跨平台 UI 自动化框架。主要使用 Python 编写，通过图像识别定位 UI 元素，无需向目标进程注入代码。框架提供设备控制 API、可在设备农场上扩展执行、命令行与 Python 接口、HTML 报告，并与 IDE 及对象层级工具集成，以支持更高级的 UI 交互。它主要用于需要在 Android、iOS 与桌面环境中进行可重复端到端自动化的 QA 工程师以及游戏或应用团队。",
         "zh-TW": "本專案是一個面向遊戲與行動應用的跨平台 UI 自動化框架。主要以 Python 撰寫，透過影像辨識定位 UI 元素，無需向目標程序注入程式碼。框架提供裝置控制 API、可在裝置農場上擴展執行、命令列與 Python 介面、HTML 報告，並與 IDE 及物件階層工具整合，以支援更高階的 UI 互動。它主要供需要在 Android、iOS 與桌面環境進行可重複端到端自動化的 QA 工程師以及遊戲或應用團隊使用。"
       },
+      "upstreamUpdatedAt": "2026-03-23T09:16:49.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:42.653Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:42.653Z",
-      "upstreamUpdatedAt": "2026-03-23T09:16:49.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:42.653Z"
     },
     {
       "id": "ce053ee78129241f",
@@ -5929,7 +6077,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.127Z"
     },
     {
       "id": "0fb04f0eefd00923",
@@ -6381,7 +6530,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.128Z"
     },
     {
       "id": "70f4242397f42928",
@@ -7367,10 +7517,10 @@
         "zh-CN": "该项目是一款交互式终端资源监视器，可监控 CPU、内存、磁盘、网络、进程以及可选的 GPU 指标。它采用现代 C++ 编写，提供支持鼠标、进程过滤、可配置视图和主题定制的快速 TUI。代码库跨平台支持 Linux、macOS 以及各类 BSD，并提供灵活的构建与打包选项。面向需要在终端环境中获取实时主机遥测数据的开发者、运维人员和安全工程师。",
         "zh-TW": "此專案是一款互動式終端機資源監視器，可監控 CPU、記憶體、磁碟、網路、行程以及可選的 GPU 指標。它以現代 C++ 撰寫，提供支援滑鼠、行程過濾、可設定檢視與主題自訂的快速 TUI。程式碼庫跨平台支援 Linux、macOS 以及各類 BSD，並提供彈性的建置與打包選項。適合需要在終端機環境中取得即時主機遙測資料的開發者、維運人員與安全工程師。"
       },
+      "upstreamUpdatedAt": "2026-09-08T16:45:24.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:43.554Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:43.554Z",
-      "upstreamUpdatedAt": "2026-09-08T16:45:24.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:43.554Z"
     },
     {
       "id": "485d6efdf06c988c",
@@ -8836,7 +8986,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.125Z"
     },
     {
       "id": "a6e60cfbc9015223",
@@ -9911,10 +10062,10 @@
         "zh-CN": "该项目是一个用 Rust 构建的简洁、数据驱动的游戏引擎。\n它永久免费且开源！\n主要面向游戏开发者、引擎程序员以及从事游戏引擎/源码领域研究的图形研究人员。",
         "zh-TW": "該專案是一個以 Rust 打造、簡潔且資料驅動的遊戲引擎。\n它永久免費且開源！\n主要適用於遊戲開發者、引擎程式設計師，以及從事遊戲引擎／原始碼領域研究的圖形研究人員。"
       },
+      "upstreamUpdatedAt": "2026-09-08T06:45:42.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:45.679Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:45.679Z",
-      "upstreamUpdatedAt": "2026-09-08T06:45:42.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:45.679Z"
     },
     {
       "id": "19b38660e7ed7cc1",
@@ -11000,10 +11151,10 @@
         "zh-CN": "Optick 是一款 C++ 游戏性能分析器，提供轻量级游戏内插桩 SDK，以及基于 WPF 的 GUI 查看器，可采集逐帧 CPU 耗时、GPU 事件（D3D12/Vulkan）、线程调度、上下文切换，并在 Windows 上通过 ETW 获取硬件计数器。\n该 SDK 通过 OPTICK_EVENT/OPTICK_FRAME 等宏支持 Unreal Engine 4/5、Unity 与自研引擎，经 TCP 套接字将采集数据传至查看器，并提供火焰图、按线程时间线、调用栈采样与帧对比分析，还可对接任务跟踪工具（GitHub、Jira）。\n它主要面向游戏开发者与引擎程序员，用于剖析渲染、物理与玩法系统，定位 CPU/GPU 瓶颈。",
         "zh-TW": "Optick 是一款 C++ 遊戲效能分析器，提供輕量級遊戲內插樁 SDK，以及基於 WPF 的 GUI 檢視器，可擷取逐幀 CPU 耗時、GPU 事件（D3D12/Vulkan）、執行緒排程、上下文切換，並在 Windows 上透過 ETW 取得硬體計數器。\n該 SDK 透過 OPTICK_EVENT/OPTICK_FRAME 等巨集支援 Unreal Engine 4/5、Unity 與自研引擎，經 TCP 通訊端將擷取資料傳至檢視器，並提供火焰圖、依執行緒時間軸、呼叫堆疊取樣與幀對比分析，還可整合任務追蹤工具（GitHub、Jira）。\n它主要面向遊戲開發者與引擎程式設計師，用於剖析算繪、物理與玩法系統，找出 CPU/GPU 瓶頸。"
       },
+      "upstreamUpdatedAt": "2024-05-25T15:51:48.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:44.531Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:44.531Z",
-      "upstreamUpdatedAt": "2024-05-25T15:51:48.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:44.531Z"
     },
     {
       "id": "9ef4a362e0757fa2",
@@ -11649,7 +11800,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.125Z"
     },
     {
       "id": "b68ca98ec5585549",
@@ -13065,10 +13217,10 @@
         "zh-CN": "Lightyear 是一个 Rust 库，用于基于 Bevy 游戏引擎构建服务器权威的多人游戏，并通过 WebTransport 支持 WebAssembly。它通过 aeronet 提供与传输层无关的网络通信，支持 UDP、WebSocket、Steam 和 WebTransport，并具备消息通道、数据包分片以及基于 postcard 的序列化。高级复制功能包括带滚回预测的客户端预测、快照插值、确定性输入复制、延迟补偿、带宽管理，以及通过 bevy_replicon 实现的世界复制。该库支持客户端-服务器、点对点以及主机-客户端拓扑，提供 tick 同步的输入处理，并与 Avian、Leafwing 等物理与输入 crate 集成。它面向游戏开发者，以及研究权威多人架构、网络代码设计，以及反作弊与漏洞分析所依赖的客户端-服务器信任边界的安全研究人员。",
         "zh-TW": "Lightyear 是一個 Rust 函式庫，用於以 Bevy 遊戲引擎建構伺服器權威的多人遊戲，並透過 WebTransport 支援 WebAssembly。它透過 aeronet 提供與傳輸層無關的網路通訊，支援 UDP、WebSocket、Steam 和 WebTransport，並具備訊息通道、封包分片以及基於 postcard 的序列化。進階複製功能包括帶回滾的用戶端預測、快照插值、確定性輸入複製、延遲補償、頻寬管理，以及透過 bevy_replicon 實現的世界複製。此函式庫支援用戶端-伺服器、點對點以及主機-用戶端拓撲，提供 tick 同步的輸入處理，並與 Avian、Leafwing 等物理與輸入 crate 整合。它面向遊戲開發者，以及研究權威多人架構、網路程式碼設計，以及反作弊與漏洞分析所依賴的用戶端-伺服器信任邊界的安全研究人員。"
       },
+      "upstreamUpdatedAt": "2026-09-07T05:26:35.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:49.136Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:49.136Z",
-      "upstreamUpdatedAt": "2026-09-07T05:26:35.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:49.136Z"
     },
     {
       "id": "8f798ce3b5c0cb5d",
@@ -13323,10 +13475,10 @@
         "zh-CN": "本项目是一款轻量级实时 CPU 与 GPU 性能分析器，以单个 C 库加基于浏览器的查看器形式提供。它支持多线程插桩、实时命令与日志通道、已保存轨迹回放，以及 GPU 渲染界面下的高刷新率可视化。该分析器适用于主要桌面与移动平台，并可采样 D3D11/12、OpenGL、Vulkan、CUDA 和 Metal 等 API。面向需要在游戏或图形密集型应用中进行低开销性能分析的引擎程序员与性能工程师。",
         "zh-TW": "本專案是一款輕量級即時 CPU 與 GPU 效能分析器，以單一 C 函式庫加上基於瀏覽器的檢視器形式提供。它支援多執行緒插樁、即時命令與日誌通道、已儲存追蹤回放，以及 GPU 渲染介面下的高重新整理率視覺化。該分析器適用於主要桌面與行動平台，並可取樣 D3D11/12、OpenGL、Vulkan、CUDA 和 Metal 等 API。面向需要在遊戲或圖形密集型應用中進行低負擔效能分析的引擎程式設計師與效能工程師。"
       },
+      "upstreamUpdatedAt": "2024-08-28T08:52:43.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:43.690Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:43.690Z",
-      "upstreamUpdatedAt": "2024-08-28T08:52:43.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:43.690Z"
     },
     {
       "id": "8bb7381f25366a0a",
@@ -14256,10 +14408,10 @@
         "zh-CN": "本项目侧重于基于 Fast Binary Encoding 的高级消息协议集成。主要使用 C++ 和 C/C++ 编写，围绕模组开发与内存分析展开。主要面向从事游戏网络/源码相关领域的后端、多人联机与在线游戏开发者。",
         "zh-TW": "本專案著重於基於 Fast Binary Encoding 的高階訊息協定整合。主要以 C++ 與 C/C++ 撰寫，核心圍繞模組開發與記憶體分析。主要適用於從事遊戲網路/原始碼相關領域的後端、多人連線與線上遊戲開發者。"
       },
+      "upstreamUpdatedAt": "2026-05-27T16:10:32.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:47.936Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:47.936Z",
-      "upstreamUpdatedAt": "2026-05-27T16:10:32.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:47.936Z"
     },
     {
       "id": "f7f1da8d9ba2f6b8",
@@ -14664,10 +14816,10 @@
         "zh-CN": "本项目是一个支持 Actor 模型的多用户 Lua 框架，常用于游戏开发。\n它在中国游戏业界被广泛使用，目前也正逐渐扩展到其他行业以及以英语为主的开发者群体。\n它主要适用于从事游戏网络/源码相关工作的后端、多人联机与在线游戏开发者。",
         "zh-TW": "本專案是一個支援 Actor 模型的多用戶 Lua 框架，常用於遊戲開發。\n它在中國遊戲產業被廣泛使用，目前也正逐漸擴展到其他產業以及以英語為主的開發者群體。\n它主要適用於從事遊戲網路/原始碼相關工作的後端、多人連線與線上遊戲開發者。"
       },
+      "upstreamUpdatedAt": "2026-09-02T22:08:33.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:47.647Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:47.647Z",
-      "upstreamUpdatedAt": "2026-09-02T22:08:33.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:47.647Z"
     },
     {
       "id": "83b11db77b54775d",
@@ -14955,10 +15107,10 @@
         "zh-CN": "本项目提供的 cocos2d-x 是一个用于构建 2D 游戏、互动读物、演示程序及其他图形应用的多平台框架。它基于 cocos2d-iphone，但使用 C++ 而非 Objective-C。它主要面向游戏开发者、引擎程序员以及从事游戏引擎/源码相关研究的图形研究者。",
         "zh-TW": "本專案提供的 cocos2d-x 是一個用於建置 2D 遊戲、互動讀物、展示程式及其他圖形應用的多平台框架。它以 cocos2d-iphone 為基礎，但使用 C++ 而非 Objective-C。它主要適用於遊戲開發者、引擎程式設計師，以及從事遊戲引擎／原始碼相關研究的圖形研究者。"
       },
+      "upstreamUpdatedAt": "2025-05-09T03:36:03.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:46.167Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:46.167Z",
-      "upstreamUpdatedAt": "2025-05-09T03:36:03.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:46.167Z"
     },
     {
       "id": "470e335755d10c78",
@@ -15418,7 +15570,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.125Z"
     },
     {
       "id": "050cccbb4d56aeb5",
@@ -15575,7 +15728,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.128Z"
     },
     {
       "id": "f0fb0f48b8ad47a4",
@@ -15851,7 +16005,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.126Z"
     },
     {
       "id": "bd99b63afebe4a42",
@@ -16861,7 +17016,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.131Z"
     },
     {
       "id": "4a97c45e4f432249",
@@ -17672,10 +17828,11 @@
         "zh-CN": "Daedalic Test Automation 是一款面向 Unreal Engine 4 的插件，用于构建并运行自动化集成测试。它在基于 Gauntlet 的测试流程之上扩展了断言、延时、模拟输入、触发器驱动检查、参数化测试以及面向性能的场景。项目主要以 C++ 编写，旨在提升覆盖率、加快回归发现问题的速度，并支持在开发流水线中无人值守执行测试。它面向希望实现可靠 QA 自动化、并对玩法行为进行可重复验证的游戏团队。",
         "zh-TW": "Daedalic Test Automation 是一款面向 Unreal Engine 4 的外掛，用於建置並執行自動化整合測試。它在以 Gauntlet 為基礎的測試流程上擴充了斷言、延遲、模擬輸入、觸發器驅動檢查、參數化測試以及效能導向情境。專案主要以 C++ 撰寫，旨在提升覆蓋率、加快回歸問題偵測，並支援在開發管線中無人值守執行測試。它面向希望實現可靠 QA 自動化、並對遊戲行為進行可重複驗證的遊戲團隊。"
       },
+      "upstreamUpdatedAt": "2022-08-18T11:26:16.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:44.654Z",
       "metadataStatus": "ok",
       "metadataVerifiedAt": "2026-09-08T19:35:44.654Z",
-      "upstreamUpdatedAt": "2022-08-18T11:26:16.000Z"
+      "lastCheckedAt": "2026-09-08T20:17:08.124Z"
     },
     {
       "id": "8e53a9aa10cd8954",
@@ -18818,7 +18975,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.126Z"
     },
     {
       "id": "ea8bb8d5c60aa276",
@@ -18851,10 +19009,10 @@
         "zh-CN": "一门以实验作业形式组织的在线 C++ 性能优化课程，涵盖 CPU 缓存未命中、分支预测失败、向量化、内存访问模式及其他底层性能瓶颈。\n每个实验包含基准测试、结果校验，以及在 Intel Alderlake、AMD Zen3 和 Apple M1 硬件平台上的自动化 CI 测试。\n主要面向系统程序员与游戏开发者，帮助学习实用的 CPU 性能分析与微优化技术。",
         "zh-TW": "一門以實驗作業形式組織的線上 C++ 效能優化課程，涵蓋 CPU 快取未命中、分支預測失敗、向量化、記憶體存取模式及其他底層效能瓶頸。\n每個實驗包含基準測試、結果驗證，以及在 Intel Alderlake、AMD Zen3 與 Apple M1 硬體平台上的自動化 CI 測試。\n主要面向系統程式設計師與遊戲開發者，協助學習實用的 CPU 效能分析與微優化技術。"
       },
+      "upstreamUpdatedAt": "2026-09-07T01:01:10.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:42.676Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:42.676Z",
-      "upstreamUpdatedAt": "2026-09-07T01:01:10.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:42.676Z"
     },
     {
       "id": "42454cdca660c61a",
@@ -23798,7 +23956,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.127Z"
     },
     {
       "id": "d89b61e7e377aa67",
@@ -26394,10 +26553,10 @@
         "zh-CN": "PresentMon 是面向图形密集型应用的游戏性能采集与实时叠加显示系统。它将原生 C++ 数据采集服务与渲染组件及可配置的 UI 栈相结合，用于实时可视化性能指标。项目包含用于跟踪采集、帧时序分析以及基准测试工作流中详细遥测流水线的工具。其主要用途是为游戏开发者、图形工程师和技术分析人员提供性能分析与诊断能力。",
         "zh-TW": "PresentMon 是面向圖形密集型應用的遊戲效能擷取與即時疊加顯示系統。它將原生 C++ 資料收集服務與渲染元件及可設定的 UI 堆疊相結合，用以即時視覺化效能指標。專案包含用於追蹤擷取、影格時序分析，以及基準測試工作流程中詳細遙測管線的工具。其主要用途是為遊戲開發者、圖形工程師與技術分析人員提供效能剖析與診斷能力。"
       },
+      "upstreamUpdatedAt": "2026-09-07T06:44:34.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:43.184Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:43.184Z",
-      "upstreamUpdatedAt": "2026-09-07T06:44:34.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:43.184Z"
     },
     {
       "id": "ece012d6154910c5",
@@ -26499,10 +26658,10 @@
         "zh-CN": "基于 Scala/JVM 的负载测试框架，采用构建于 Akka 与 Netty 之上的异步非阻塞架构，以极少的线程开销模拟高并发。它提供 Scala DSL，用于定义覆盖 HTTP、WebSocket、SSE、JMS、gRPC 和 MQTT 等协议的用户场景，并以断言作为通过/失败判定标准。测试结果会汇总为详细的 HTML 报告，包含百分位延迟分布、每秒请求数时间线以及错误明细。",
         "zh-TW": "基於 Scala/JVM 的負載測試框架，採用建置於 Akka 與 Netty 之上的非同步非阻塞架構，以極少的執行緒開銷模擬高並發。它提供 Scala DSL，用於定義涵蓋 HTTP、WebSocket、SSE、JMS、gRPC 與 MQTT 等通訊協定的使用者場景，並以斷言作為通過/失敗判定標準。測試結果會彙整為詳細的 HTML 報告，包含百分位延遲分布、每秒請求數時間軸以及錯誤明細。"
       },
+      "upstreamUpdatedAt": "2026-09-07T09:35:39.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:43.145Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:43.145Z",
-      "upstreamUpdatedAt": "2026-09-07T09:35:39.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:43.145Z"
     },
     {
       "id": "9b6a74e342a22977",
@@ -26990,7 +27149,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.128Z"
     },
     {
       "id": "895fac5af758fb40",
@@ -27222,7 +27382,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.126Z"
     },
     {
       "id": "929da91f7b80e157",
@@ -28478,7 +28639,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.129Z"
     },
     {
       "id": "6837528737a4d105",
@@ -32521,7 +32683,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.129Z"
     },
     {
       "id": "1f7b27acbd9c1c69",
@@ -34221,7 +34384,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.127Z"
     },
     {
       "id": "8e564bc1c250e765",
@@ -39914,7 +40078,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.129Z"
     },
     {
       "id": "70ce54065442eea3",
@@ -40360,7 +40525,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.125Z"
     },
     {
       "id": "3208331ce5660f96",
@@ -40407,7 +40573,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.123Z"
     },
     {
       "id": "46dbdfef3a50cbf4",
@@ -41058,7 +41225,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.127Z"
     },
     {
       "id": "4bd3c28606930090",
@@ -43998,7 +44166,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.124Z"
     },
     {
       "id": "1dfbadf65d31ec63",
@@ -44356,10 +44525,10 @@
         "zh-CN": "本项目是收录于游戏引擎 / 源码类别下的仓库，核心内容围绕 godot。\n它以 Godot 为中心。\n主要面向从事游戏引擎 / 源码领域的游戏开发者、引擎程序员和图形研究人员。",
         "zh-TW": "本專案是收錄於遊戲引擎 / 原始碼類別下的儲存庫，核心內容圍繞 godot。\n它以 Godot 為中心。\n主要面向從事遊戲引擎 / 原始碼領域的遊戲開發者、引擎程式設計師與圖形研究人員。"
       },
+      "upstreamUpdatedAt": "2026-09-08T17:14:08.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:45.180Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:45.180Z",
-      "upstreamUpdatedAt": "2026-09-08T17:14:08.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:45.180Z"
     },
     {
       "id": "354590fb0089209c",
@@ -44397,10 +44566,10 @@
         "zh-CN": "本项目专注于 Godot 的演示与模板项目。\n大部分演示已导出至 GitHub Pages。\n主要面向游戏开发、逆向工程以及游戏开发/源码相关工具构建领域的开发者。",
         "zh-TW": "本專案專注於 Godot 的示範與範本專案。\n大部分示範已匯出至 GitHub Pages。\n主要面向遊戲開發、逆向工程以及遊戲開發/原始碼相關工具構建領域的開發者。"
       },
+      "upstreamUpdatedAt": "2026-09-08T19:33:11.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:44.988Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:44.988Z",
-      "upstreamUpdatedAt": "2026-09-08T19:33:11.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:44.988Z"
     },
     {
       "id": "e12c75aaf73b196e",
@@ -44593,10 +44762,10 @@
         "zh-CN": "本项目是 Orbit，由 Google 开发的面向原生应用的独立 C++ 性能分析器。它在运行时动态插桩函数，无需修改源代码或重新编译，可提供函数耗时、调用图、线程调度、上下文切换分析以及内存跟踪。该工具采用客户端-服务器架构，支持在 Linux 上进行远程分析，并在 Windows 上可视化结果。它面向游戏开发者和系统程序员，用于分析复杂的原生应用并定位性能回退。",
         "zh-TW": "本專案是 Orbit，由 Google 開發、面向原生應用程式的獨立 C++ 效能分析器。它在執行時動態對函式進行插樁，無需修改原始碼或重新編譯，可提供函式耗時、呼叫圖、執行緒排程、上下文切換分析以及記憶體追蹤。此工具採用用戶端-伺服器架構，支援在 Linux 上進行遠端分析，並在 Windows 上視覺化結果。它面向遊戲開發者與系統程式設計師，用於分析複雜的原生應用程式並找出效能倒退。"
       },
+      "upstreamUpdatedAt": "2025-01-31T10:36:00.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:44.163Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:44.163Z",
-      "upstreamUpdatedAt": "2025-01-31T10:36:00.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:44.163Z"
     },
     {
       "id": "9e14d17beb221f1e",
@@ -47726,7 +47895,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.130Z"
     },
     {
       "id": "0d0008bc357afec5",
@@ -48677,10 +48847,10 @@
         "zh-CN": "个人游戏开发笔记合集，将多年工作室内部入门资料整理成可浏览的文档站点。大量覆盖 Unreal Engine 4，包括环境搭建、玩法编程、网络与复制、渲染、着色器、性能优化与编辑器工具，并涵盖 Houdini、图形学理论，以及 C++、Python 等相关工具的编程速查表。笔记还包含 Windows 内部机制、调试流程与开发者工具指引。内容基于 Markdown，适合用 MkDocs 或 Obsidian 等方式本地浏览。面向需要实用 UE4 与图形开发参考资料的游戏程序员与技术美术。",
         "zh-TW": "個人遊戲開發筆記合集，將多年工作室內部入門資料整理成可瀏覽的文件網站。大量涵蓋 Unreal Engine 4，包括環境建置、玩法程式設計、網路與複製、算繪、著色器、效能最佳化與編輯器工具，並涵蓋 Houdini、圖形學理論，以及 C++、Python 等相關工具的程式設計速查表。筆記亦包含 Windows 內部機制、除錯流程與開發者工具指引。內容以 Markdown 為基礎，適合以 MkDocs 或 Obsidian 等方式本機瀏覽。面向需要實用 UE4 與圖形開發參考資料的遊戲程式設計師與技術美術。"
       },
+      "upstreamUpdatedAt": "2026-08-09T04:32:58.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:47.243Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:47.243Z",
-      "upstreamUpdatedAt": "2026-08-09T04:32:58.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:47.243Z"
     },
     {
       "id": "13c3ae1e8d9213f0",
@@ -51956,7 +52126,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.132Z"
     },
     {
       "id": "5cb8e7601fbceedf",
@@ -52463,7 +52634,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.132Z"
     },
     {
       "id": "8e6e5542beff99a9",
@@ -53250,7 +53422,8 @@
         "ru": "Этот проект сосредоточен на копии Dead by Daylight.\nОн в основном написан на C++ и C/C++ и посвящён физике, анимации и пайплайнам ассетов.\nОн в первую очередь полезен разработчикам игр, специалистам по реверс-инжинирингу и создателям инструментов, работающим в области разработки игр / исходного кода.",
         "zh-CN": "本项目聚焦于 Dead by Daylight 的拷贝复刻。\n主要使用 C++ 与 C/C++ 编写，围绕物理、动画与资源管线展开。\n主要面向从事游戏开发/源码相关工作的游戏开发者、逆向工程师与工具开发者。",
         "zh-TW": "本專案聚焦於 Dead by Daylight 的拷貝複刻。\n主要使用 C++ 與 C/C++ 撰寫，圍繞物理、動畫與資源管線展開。\n主要面向從事遊戲開發/原始碼相關工作的遊戲開發者、逆向工程師與工具開發者。"
-      }
+      },
+      "lastCheckedAt": "2026-09-08T20:17:08.123Z"
     },
     {
       "id": "eb8e14eb4f40fa54",
@@ -54766,7 +54939,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.123Z"
     },
     {
       "id": "c468c5f4e7ca0e4a",
@@ -54931,7 +55105,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.132Z"
     },
     {
       "id": "af8a421244328769",
@@ -61583,10 +61758,10 @@
         "zh-CN": "本项目是一套持续维护的实用免费 Unity 脚本、库、插件与扩展合集。\n该列表采用 GNU 通用公共许可证 v3.0，且仅适用于本仓库。\n它主要面向在游戏引擎 / 游戏引擎插件：Unity 领域工作的游戏开发者、引擎程序员以及图形研究者。",
         "zh-TW": "本專案是一套持續維護的實用免費 Unity 腳本、函式庫、外掛與擴充合集。\n此清單採用 GNU 通用公共授權條款 v3.0，且僅適用於本存放庫。\n它主要面向在遊戲引擎 / 遊戲引擎外掛：Unity 領域工作的遊戲開發者、引擎程式設計師以及圖形研究者。"
       },
+      "upstreamUpdatedAt": "2025-08-20T16:06:43.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:46.727Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:46.727Z",
-      "upstreamUpdatedAt": "2025-08-20T16:06:43.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:46.727Z"
     },
     {
       "id": "71a55baee2f55683",
@@ -63903,7 +64078,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.132Z"
     },
     {
       "id": "5d742124637e9b86",
@@ -65403,7 +65579,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.130Z"
     },
     {
       "id": "82c5e40a980285fd",
@@ -68126,7 +68303,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.129Z"
     },
     {
       "id": "a970deffe58da3dc",
@@ -70689,10 +70867,10 @@
         "zh-CN": "本项目是一款游戏引擎，也是面向 Python 与 C++ 程序的 3D 渲染与游戏开发框架。\nPanda3D 开源且可免费用于任何用途（包括商业用途），得益于其宽松的许可协议。\n它主要适用于从事游戏引擎/源码相关工作的游戏开发者、引擎程序员以及图形研究人员。",
         "zh-TW": "本專案是一款遊戲引擎，也是面向 Python 與 C++ 程式的 3D 渲染與遊戲開發框架。\nPanda3D 開源且可免費用於任何用途（包括商業用途），得益於其寬鬆的授權條款。\n它主要適用於從事遊戲引擎／原始碼相關工作的遊戲開發者、引擎程式設計師以及圖形研究人員。"
       },
+      "upstreamUpdatedAt": "2026-07-28T20:40:18.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:46.233Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:46.233Z",
-      "upstreamUpdatedAt": "2026-07-28T20:40:18.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:46.233Z"
     },
     {
       "id": "d90e32ba3c55c1d0",
@@ -73845,10 +74023,10 @@
         "zh-CN": "本项目是一个 Unity C# 设计模式库，通过可运行的场景演示经典面向对象模式以及游戏相关模式。\n它实现了全部 23 种 GoF 模式以及若干游戏编程模式，每种模式均配有结构示例与实际应用场景。\n仓库按模式类别组织，并包含图示、示例脚本和 Unity 场景，便于动手学习。\n面向希望在真实游戏代码中应用可维护架构模式的 Unity 开发者。",
         "zh-TW": "本專案是一個 Unity C# 設計模式庫，透過可執行的場景演示經典物件導向模式以及遊戲相關模式。\n它實作了全部 23 種 GoF 模式以及若干遊戲程式設計模式，每種模式均附有結構範例與實際應用情境。\n倉庫依模式類別組織，並包含圖示、範例腳本與 Unity 場景，便於動手學習。\n面向希望在真實遊戲程式碼中套用可維護架構模式的 Unity 開發者。"
       },
+      "upstreamUpdatedAt": "2020-02-06T05:00:57.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:46.571Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:46.571Z",
-      "upstreamUpdatedAt": "2020-02-06T05:00:57.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:46.571Z"
     },
     {
       "id": "6010e68d6b7949d5",
@@ -73883,10 +74061,10 @@
         "zh-CN": "本项目是一个用于构建事件驱动 TCP、UDP 与 HTTP 服务的高性能 C++11 网络库。\n它提供非阻塞服务端与客户端组件、线程安全的事件循环、定时器、异步 DNS，以及面向连接的实用工具层。\n代码库基于 libevent 构建，并包含面向生产环境的工具、基准测试，以及面向 Memcached、NSQ 等系统的相关客户端。\n它主要面向需要可扩展、低延迟网络服务的后端与基础设施开发者。",
         "zh-TW": "本專案是一個用於建置事件驅動 TCP、UDP 與 HTTP 服務的高效能 C++11 網路函式庫。\n它提供非阻塞伺服器與客戶端元件、執行緒安全的事件迴圈、計時器、非同步 DNS，以及面向連線的實用工具層。\n程式碼庫以 libevent 為基礎建置，並包含著重生產環境的工具、效能基準測試，以及面向 Memcached、NSQ 等系統的相關用戶端。\n它主要面向需要可擴充、低延遲網路服務的後端與基礎設施開發者。"
       },
+      "upstreamUpdatedAt": "2024-04-10T11:09:16.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:48.191Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:48.191Z",
-      "upstreamUpdatedAt": "2024-04-10T11:09:16.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:48.191Z"
     },
     {
       "id": "6b7194d051d0a0aa",
@@ -75570,10 +75748,10 @@
         "zh-CN": "本项目为 Recast & Detour，业界标准的游戏导航网格工具集。Recast 通过对任意三维几何体进行体素化、轮廓追踪与多边形网格简化来生成导航网格。Detour 在生成的导航网格上提供寻路、路径平滑与局部转向，并支持离网格连接、区域代价以及基于分块的流式加载。该 C++ 库已被众多商业游戏引擎与游戏产品采用，面向需要实现 AI 导航与寻路系统的游戏开发者。",
         "zh-TW": "本專案為 Recast & Detour，業界標準的遊戲導航網格工具集。Recast 透過對任意三維幾何體進行體素化、輪廓追蹤與多邊形網格簡化來產生導航網格。Detour 在產生的導航網格上提供尋路、路徑平滑與局部轉向，並支援離網格連線、區域代價以及基於分塊的串流載入。此 C++ 函式庫已為眾多商業遊戲引擎與遊戲作品所採用，面向需要實作 AI 導航與尋路系統的遊戲開發者。"
       },
+      "upstreamUpdatedAt": "2026-02-27T07:17:13.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:47.047Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:47.047Z",
-      "upstreamUpdatedAt": "2026-02-27T07:17:13.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:47.047Z"
     },
     {
       "id": "1d04075bf4b4a09f",
@@ -75747,7 +75925,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.131Z"
     },
     {
       "id": "473404a1c2c59a78",
@@ -76550,7 +76729,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.127Z"
     },
     {
       "id": "06a05aec39031485",
@@ -78563,7 +78743,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.132Z"
     },
     {
       "id": "8244a510706aa529",
@@ -81918,10 +82099,10 @@
         "zh-CN": "本项目为 KCP，一个用 C 实现的快速可靠 ARQ（自动重传请求）协议，可在 UDP 上提供类似 TCP 的可靠性。相较 TCP，它以多占用 10–20% 带宽换取 30–40% 更低的延迟，通过激进重传、选择性 ACK 与快速恢复实现，且无 TCP 拥塞控制的开销。该单文件 C 库与具体协议无关，可运行于任意传输层之上。面向需要构建低延迟实时多人联网的游戏开发者与网络程序员。",
         "zh-TW": "本專案為 KCP，一個以 C 實作的快速可靠 ARQ（自動重傳請求）協定，可在 UDP 上提供類似 TCP 的可靠性。相較 TCP，它以多佔用 10–20% 頻寬換取 30–40% 更低的延遲，透過積極重傳、選擇性 ACK 與快速復原實現，且無 TCP 壅塞控制的開銷。此單檔案 C 函式庫與具體協定無關，可運行於任意傳輸層之上。面向需要建置低延遲即時多人連網的遊戲開發者與網路程式設計師。"
       },
+      "upstreamUpdatedAt": "2026-06-23T06:21:10.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:49.494Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:49.494Z",
-      "upstreamUpdatedAt": "2026-06-23T06:21:10.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:49.494Z"
     },
     {
       "id": "e4809f86cc959b33",
@@ -82269,10 +82450,10 @@
         "zh-CN": "本项目是 Socket.IO，面向 Node.js 与浏览器的实时双向事件通信库。它以 WebSocket 作为主要传输方式，并在需要时自动回退到 HTTP 长轮询，提供可靠的实时消息传递，支持自动重连、基于命名空间的多路复用、房间广播以及二进制数据等功能。该 JavaScript/TypeScript 库同时包含服务端与客户端组件。它面向构建多人游戏、聊天系统和实时仪表盘等实时应用的 Web 开发者。",
         "zh-TW": "本專案是 Socket.IO，面向 Node.js 與瀏覽器的即時雙向事件通訊函式庫。它以 WebSocket 作為主要傳輸方式，並在需要時自動回退到 HTTP 長輪詢，提供可靠的即時訊息傳遞，支援自動重連、基於命名空間的多路複用、房間廣播以及二進位資料等功能。該 JavaScript/TypeScript 函式庫同時包含伺服器端與用戶端元件。它面向建置多人遊戲、聊天系統與即時儀表板等即時應用的 Web 開發者。"
       },
+      "upstreamUpdatedAt": "2026-09-08T09:36:50.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:48.661Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:48.661Z",
-      "upstreamUpdatedAt": "2026-09-08T09:36:50.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:48.661Z"
     },
     {
       "id": "b1e8d975b0edd457",
@@ -86160,7 +86341,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.130Z"
     },
     {
       "id": "49029756668f7f1b",
@@ -86397,7 +86579,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.127Z"
     },
     {
       "id": "6607d49d10b23d10",
@@ -87741,10 +87924,10 @@
         "zh-CN": "本项目专注于服务器框架。\n它为分布式多人游戏和服务端应用提供基础开发框架。\n主要适用于从事游戏网络/源代码相关领域的后端、多人游戏与在线游戏开发者。",
         "zh-TW": "本專案專注於伺服器框架。\n它為分散式多人遊戲與伺服器端應用提供基礎開發框架。\n主要適用於從事遊戲網路/原始碼相關領域的後端、多人遊戲與線上遊戲開發者。"
       },
+      "upstreamUpdatedAt": "2026-07-22T20:40:01.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:49.001Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:49.001Z",
-      "upstreamUpdatedAt": "2026-07-22T20:40:01.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:49.001Z"
     },
     {
       "id": "893ac9eb5cf70b6d",
@@ -89006,10 +89189,10 @@
         "zh-CN": "本项目为 uWebSockets，一款用 C++ 编写并提供 Node.js 绑定的高性能 WebSocket 与 HTTP 服务器库。它以极低开销实现 WebSocket 协议，单机可达数百万连接，延迟达微秒级。库支持通过 OpenSSL/BoringSSL 启用 TLS、HTTP 路由、发布/订阅消息以及按套接字的背压处理。面向游戏服务器开发者与构建高吞吐实时网络服务的后端工程师。",
         "zh-TW": "本專案為 uWebSockets，一款以 C++ 撰寫並提供 Node.js 繫結的高效能 WebSocket 與 HTTP 伺服器函式庫。它以極低開銷實作 WebSocket 協定，單機可達數百萬連線，延遲達微秒級。函式庫支援透過 OpenSSL/BoringSSL 啟用 TLS、HTTP 路由、發布/訂閱訊息以及依通訊端的背壓處理。面向遊戲伺服器開發者與建置高吞吐量即時網路服務的後端工程師。"
       },
+      "upstreamUpdatedAt": "2026-09-03T20:57:07.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:48.470Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:48.470Z",
-      "upstreamUpdatedAt": "2026-09-03T20:57:07.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:48.470Z"
     },
     {
       "id": "a41707f9738f9888",
@@ -89155,10 +89338,10 @@
         "zh-CN": "本项目是 Unity 引擎与编辑器的官方 C# 参考源码。它公开了 Unity 托管侧实现的大部分内容，便于开发者查阅 API 行为与编辑器内部工作流程。该仓库以 C# 为主，并镜像 Unity 内部源码树布局，但以仅供参考的许可协议分发。主要用于理解引擎、调试、工具研究，以及对 Unity 内部机制的深入技术研究。",
         "zh-TW": "本專案是 Unity 引擎與編輯器的官方 C# 參考原始碼。它公開了 Unity 受控端實作的大部分內容，方便開發者檢視 API 行為與編輯器內部工作流程。此儲存庫以 C# 為主，並鏡像 Unity 內部原始碼樹配置，但以僅供參考的授權條款散佈。主要用於理解引擎、除錯、工具研究，以及對 Unity 內部機制的深入技術研究。"
       },
+      "upstreamUpdatedAt": "2026-09-07T22:55:32.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:45.625Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:45.625Z",
-      "upstreamUpdatedAt": "2026-09-07T22:55:32.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:45.625Z"
     },
     {
       "id": "57c7ce23ee5475cb",
@@ -89792,10 +89975,10 @@
         "zh-CN": "本项目是一个跨平台游戏网络传输库，通过面向连接的 API 提供可靠与不可靠消息传递。\n主要使用 C++ 实现并提供 C 接口，支持 CMake 构建，以及桌面、移动和主机环境。\n主要特性包括分片与重组、基于 ack 向量的高级数据包可靠性、带宽通道控制，以及详细的网络仿真工具。\n还提供加密传输与支持 NAT 穿透的点对点连接，适用于多人游戏后端与引擎网络。",
         "zh-TW": "本專案是一個跨平台遊戲網路傳輸函式庫，透過面向連線的 API 提供可靠與不可靠訊息傳遞。\n主要以 C++ 實作並提供 C 介面，支援 CMake 建置，以及桌面、行動與主機環境。\n主要功能包括分片與重組、基於 ack 向量的進階封包可靠性、頻寬通道控制，以及詳細的網路模擬工具。\n亦提供加密傳輸與支援 NAT 穿透的點對點連線，適合多人遊戲後端與引擎網路。"
       },
+      "upstreamUpdatedAt": "2026-08-27T01:04:25.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:47.505Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:47.505Z",
-      "upstreamUpdatedAt": "2026-08-27T01:04:25.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:47.505Z"
     },
     {
       "id": "f139e154510bd318",
@@ -90307,7 +90490,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.125Z"
     },
     {
       "id": "e4c52ac1aaa027ce",
@@ -90523,7 +90707,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.125Z"
     },
     {
       "id": "ff0071d372835154",
@@ -91755,7 +91940,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.128Z"
     },
     {
       "id": "961038dd5f84df3b",
@@ -92383,7 +92569,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.129Z"
     },
     {
       "id": "1486d690c1e1f4f5",
@@ -93560,10 +93747,10 @@
         "zh-CN": "本项目是 Tracy，一款面向 C++ 应用程序（包括游戏）的实时帧性能分析器。它提供带区域标记的 CPU 性能分析、针对 OpenGL/Vulkan/Direct3D 的 GPU 性能分析、内存分配追踪、锁竞争分析、上下文切换可视化以及源代码标注。该分析器由嵌入应用程序的轻量级客户端库和独立查看器组成，可展示时间线、火焰图和统计视图。面向希望优化帧时间并定位实时应用瓶颈的游戏开发者与性能工程师。",
         "zh-TW": "本專案是 Tracy，一款面向 C++ 應用程式（包括遊戲）的即時幀效能分析器。它提供帶區域標記的 CPU 效能分析、針對 OpenGL/Vulkan/Direct3D 的 GPU 效能分析、記憶體配置追蹤、鎖競爭分析、上下文切換視覺化以及原始碼標註。該分析器由嵌入應用程式的輕量級用戶端函式庫和獨立檢視器組成，可展示時間軸、火焰圖和統計檢視。面向希望優化幀時間並找出即時應用瓶頸的遊戲開發者與效能工程師。"
       },
+      "upstreamUpdatedAt": "2026-09-08T16:15:36.000Z",
       "metadataCheckedAt": "2026-09-08T19:35:44.108Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:44.108Z",
-      "upstreamUpdatedAt": "2026-09-08T16:15:36.000Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:44.108Z"
     },
     {
       "id": "e0529ef95ab7ca79",
@@ -97021,7 +97208,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-08T20:17:08.124Z"
     },
     {
       "id": "d06a0d81daca1a96",
