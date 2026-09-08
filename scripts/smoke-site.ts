@@ -107,7 +107,7 @@ async function main() {
   let closed: Promise<void> | undefined;
   const request = (route: string) => {
     assert(route.startsWith('/') && !route.startsWith('//'), 'Smoke requests must remain local.');
-    return fetch(`${ORIGIN}${route}`, { redirect: 'manual', signal: controller.signal, headers: { Accept: 'text/html,application/rss+xml,image/png', 'User-Agent': 'AGS-Local-Production-Smoke/1.0' } });
+    return fetch(`${ORIGIN}${route}`, { redirect: 'manual', signal: controller.signal, headers: { Accept: 'text/html,text/css,application/rss+xml,image/png', 'User-Agent': 'AGS-Local-Production-Smoke/1.0' } });
   };
   const document = async (route: string, status: number) => {
     const response = await request(route);
@@ -147,7 +147,27 @@ async function main() {
       assert(!getResource(missingId), 'The smoke-test missing resource ID unexpectedly exists.');
       for (const locale of LOCALES) {
         const homepage = `/${locale}`;
-        assertLocale(await document(homepage, 200), locale, homepage);
+        const homepageDocument = await document(homepage, 200);
+        assertLocale(homepageDocument, locale, homepage);
+        if (locale === 'en') {
+          const stylesheets = new Set<string>();
+          for (const element of elements(homepageDocument)) {
+            if (element.tagName !== 'link' || !(htmlAttribute(element, 'rel') || '').toLowerCase().split(/\s+/).includes('stylesheet')) continue;
+            const href = htmlAttribute(element, 'href');
+            if (!href) continue;
+            const url = new URL(href, ORIGIN);
+            if (url.origin === ORIGIN && !url.username && !url.password && url.pathname.startsWith('/_next/static/')) stylesheets.add(`${url.pathname}${url.search}`);
+          }
+          assert(stylesheets.size > 0, '/en: missing same-origin Next.js stylesheets.');
+          const css: string[] = [];
+          for (const route of stylesheets) {
+            const response = await request(route);
+            assert(response.status === 200 && response.headers.get('content-type')?.toLowerCase().includes('text/css'), `${route}: expected HTTP 200 CSS.`);
+            css.push(new TextDecoder().decode(await boundedBody(response, 4 * 1024 * 1024)));
+          }
+          const combined = css.join('\n');
+          assert(combined.includes('.directory-shell') && combined.includes('.site-header'), '/en: linked CSS is missing the current directory layout or site header.');
+        }
         for (const missing of [`/${locale}/resources/${missingId}`, `/${locale}/smoke-missing-page`]) {
           const markup = await document(missing, 404);
           assertLocale(markup, locale, missing);
@@ -170,7 +190,7 @@ async function main() {
       assert(og.status === 200 && og.headers.get('content-type')?.includes('image/png'), '/opengraph-image: expected HTTP 200 PNG.');
       const png = await boundedBody(og, 4 * 1024 * 1024);
       assert(png.length > 100 && [137, 80, 78, 71, 13, 10, 26, 10].every((byte, index) => png[index] === byte), '/opengraph-image: invalid PNG signature.');
-      console.log('Production smoke passed: 10 localized homepages, 20 localized HTTP 404 pages with SSR h1/noindex, known resource, RSS, and OG image.');
+      console.log('Production smoke passed: 10 localized homepages, current linked directory CSS, 20 localized HTTP 404 pages with SSR h1/noindex, known resource, RSS, and OG image.');
     })(), deadline]);
   } catch (error) {
     if (logs) console.error(`Next.js startup/output tail: ${logs.slice(-1200).replace(/\s+/g, ' ').trim()}`);
