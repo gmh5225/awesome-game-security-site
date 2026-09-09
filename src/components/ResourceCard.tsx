@@ -4,6 +4,7 @@ import { getEditorial, summaryInfo } from '@/lib/editorial';
 import type { Locale, Resource } from '@/lib/types';
 import Icon from './Icon';
 import { SaveButton } from './ResourceActions';
+import Tooltip from './Tooltip';
 
 export default function ResourceCard({ resource, locale, index, editorial: showEditorial = false }: { resource: Resource; locale: Locale; index?: number; editorial?: boolean }) {
   const d = getDictionary(locale);
@@ -23,12 +24,12 @@ export default function ResourceCard({ resource, locale, index, editorial: showE
         <dt className="resource-field-label" lang="en">Desc:</dt>
         <dd className="resource-field-value">
           <p className="resource-description" lang={summary.language}>{summary.text}</p>
-          {!editorial && <p className="source-provenance" title={summary.language!==locale?d.translationFallback:d.sourceNote}>{summary.provenance==='upstream'?d.sourceGenerated:d.originalLanguage}{summary.language&&summary.language!==locale?' · EN':''}</p>}
+          {!editorial && <p className="source-provenance"><Tooltip content={summary.language!==locale?d.translationFallback:d.sourceNote}><span className="tooltip-trigger" tabIndex={0}>{summary.provenance==='upstream'?d.sourceGenerated:d.originalLanguage}{summary.language&&summary.language!==locale?' · EN':''}</span></Tooltip></p>}
         </dd>
       </div>
       <div className="resource-field">
         <dt className="resource-field-label" lang="en">URL:</dt>
-        <dd className="resource-field-value"><a className="url-text" href={sourceUrl} target="_blank" rel="noopener noreferrer" title={d.visitResource}>{sourceUrl}</a></dd>
+        <dd className="resource-field-value"><a className="url-text" href={sourceUrl} target="_blank" rel="noopener noreferrer" aria-label={`${d.visitResource}: ${sourceUrl}`}>{sourceUrl}</a></dd>
       </div>
       <div className="resource-field">
         <dt className="resource-field-label" lang="en">Tags:</dt>

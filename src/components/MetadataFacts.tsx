@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import { getDictionary, localizedTag } from '@/lib/i18n';
 import { formatDate } from '@/lib/seo';
 import type { Locale, Resource, ResourceKind, ResourceLevel } from '@/lib/types';
+import Tooltip from './Tooltip';
 
 interface MetadataFactsProps {
   resource: Resource;
@@ -22,7 +23,8 @@ export default function MetadataFacts({ resource, locale, level, kind }: Metadat
     const parsed = timestamp(value);
     if (parsed === undefined) return d.unknown;
     const utc = new Date(parsed).toISOString();
-    return <time dateTime={utc} title={utc}>{formatDate(utc, locale)}</time>;
+    const formatted = formatDate(utc, locale);
+    return <Tooltip content={utc}><time className="tooltip-trigger" dateTime={utc} aria-label={`${formatted} (${utc})`} tabIndex={0}>{formatted}</time></Tooltip>;
   };
   const verifiedAt = timestamp(resource.metadataVerifiedAt);
   const attemptedAt = timestamp(resource.metadataCheckedAt);
