@@ -50,6 +50,12 @@ export default function Directory({ resources, locale, topicCards, savedOnly = f
   const visible = results.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
   const matchedTopics = query&&!savedOnly?searchTopics(query,locale):[];
   const hasFilters = !!(query || category || kind || platform || engine || level);
+  if (savedOnly && !saved.length && !hasFilters) {
+    return <section className="content-page">
+      <header className="page-intro"><h1>{d.saved}</h1><p>{d.savedLocal}</p></header>
+      <div className="empty-state"><Icon name="bookmark" size={32}/><h2>{d.noSaved}</h2><p>{d.noSavedHelp}</p><Link className="button secondary" href={`/${locale}`}>{d.exploreAll}<Icon name="arrow" size={16}/></Link></div>
+    </section>;
+  }
   const number = (value: number) => new Intl.NumberFormat(locale).format(value);
   function update(key: string, value: string, replace = false) {
     const next = new URLSearchParams(params.toString());
@@ -95,7 +101,7 @@ export default function Directory({ resources, locale, topicCards, savedOnly = f
         <div id="resource-filters" className="filter-row" hidden={!filtersOpen}>{filterSelect('category',d.category,category,d.allCategories,categories.map(value => [value,localizedCategory(value,locale)]))}{filterSelect('kind',d.kind,kind,d.allKinds,kinds)}{filterSelect('platform',d.platform,platform,d.allPlatforms,platforms.map(value => [value,value]))}{filterSelect('engine',d.engine,engine,d.allEngines,engines.map(value => [value,value]))}{filterSelect('level',d.level,level,d.allLevels,levels)}</div>
         {hasFilters && <div className="active-filters"><span>{d.selectedFilters}</span>{[['q',query],['category',category],['kind',kind],['platform',platform],['engine',engine],['level',level]].filter(([,value]) => value).map(([key,value]) => <button key={key} type="button" className="filter-chip" aria-label={`${d.clear}: ${value}`} onClick={() => update(key,'')}>{key === 'category' ? localizedCategory(value,locale) : key === 'kind' ? kinds.find(([id])=>id===value)?.[1] : key === 'level' ? levels.find(([id])=>id===value)?.[1] : value}<Icon name="close" size={12}/></button>)}<button type="button" className="text-button" onClick={reset}>{d.resetFilters}</button></div>}
         {visible.length ? <div className="resource-grid">{visible.map(resource => <ResourceCard key={resource.id} resource={resource} locale={locale}/>)}</div> : <div className="empty-state"><Icon name={savedOnly ? 'bookmark' : 'search'} size={32}/><h3>{savedOnly && !saved.length ? d.noSaved : d.noResults}</h3><p>{savedOnly && !saved.length ? d.noSavedHelp : d.noResultsHelp}</p>{hasFilters ? <button type="button" className="button secondary" onClick={reset}>{d.resetFilters}</button> : <Link className="button secondary" href={`/${locale}`}>{d.exploreAll}<Icon name="arrow" size={16}/></Link>}</div>}
-        {pageCount > 1 && <nav className="pagination" aria-label={d.page}><button type="button" className="button secondary" disabled={currentPage <= 1} onClick={() => {update('page',String(currentPage-1));document.getElementById('results-heading')?.scrollIntoView({block:'start'});}}>{d.previous}</button><span>{d.page} {number(currentPage)} {d.of} {number(pageCount)}</span><button type="button" className="button secondary" disabled={currentPage >= pageCount} onClick={() => {update('page',String(currentPage+1));document.getElementById('results-heading')?.scrollIntoView({block:'start'});}}>{d.next}</button></nav>}
+        {pageCount > 1 && <nav className="pagination" aria-label={d.page}><button type="button" className="button secondary" disabled={currentPage <= 1} onClick={() => {update('page',String(currentPage-1));document.getElementById('results-heading')?.scrollIntoView({block:'start'});}}><Icon name="arrow" size={16}/>{d.previous}</button><span>{d.page} {number(currentPage)} {d.of} {number(pageCount)}</span><button type="button" className="button secondary" disabled={currentPage >= pageCount} onClick={() => {update('page',String(currentPage+1));document.getElementById('results-heading')?.scrollIntoView({block:'start'});}}>{d.next}<Icon name="arrow" size={16}/></button></nav>}
       </section>
     </div>
   </div>;

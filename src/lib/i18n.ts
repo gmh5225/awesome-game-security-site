@@ -10,6 +10,9 @@ export function isLocale(value: string): value is Locale {
 }
 
 const en = {
+  resourceDetails: 'Resource details',
+  repositoryStatus: 'Repository status',
+  checkHistory: 'Check history',
   searchCategories: 'Search categories…', noOptions: 'No matching options',
   metadataStale: 'The latest metadata check was inconclusive. The archive status and push date below are the last successfully verified evidence.',
   metadataAttempted: 'Metadata last checked',
@@ -81,6 +84,9 @@ const en = {
 export type Dictionary = { [Key in keyof typeof en]: string };
 
 const zhCN: Dictionary = {
+  resourceDetails: '资源信息',
+  repositoryStatus: '仓库状态',
+  checkHistory: '检测记录',
   searchCategories: '搜索分类…', noOptions: '没有匹配的选项',
   metadataStale: '最近一次元数据检测未获得确定结果。以下归档状态和推送日期来自上一次成功核实的记录。',
   metadataAttempted: '元数据最近检测',
@@ -140,6 +146,9 @@ const zhCN: Dictionary = {
 };
 
 const zhTW: Dictionary = {
+  resourceDetails: '資源資訊',
+  repositoryStatus: '儲存庫狀態',
+  checkHistory: '檢查紀錄',
   searchCategories: '搜尋分類…', noOptions: '沒有符合的選項',
   metadataStale: '最近一次中繼資料檢查未獲得確定結果。以下封存狀態和推送日期來自上一次成功核實的紀錄。',
   metadataAttempted: '中繼資料最近檢查',
@@ -198,6 +207,9 @@ const zhTW: Dictionary = {
 };
 
 const ja: Dictionary = {
+  resourceDetails: 'リソース情報',
+  repositoryStatus: 'リポジトリの状態',
+  checkHistory: '確認履歴',
   searchCategories: 'カテゴリを検索…', noOptions: '一致する項目はありません',
   metadataStale: '直近のメタデータ確認では確定できませんでした。以下のアーカイブ状態とプッシュ日は、最後に確認できた記録に基づきます。',
   metadataAttempted: 'メタデータの最終確認',
@@ -262,6 +274,9 @@ const ja: Dictionary = {
 };
 
 const ko: Dictionary = {
+  resourceDetails: '자료 정보',
+  repositoryStatus: '저장소 상태',
+  checkHistory: '확인 기록',
   searchCategories: '카테고리 검색…', noOptions: '일치하는 항목이 없습니다',
   metadataStale: '최근 메타데이터 확인에서 확정적인 결과를 얻지 못했습니다. 아래 보관 상태와 푸시 날짜는 마지막으로 확인된 기록입니다.',
   metadataAttempted: '메타데이터 최근 확인',
@@ -323,6 +338,9 @@ const ko: Dictionary = {
 };
 
 const de: Dictionary = {
+  resourceDetails: 'Ressourcendetails',
+  repositoryStatus: 'Repository-Status',
+  checkHistory: 'Prüfverlauf',
   searchCategories: 'Kategorien suchen…', noOptions: 'Keine passenden Optionen',
   metadataStale: 'Die letzte Metadatenprüfung lieferte kein eindeutiges Ergebnis. Archivstatus und Push-Datum unten stammen aus der letzten erfolgreichen Überprüfung.',
   metadataAttempted: 'Metadaten zuletzt geprüft',
@@ -387,6 +405,9 @@ const de: Dictionary = {
 };
 
 const fr: Dictionary = {
+  resourceDetails: 'Détails de la ressource',
+  repositoryStatus: 'État du dépôt',
+  checkHistory: 'Historique des vérifications',
   searchCategories: 'Rechercher une catégorie…', noOptions: 'Aucune option correspondante',
   metadataStale: 'La dernière vérification des métadonnées n’a pas été concluante. Le statut d’archivage et la date d’envoi ci-dessous proviennent de la dernière vérification réussie.',
   metadataAttempted: 'Dernière vérification des métadonnées',
@@ -451,6 +472,9 @@ const fr: Dictionary = {
 };
 
 const es: Dictionary = {
+  resourceDetails: 'Detalles del recurso',
+  repositoryStatus: 'Estado del repositorio',
+  checkHistory: 'Historial de revisiones',
   searchCategories: 'Buscar categorías…', noOptions: 'No hay opciones coincidentes',
   metadataStale: 'La última revisión de metadatos no fue concluyente. El estado de archivo y la fecha de envío que aparecen a continuación proceden de la última verificación satisfactoria.',
   metadataAttempted: 'Última revisión de metadatos',
@@ -516,6 +540,9 @@ const es: Dictionary = {
 };
 
 const it: Dictionary = {
+  resourceDetails: 'Dettagli della risorsa',
+  repositoryStatus: 'Stato del repository',
+  checkHistory: 'Cronologia dei controlli',
   searchCategories: 'Cerca categorie…', noOptions: 'Nessuna opzione corrispondente',
   metadataStale: 'L’ultimo controllo dei metadati non ha dato un esito certo. Lo stato di archiviazione e la data di invio qui sotto provengono dall’ultima verifica riuscita.',
   metadataAttempted: 'Ultimo controllo dei metadati',
@@ -581,6 +608,9 @@ const it: Dictionary = {
 };
 
 const ru: Dictionary = {
+  resourceDetails: 'Сведения о ресурсе',
+  repositoryStatus: 'Состояние репозитория',
+  checkHistory: 'История проверок',
   searchCategories: 'Поиск категорий…', noOptions: 'Нет подходящих вариантов',
   metadataStale: 'Последняя проверка метаданных не дала определённого результата. Статус архивации и дата отправки ниже взяты из последней успешной проверки.',
   metadataAttempted: 'Последняя проверка метаданных',
