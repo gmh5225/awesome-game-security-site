@@ -204,10 +204,14 @@ main { min-height: 65vh; }
 .prose-page section { margin-top: 35px; }
 .prose-page section p { line-height: 1.9; color: var(--muted); margin-top: 15px; }
 .prose-page a { color: var(--accent); }
-.updates-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 15px; margin-bottom: 12px; }
-.segmented { display: flex; background: var(--panel); border: 1px solid var(--border); padding: 4px; border-radius: 4px; }
-.segmented button { padding: 9px 14px; font-size: .85rem; color: var(--muted); border-radius: 3px; }
-.segmented button.is-active { background: var(--accent-dark); color: var(--label); }
+.updates-toolbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; margin-bottom: 12px; }
+.segmented { display: flex; align-items: stretch; gap: 28px; min-width: 0; max-width: 100%; }
+.segmented button { position: relative; min-width: 0; min-height: 44px; padding: 11px 0; font-size: .85rem; line-height: 1.5; color: var(--muted); overflow-wrap: anywhere; transition: color .15s ease; }
+.segmented button::after { content: ''; position: absolute; right: 0; bottom: 0; left: 0; height: 2px; background: transparent; }
+.segmented button:hover { color: var(--text); }
+.segmented button.is-active { color: var(--label); }
+.segmented button.is-active::after { background: var(--accent); }
+.updates-rss { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; padding: 10px 0; color: var(--muted); font-size: .8rem; }
 .updates-empty { margin-top: 30px; }
 .change-list { list-style: none; padding: 0; margin: 32px 0 0; }
 .change-list li { display: grid; grid-template-columns: 140px 1fr; gap: 25px; padding: 24px 0; border-top: 1px solid var(--border); }
@@ -373,8 +377,8 @@ body:has(dialog[open]) { overflow: hidden; }
   .action-row .button { font-size: .77rem; padding: 10px 12px; }
   .detail-section>p { font-size: .9rem; }
   .updates-toolbar { align-items: stretch; flex-wrap: wrap; }
-  .segmented button { font-size: .8rem; padding: 9px 11px; }
-  .updates-toolbar>.button { font-size: .8rem; }
+  .segmented { gap: 22px; }
+  .segmented button { font-size: .8rem; }
   .change-list li { grid-template-columns: 1fr; gap: 8px; padding: 20px 0; }
   .change-list time { font-size: .75rem; }
   .change-list h2 { font-size: 1rem; }
