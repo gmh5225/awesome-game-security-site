@@ -37,6 +37,6 @@ export default function ResourceCard({ resource, locale, index, editorial: showE
       </div>
     </dl>
     {showEditorial && editorial && <div className="editorial-preview"><strong>{d.whySelected}</strong><p>{editorial.reason[locale]}</p></div>}
-    <div className="card-bottom"><span>{editorial && <span className="curated-label"><span className="status-dot"/>{d.curated}</span>}</span><Link className="view-details" href={detailUrl}>{d.viewResource}<Icon name="arrow" size={16}/></Link></div>
+    <div className="card-bottom"><span>{editorial && !showEditorial && <span className="curated-label"><span className="status-dot"/>{d.curated}</span>}</span><Link className="view-details" href={detailUrl}>{d.viewResource}<Icon name="arrow" size={16}/></Link></div>
   </article>;
 }
