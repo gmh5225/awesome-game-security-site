@@ -4,6 +4,7 @@ import { usePathname, useSearchParams } from 'next/navigation';
 import { getDictionary, localeNames } from '@/lib/i18n';
 import { LOCALES, type Locale } from '@/lib/types';
 import Icon from './Icon';
+import SelectControl from './SelectControl';
 
 export default function SiteHeader({ locale }: { locale: Locale }) {
   const d = getDictionary(locale);
@@ -23,6 +24,6 @@ export default function SiteHeader({ locale }: { locale: Locale }) {
   return <header className="site-header"><div className="header-inner">
     <Link href={`/${locale}`} className="brand" aria-label={d.siteName}><span className="brand-mark mono" aria-hidden="true">{'</>'}</span><span><strong>Awesome Game Security</strong></span></Link>
     <nav aria-label={d.menu} className="top-nav">{links.map(([path, label, icon]) => <Link key={path} href={`/${locale}${path}`} aria-current={(path ? pathname.includes(`/${locale}${path}`) : pathname === `/${locale}`) ? 'page' : undefined}><Icon name={icon} size={17}/><span>{label}</span></Link>)}</nav>
-    <label className="language-picker"><Icon name="globe" size={17}/><span className="sr-only">{d.language}</span><select value={locale} aria-label={d.language} onChange={event => changeLanguage(event.target.value)}>{LOCALES.map(lang => <option key={lang} value={lang}>{localeNames[lang]}</option>)}</select></label>
+    <div className="language-picker"><SelectControl label={d.language} value={locale} onValueChange={changeLanguage} variant="language" align="end" icon={<Icon name="globe" size={16}/>} options={LOCALES.map(lang => ({value: lang, label: localeNames[lang], detail: lang.toUpperCase()}))}/></div>
   </div></header>;
 }

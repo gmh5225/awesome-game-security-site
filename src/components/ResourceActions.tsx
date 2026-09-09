@@ -4,13 +4,16 @@ import { useLocalList } from '@/lib/local-state';
 import { getDictionary } from '@/lib/i18n';
 import type { Locale } from '@/lib/types';
 import Icon from './Icon';
+import Tooltip from './Tooltip';
 
 export function SaveButton({ id, locale, compact = false }: { id: string; locale: Locale; compact?: boolean }) {
   const d = getDictionary(locale);
   const [saved, toggle] = useLocalList('ags:saved');
   const [error, setError] = useState(false);
   const selected = saved.includes(id);
-  return <><button type="button" className={`${compact ? 'icon-button' : 'button secondary'} ${selected ? 'selected' : ''}`} aria-label={selected ? d.unsave : d.save} title={selected ? d.unsave : d.save} aria-pressed={selected} onClick={() => setError(!toggle(id))}><Icon name={selected ? 'check' : 'bookmark'} size={18}/>{!compact && (selected ? d.saved : d.save)}</button>{error && <span role="status" className="small muted">{d.storageUnavailable}</span>}</>;
+  const label = selected ? d.unsave : d.save;
+  const button = <button type="button" className={`${compact ? 'icon-button' : 'button secondary'} ${selected ? 'selected' : ''}`} aria-label={label} aria-pressed={selected} onClick={() => setError(!toggle(id))}><Icon name={selected ? 'check' : 'bookmark'} size={18}/>{!compact && (selected ? d.saved : d.save)}</button>;
+  return <>{compact ? <Tooltip content={label}>{button}</Tooltip> : button}{error && <span role="status" className="small muted">{d.storageUnavailable}</span>}</>;
 }
 export function FollowButton({ slug, locale }: { slug: string; locale: Locale }) {
   const d = getDictionary(locale);

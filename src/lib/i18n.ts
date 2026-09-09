@@ -10,6 +10,7 @@ export function isLocale(value: string): value is Locale {
 }
 
 const en = {
+  searchCategories: 'Search categories…', noOptions: 'No matching options',
   metadataStale: 'The latest metadata check was inconclusive. The archive status and push date below are the last successfully verified evidence.',
   metadataAttempted: 'Metadata last checked',
   linkStatus: 'Link status',
@@ -80,6 +81,7 @@ const en = {
 export type Dictionary = { [Key in keyof typeof en]: string };
 
 const zhCN: Dictionary = {
+  searchCategories: '搜索分类…', noOptions: '没有匹配的选项',
   metadataStale: '最近一次元数据检测未获得确定结果。以下归档状态和推送日期来自上一次成功核实的记录。',
   metadataAttempted: '元数据最近检测',
   linkStatus: '链接状态',
@@ -138,6 +140,7 @@ const zhCN: Dictionary = {
 };
 
 const zhTW: Dictionary = {
+  searchCategories: '搜尋分類…', noOptions: '沒有符合的選項',
   metadataStale: '最近一次中繼資料檢查未獲得確定結果。以下封存狀態和推送日期來自上一次成功核實的紀錄。',
   metadataAttempted: '中繼資料最近檢查',
   linkStatus: '連結狀態',
@@ -195,6 +198,7 @@ const zhTW: Dictionary = {
 };
 
 const ja: Dictionary = {
+  searchCategories: 'カテゴリを検索…', noOptions: '一致する項目はありません',
   metadataStale: '直近のメタデータ確認では確定できませんでした。以下のアーカイブ状態とプッシュ日は、最後に確認できた記録に基づきます。',
   metadataAttempted: 'メタデータの最終確認',
   linkStatus: 'リンクの状態',
@@ -258,6 +262,7 @@ const ja: Dictionary = {
 };
 
 const ko: Dictionary = {
+  searchCategories: '카테고리 검색…', noOptions: '일치하는 항목이 없습니다',
   metadataStale: '최근 메타데이터 확인에서 확정적인 결과를 얻지 못했습니다. 아래 보관 상태와 푸시 날짜는 마지막으로 확인된 기록입니다.',
   metadataAttempted: '메타데이터 최근 확인',
   linkStatus: '링크 상태',
@@ -318,6 +323,7 @@ const ko: Dictionary = {
 };
 
 const de: Dictionary = {
+  searchCategories: 'Kategorien suchen…', noOptions: 'Keine passenden Optionen',
   metadataStale: 'Die letzte Metadatenprüfung lieferte kein eindeutiges Ergebnis. Archivstatus und Push-Datum unten stammen aus der letzten erfolgreichen Überprüfung.',
   metadataAttempted: 'Metadaten zuletzt geprüft',
   linkStatus: 'Linkstatus',
@@ -381,6 +387,7 @@ const de: Dictionary = {
 };
 
 const fr: Dictionary = {
+  searchCategories: 'Rechercher une catégorie…', noOptions: 'Aucune option correspondante',
   metadataStale: 'La dernière vérification des métadonnées n’a pas été concluante. Le statut d’archivage et la date d’envoi ci-dessous proviennent de la dernière vérification réussie.',
   metadataAttempted: 'Dernière vérification des métadonnées',
   linkStatus: 'État du lien',
@@ -444,6 +451,7 @@ const fr: Dictionary = {
 };
 
 const es: Dictionary = {
+  searchCategories: 'Buscar categorías…', noOptions: 'No hay opciones coincidentes',
   metadataStale: 'La última revisión de metadatos no fue concluyente. El estado de archivo y la fecha de envío que aparecen a continuación proceden de la última verificación satisfactoria.',
   metadataAttempted: 'Última revisión de metadatos',
   linkStatus: 'Estado del enlace',
@@ -508,6 +516,7 @@ const es: Dictionary = {
 };
 
 const it: Dictionary = {
+  searchCategories: 'Cerca categorie…', noOptions: 'Nessuna opzione corrispondente',
   metadataStale: 'L’ultimo controllo dei metadati non ha dato un esito certo. Lo stato di archiviazione e la data di invio qui sotto provengono dall’ultima verifica riuscita.',
   metadataAttempted: 'Ultimo controllo dei metadati',
   linkStatus: 'Stato del link',
@@ -572,6 +581,7 @@ const it: Dictionary = {
 };
 
 const ru: Dictionary = {
+  searchCategories: 'Поиск категорий…', noOptions: 'Нет подходящих вариантов',
   metadataStale: 'Последняя проверка метаданных не дала определённого результата. Статус архивации и дата отправки ниже взяты из последней успешной проверки.',
   metadataAttempted: 'Последняя проверка метаданных',
   linkStatus: 'Состояние ссылки',
