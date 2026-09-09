@@ -12,7 +12,7 @@ import Icon from '@/components/Icon';
 import '../directory.css';
 const sans = localFont({ src: '../fonts/GeistVF.woff', variable: '--font-geist-sans', weight: '100 900', display: 'swap' });
 const mono = localFont({ src: '../fonts/GeistMonoVF.woff', variable: '--font-geist-mono', weight: '100 900', display: 'swap' });
-export const viewport: Viewport = { width: 'device-width', initialScale: 1, themeColor: '#101716' };
+export const viewport: Viewport = { width: 'device-width', initialScale: 1, themeColor: '#1e1e1e' };
 export const generateStaticParams = () => LOCALES.map(locale => ({locale}));
 export async function generateMetadata({params}: {params:Promise<{locale:string}>}) { const {locale}=await params; if(!isLocale(locale)) return {}; const d=getDictionary(locale); return pageMetadata(locale,'',d.siteName,d.heroDescription); }
 export default async function LocaleLayout({ children, params }: { children: React.ReactNode; params: Promise<{locale:string}> }) {

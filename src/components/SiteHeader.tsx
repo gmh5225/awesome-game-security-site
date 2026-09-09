@@ -21,7 +21,7 @@ export default function SiteHeader({ locale }: { locale: Locale }) {
     window.location.assign(destination.href);
   }
   return <header className="site-header"><div className="header-inner">
-    <Link href={`/${locale}`} className="brand" aria-label={d.siteName}><span className="brand-mark"><Icon name="shield" size={24}/></span><span><strong>Awesome Game Security</strong><span className="brand-subtitle">{d.tagline}</span></span></Link>
+    <Link href={`/${locale}`} className="brand" aria-label={d.siteName}><span className="brand-mark mono" aria-hidden="true">{'</>'}</span><span><strong>Awesome Game Security</strong></span></Link>
     <nav aria-label={d.menu} className="top-nav">{links.map(([path, label, icon]) => <Link key={path} href={`/${locale}${path}`} aria-current={(path ? pathname.includes(`/${locale}${path}`) : pathname === `/${locale}`) ? 'page' : undefined}><Icon name={icon} size={17}/><span>{label}</span></Link>)}</nav>
     <label className="language-picker"><Icon name="globe" size={17}/><span className="sr-only">{d.language}</span><select value={locale} aria-label={d.language} onChange={event => changeLanguage(event.target.value)}>{LOCALES.map(lang => <option key={lang} value={lang}>{localeNames[lang]}</option>)}</select></label>
   </div></header>;
