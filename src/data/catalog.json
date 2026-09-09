@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "sourceCommit": "99580749d9c8757317599aa9e9ef6cab4f57ece4",
-  "syncedAt": "2026-09-08T20:17:02.640Z",
+  "sourceCommit": "90b22a83c9eb896e8988510ebdc8dd484a22b35f",
+  "syncedAt": "2026-09-09T08:10:19.765Z",
   "baselineAt": "2026-09-08T18:47:01.871Z",
   "resources": [
     {
@@ -2152,10 +2152,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2025-08-21T12:17:02.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:09.573Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:09.573Z",
-      "upstreamUpdatedAt": "2025-08-21T12:17:02.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:09.573Z"
     },
     {
       "id": "415da1114aa8e644",
@@ -2181,10 +2181,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-06-06T10:52:34.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:09.576Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:09.576Z",
-      "upstreamUpdatedAt": "2026-06-06T10:52:34.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:09.576Z"
     },
     {
       "id": "6162efd7558abee8",
@@ -2210,10 +2210,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2022-12-26T16:42:51.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:09.779Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:09.779Z",
-      "upstreamUpdatedAt": "2022-12-26T16:42:51.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:09.779Z"
     },
     {
       "id": "262a5aca02774791",
@@ -2239,10 +2239,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-09-01T15:51:38.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:09.764Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:09.764Z",
-      "upstreamUpdatedAt": "2026-09-01T15:51:38.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:09.764Z"
     },
     {
       "id": "8bdb25cacf90a387",
@@ -2265,10 +2265,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2023-02-25T03:59:03.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:09.976Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:09.976Z",
-      "upstreamUpdatedAt": "2023-02-25T03:59:03.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:09.976Z"
     },
     {
       "id": "b7eddbb5468cfb85",
@@ -2291,10 +2291,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-07-28T08:15:17.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:10.054Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:10.054Z",
-      "upstreamUpdatedAt": "2026-07-28T08:15:17.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:10.054Z"
     },
     {
       "id": "d16c5cd0acaee533",
@@ -2317,10 +2317,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "archived",
+      "upstreamUpdatedAt": "2024-10-30T15:52:32.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:10.152Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:10.152Z",
-      "upstreamUpdatedAt": "2024-10-30T15:52:32.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:10.152Z"
     },
     {
       "id": "ad4d84d919366965",
@@ -2346,10 +2346,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-09-02T10:34:35.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:10.254Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:10.254Z",
-      "upstreamUpdatedAt": "2026-09-02T10:34:35.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:10.254Z"
     },
     {
       "id": "16eaa5b876abb60f",
@@ -2399,10 +2399,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2025-04-23T13:01:22.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:10.433Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:10.433Z",
-      "upstreamUpdatedAt": "2025-04-23T13:01:22.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:10.433Z"
     },
     {
       "id": "6e2648a26be88c6a",
@@ -2425,10 +2425,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-07-20T23:13:01.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:10.531Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:10.531Z",
-      "upstreamUpdatedAt": "2026-07-20T23:13:01.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:10.531Z"
     },
     {
       "id": "1124a81daac586e8",
@@ -2451,10 +2451,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-03-16T09:42:55.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:10.772Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:10.772Z",
-      "upstreamUpdatedAt": "2026-03-16T09:42:55.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:10.772Z"
     },
     {
       "id": "7440d9c9b1745aca",
@@ -2585,10 +2585,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-07-20T10:52:34.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:11.203Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:11.203Z",
-      "upstreamUpdatedAt": "2026-07-20T10:52:34.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:11.203Z"
     },
     {
       "id": "0ad5f8ab8a6e78ac",
@@ -2611,10 +2611,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-09-08T19:49:30.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:11.195Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:11.195Z",
-      "upstreamUpdatedAt": "2026-09-08T19:49:30.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:11.195Z"
     },
     {
       "id": "64b476c674bf4713",
@@ -2640,10 +2640,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-05-08T13:54:03.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:11.388Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:11.388Z",
-      "upstreamUpdatedAt": "2026-05-08T13:54:03.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:11.388Z"
     },
     {
       "id": "f7b4f6e513efb526",
@@ -2666,10 +2666,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2025-11-18T22:14:28.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:11.423Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:11.423Z",
-      "upstreamUpdatedAt": "2025-11-18T22:14:28.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:11.423Z"
     },
     {
       "id": "63dae665aac0a10a",
@@ -2697,10 +2697,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2022-01-09T10:44:06.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:11.567Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:11.567Z",
-      "upstreamUpdatedAt": "2022-01-09T10:44:06.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:11.567Z"
     },
     {
       "id": "95d593b2f392245a",
@@ -2723,10 +2723,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2023-03-22T16:33:34.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:11.616Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:11.616Z",
-      "upstreamUpdatedAt": "2023-03-22T16:33:34.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:11.616Z"
     },
     {
       "id": "2ed6a0f59054bb0e",
@@ -2749,10 +2749,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2025-01-13T16:09:01.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:11.864Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:11.864Z",
-      "upstreamUpdatedAt": "2025-01-13T16:09:01.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:11.864Z"
     },
     {
       "id": "5c4c755e966fbd56",
@@ -2790,10 +2790,10 @@
         "zh-CN": "本项目是一套用于在 Linux 上部署 Source 引擎专用服务器的一键 shell 脚本。\n它可自动完成环境检查、依赖安装、SteamCMD 配置以及游戏服务器下载等步骤，支持 Debian、Ubuntu、CentOS 等发行版。\n脚本还可协助安装 Sourcemod、Metamod 等常见 Source 服务器组件，并为典型部署错误提供排障指导。\n主要用途是简化新手的服务器搭建流程，同时减少经验丰富的社区服运维人员的重复手工操作。",
         "zh-TW": "本專案是一套用於在 Linux 上部署 Source 引擎專用伺服器的一鍵 shell 腳本。\n它可自動完成環境檢查、相依套件安裝、SteamCMD 設定以及遊戲伺服器下載等步驟，支援 Debian、Ubuntu、CentOS 等發行版。\n腳本亦可協助安裝 Sourcemod、Metamod 等常見 Source 伺服器元件，並為典型部署錯誤提供疑難排解指引。\n主要用途是簡化新手的伺服器架設流程，同時減少經驗豐富的社群伺服器維運人員的重複手動作業。"
       },
+      "upstreamUpdatedAt": "2022-08-31T06:53:02.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:11.844Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:11.844Z",
-      "upstreamUpdatedAt": "2022-08-31T06:53:02.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:11.844Z"
     },
     {
       "id": "d7771256e54a6ae0",
@@ -2816,10 +2816,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-09-07T10:12:07.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:12.064Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:12.064Z",
-      "upstreamUpdatedAt": "2026-09-07T10:12:07.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:12.064Z"
     },
     {
       "id": "96de6cd6f75706a0",
@@ -2845,10 +2845,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-05-23T10:21:48.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:12.150Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:12.150Z",
-      "upstreamUpdatedAt": "2026-05-23T10:21:48.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:12.150Z"
     },
     {
       "id": "6d697eb46c1b4e0a",
@@ -2874,10 +2874,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2025-05-12T23:21:11.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:12.297Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:12.297Z",
-      "upstreamUpdatedAt": "2025-05-12T23:21:11.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:12.297Z"
     },
     {
       "id": "c9dca96d1e4dd82d",
@@ -2903,10 +2903,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-07-26T05:06:54.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:12.386Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:12.386Z",
-      "upstreamUpdatedAt": "2026-07-26T05:06:54.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:12.386Z"
     },
     {
       "id": "bf6d7eea0aba4c3f",
@@ -2942,10 +2942,10 @@
         "zh-CN": "本项目是一套一体化 shell 脚本与压缩归档包，用于搭建已预越狱、并安装完整 bootstrap 的 vphone iOS 模拟器实例。它可在 macOS 上自动完成 vphone-cli 环境的下载、合并与解压，需禁用 SIP 并绕过 AMFI。主要面向需要即用型越狱 iOS 环境进行应用分析与测试的 iOS 安全研究人员及模拟器用户。",
         "zh-TW": "本專案是一套一體化 shell 腳本與壓縮封存套件，用於建置已預先越獄、並安裝完整 bootstrap 的 vphone iOS 模擬器實例。它可在 macOS 上自動完成 vphone-cli 環境的下載、合併與解壓，需停用 SIP 並繞過 AMFI。主要適用於需要即用型越獄 iOS 環境進行應用程式分析與測試的 iOS 安全研究人員及模擬器使用者。"
       },
+      "upstreamUpdatedAt": "2026-08-27T09:22:49.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:12.570Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:12.570Z",
-      "upstreamUpdatedAt": "2026-08-27T09:22:49.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:12.570Z"
     },
     {
       "id": "49d62c99b5d4f322",
@@ -2992,10 +2992,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2024-09-26T17:52:20.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:12.676Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:12.676Z",
-      "upstreamUpdatedAt": "2024-09-26T17:52:20.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:12.676Z"
     },
     {
       "id": "6ac93044a2374cff",
@@ -3018,10 +3018,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2025-01-03T19:12:13.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:12.775Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:12.775Z",
-      "upstreamUpdatedAt": "2025-01-03T19:12:13.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:12.775Z"
     },
     {
       "id": "365ca10fe96448b8",
@@ -3044,10 +3044,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2024-04-22T22:00:11.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:12.969Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:12.969Z",
-      "upstreamUpdatedAt": "2024-04-22T22:00:11.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:12.969Z"
     },
     {
       "id": "c91293c4ce3fe233",
@@ -3070,10 +3070,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2023-02-04T21:54:42.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:13.080Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:13.080Z",
-      "upstreamUpdatedAt": "2023-02-04T21:54:42.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:13.080Z"
     },
     {
       "id": "62fd950f5c4aff1e",
@@ -3096,10 +3096,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2022-10-02T18:11:32.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:13.141Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:13.141Z",
-      "upstreamUpdatedAt": "2022-10-02T18:11:32.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:13.141Z"
     },
     {
       "id": "45995bbdc53b2ee0",
@@ -3125,10 +3125,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-09-08T00:26:40.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:13.365Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:13.365Z",
-      "upstreamUpdatedAt": "2026-09-08T00:26:40.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:13.365Z"
     },
     {
       "id": "5b2e271386ecb062",
@@ -3154,10 +3154,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2025-08-07T19:46:49.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:13.500Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:13.500Z",
-      "upstreamUpdatedAt": "2025-08-07T19:46:49.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:13.500Z"
     },
     {
       "id": "7d6be0f26adb0914",
@@ -3183,10 +3183,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-08-02T15:25:17.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:13.575Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:13.575Z",
-      "upstreamUpdatedAt": "2026-08-02T15:25:17.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:13.575Z"
     },
     {
       "id": "cf2bff2f8fa934c5",
@@ -3212,10 +3212,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2020-06-04T13:03:18.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:13.703Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:13.703Z",
-      "upstreamUpdatedAt": "2020-06-04T13:03:18.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:13.703Z"
     },
     {
       "id": "4789b20e32ba0e54",
@@ -3238,10 +3238,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2024-06-23T16:38:18.000Z",
       "metadataCheckedAt": "2026-09-08T20:17:13.750Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T20:17:13.750Z",
-      "upstreamUpdatedAt": "2024-06-23T16:38:18.000Z"
+      "metadataVerifiedAt": "2026-09-08T20:17:13.750Z"
     },
     {
       "id": "11a0158bf9c0b816",
@@ -3263,7 +3263,7 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown",
+      "maintenance": "active",
       "summaries": {
         "de": "GDevelop ist ein Open-Source-, plattformübergreifendes Werkzeug und eine Engine zur Spieleerstellung, mit dem Nutzer 2D- und 3D-Spiele über ein visuelles, ereignisbasiertes Logiksystem statt allein durch klassischen Code bauen können. Die Architektur trennt einen C++-Projektkern (GDCore) mit Ereignisparsing und Codegenerierung, JavaScript-Bindings (GDevelop.js), eine auf Pixi.js basierende HTML5-/JavaScript-Laufzeitumgebung (GDJS) sowie eine React-basierte Desktop-IDE (newIDE), die über Electron und verwandte Packager exportieren kann. Die Codebasis umfasst ein großes Erweiterungökosystem für Sprites, Behaviors, Tilemaps, 3D-Objekte und Effekte, Audio, Eingabe, Networking, Werbung und Debugging-Tools. Sie ist vor allem für Spieleentwickler und Lehrende nützlich, die Spiele ohne aufwendige Programmierung erstellen, sowie für Forschende, die offene Engine-Designs, Visual Scripting und HTML5-Exportpipelines untersuchen.",
         "en": "GDevelop is an open-source, cross-platform game creation tool and engine that lets users build 2D and 3D games with a visual events-based logic system rather than traditional coding alone. Its architecture splits a C++ project core (GDCore) with event parsing and code generation, JavaScript bindings (GDevelop.js), a Pixi.js-backed HTML5/JavaScript runtime (GDJS), and a React-based desktop IDE (newIDE) that can export via Electron and related packagers. The codebase includes a large extension ecosystem covering sprites, behaviors, tile maps, 3D objects and effects, audio, input, networking, ads, and debugging tools. It is primarily useful for game developers and educators making games without heavy programming, and for researchers studying open game-engine design, visual scripting, and HTML5 export pipelines.",
@@ -3275,7 +3275,11 @@
         "ru": "GDevelop — это открытый кроссплатформенный инструмент и движок для создания игр, позволяющий делать 2D- и 3D-игры с помощью визуальной событийной логики, а не только традиционного программирования. Архитектура разделяет ядро проекта на C++ (GDCore) с разбором событий и генерацией кода, JavaScript-привязки (GDevelop.js), HTML5/JavaScript-рантайм на базе Pixi.js (GDJS) и десктопную IDE на React (newIDE), которая может экспортировать через Electron и связанные упаковщики. В кодовой базе есть обширная экосистема расширений: спрайты, поведения, тайловые карты, 3D-объекты и эффекты, аудио, ввод, сеть, реклама и средства отладки. Инструмент в первую очередь полезен разработчикам и преподавателям, создающим игры без тяжёлого программирования, а также исследователям открытой архитектуры игровых движков, визуального скриптинга и HTML5-пайплайнов экспорта.",
         "zh-CN": "GDevelop 是一款开源、跨平台的游戏创作工具与引擎，用户可通过基于可视化事件的逻辑系统构建 2D 与 3D 游戏，而无需完全依赖传统编程。其架构将 C++ 项目核心（GDCore，负责事件解析与代码生成）、JavaScript 绑定（GDevelop.js）、基于 Pixi.js 的 HTML5/JavaScript 运行时（GDJS），以及基于 React 的桌面 IDE（newIDE，可通过 Electron 及相关打包工具导出）分离开来。代码库包含庞大的扩展生态，涵盖精灵、行为、瓦片地图、3D 对象与特效、音频、输入、网络、广告与调试工具。它主要面向无需大量编程即可制作游戏的开发者与教育工作者，也适合研究开放游戏引擎设计、可视化脚本与 HTML5 导出流水线的研究人员。",
         "zh-TW": "GDevelop 是一款開源、跨平台的遊戲創作工具與引擎，使用者可透過基於視覺化事件的邏輯系統製作 2D 與 3D 遊戲，而不必完全依賴傳統程式設計。其架構將 C++ 專案核心（GDCore，負責事件解析與程式碼產生）、JavaScript 繫結（GDevelop.js）、以 Pixi.js 為基礎的 HTML5/JavaScript 執行環境（GDJS），以及以 React 為基礎的桌面 IDE（newIDE，可透過 Electron 及相關打包工具匯出）分開。程式碼庫包含龐大的擴充生態系統，涵蓋精靈、行為、圖磚地圖、3D 物件與特效、音訊、輸入、網路、廣告與除錯工具。它主要適用於無需大量程式設計即可製作遊戲的開發者與教育工作者，也適合研究開放遊戲引擎設計、視覺化腳本與 HTML5 匯出流程的研究人員。"
-      }
+      },
+      "metadataCheckedAt": "2026-09-09T08:10:26.980Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:26.980Z",
+      "upstreamUpdatedAt": "2026-09-09T00:07:07.000Z"
     },
     {
       "id": "a2ced24c8d90be4c",
@@ -3297,7 +3301,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:27.011Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:27.011Z",
+      "upstreamUpdatedAt": "2025-07-12T08:25:37.000Z"
     },
     {
       "id": "7807d54b0e1d1feb",
@@ -3322,7 +3330,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:27.274Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:27.274Z",
+      "upstreamUpdatedAt": "2025-11-30T13:05:48.000Z"
     },
     {
       "id": "5d6a43aef44de89f",
@@ -3347,7 +3359,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:27.511Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:27.511Z",
+      "upstreamUpdatedAt": "2022-12-12T16:50:18.000Z"
     },
     {
       "id": "714b66be8845eb7a",
@@ -3369,7 +3385,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:27.530Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:27.530Z",
+      "upstreamUpdatedAt": "2020-10-24T22:53:19.000Z"
     },
     {
       "id": "1a9e1dfb114d9bb1",
@@ -3394,7 +3414,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:27.762Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:27.762Z",
+      "upstreamUpdatedAt": "2020-11-09T05:28:26.000Z"
     },
     {
       "id": "3c67442ac8878694",
@@ -3416,7 +3440,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:27.728Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:27.728Z",
+      "upstreamUpdatedAt": "2020-09-30T22:32:17.000Z"
     },
     {
       "id": "fe9a3d95ee871054",
@@ -3438,7 +3466,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:28.056Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:28.056Z",
+      "upstreamUpdatedAt": "2023-01-16T21:07:13.000Z"
     },
     {
       "id": "2d9468618fb5af04",
@@ -3464,7 +3496,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:28.030Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:28.030Z",
+      "upstreamUpdatedAt": "2022-04-21T06:50:54.000Z"
     },
     {
       "id": "9e9006ca9e506b62",
@@ -3486,7 +3522,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:28.243Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:28.243Z",
+      "upstreamUpdatedAt": "2024-07-31T11:12:55.000Z"
     },
     {
       "id": "695d735e35f1aff5",
@@ -3508,7 +3548,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "archived",
+      "metadataCheckedAt": "2026-09-09T08:10:28.303Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:28.303Z",
+      "upstreamUpdatedAt": "2024-06-21T08:49:44.000Z"
     },
     {
       "id": "46a5a910f5198d80",
@@ -3530,7 +3574,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:28.458Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:28.458Z",
+      "upstreamUpdatedAt": "2025-12-24T11:54:35.000Z"
     },
     {
       "id": "9c764a535e7323c1",
@@ -3552,7 +3600,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:28.543Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:28.543Z",
+      "upstreamUpdatedAt": "2026-02-18T19:21:52.000Z"
     },
     {
       "id": "4c6f87f5f29d9c62",
@@ -3581,7 +3633,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:28.722Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:28.722Z",
+      "upstreamUpdatedAt": "2025-11-07T07:24:39.000Z"
     },
     {
       "id": "2384847408a09dd2",
@@ -3603,7 +3659,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:28.807Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:28.807Z",
+      "upstreamUpdatedAt": "2025-12-24T10:53:19.000Z"
     },
     {
       "id": "b64bfe53398f8b81",
@@ -3625,7 +3685,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:28.938Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:28.938Z",
+      "upstreamUpdatedAt": "2026-08-19T20:48:45.000Z"
     },
     {
       "id": "f7e94407f5557ff3",
@@ -3653,7 +3717,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:29.041Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:29.041Z",
+      "upstreamUpdatedAt": "2024-12-31T19:23:17.000Z"
     },
     {
       "id": "d6816e74aacc40be",
@@ -3675,7 +3743,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:29.158Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:29.158Z",
+      "upstreamUpdatedAt": "2026-08-29T09:33:21.000Z"
     },
     {
       "id": "c1c39cf41582489b",
@@ -3700,7 +3772,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:29.236Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:29.236Z",
+      "upstreamUpdatedAt": "2022-11-11T00:29:41.000Z"
     },
     {
       "id": "5a4882eb8a78b98d",
@@ -3722,7 +3798,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:29.443Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:29.443Z",
+      "upstreamUpdatedAt": "2024-05-14T08:50:52.000Z"
     },
     {
       "id": "ec46603f649df297",
@@ -3749,7 +3829,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:29.464Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:29.464Z",
+      "upstreamUpdatedAt": "2025-12-04T12:16:15.000Z"
     },
     {
       "id": "e5a73ace1573140c",
@@ -3780,7 +3864,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:29.637Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:29.637Z",
+      "upstreamUpdatedAt": "2026-09-02T09:35:52.000Z"
     },
     {
       "id": "56a94bdfe21446ac",
@@ -3805,7 +3893,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:29.710Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:29.710Z",
+      "upstreamUpdatedAt": "2026-07-18T16:03:06.000Z"
     },
     {
       "id": "4260573d1128aeb9",
@@ -3830,7 +3922,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:29.925Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:29.925Z",
+      "upstreamUpdatedAt": "2026-08-29T19:44:34.000Z"
     },
     {
       "id": "8b7cdb2ac40b6115",
@@ -3852,7 +3948,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:29.943Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:29.943Z",
+      "upstreamUpdatedAt": "2022-02-16T17:24:42.000Z"
     },
     {
       "id": "bf40559b55215fda",
@@ -3874,7 +3974,7 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown",
+      "maintenance": "active",
       "summaries": {
         "de": "Dieses Projekt ist eine Clean-Room-Neuimplementierung einer klassischen Action-RPG-Engine in C. Es stellt plattformübergreifende Engine-Komponenten bereit, darunter Rendering, Audio, Szenenverwaltung, MPQ-Asset-Verarbeitung sowie Mediadekoding mit Bibliotheken wie SDL2, FFmpeg, zlib und libarchive. Die Codebasis legt den Schwerpunkt auf Portabilität und Erweiterbarkeit statt auf die Wiederverwendung originalen proprietären Spielcodes. Hauptzielgruppe sind Engine-Entwickler und moddingorientierte Forscher, die eine transparente Grundlage zum Studium und zur Erweiterung legacy-Spielverhaltens suchen.",
         "en": "This project is a clean-room reimplementation of a classic action RPG engine written in C. It provides cross-platform engine components such as rendering, audio, scene management, MPQ asset handling, and media decoding using libraries like SDL2, FFmpeg, zlib, and libarchive. The codebase focuses on portability and extensibility rather than reusing original proprietary game code. Its main audience is engine developers and modding-oriented researchers who want a transparent foundation for studying and extending legacy game behavior.",
@@ -3886,7 +3986,11 @@
         "ru": "Этот проект — clean-room-реимплементация классического движка action RPG на языке C. Он предоставляет кроссплатформенные компоненты движка: рендеринг, аудио, управление сценами, работу с MPQ-ассетами и декодирование медиа с помощью библиотек вроде SDL2, FFmpeg, zlib и libarchive. Кодовая база ориентирована на переносимость и расширяемость, а не на повторное использование исходного проприетарного игрового кода. Основная аудитория — разработчики движков и исследователи, связанные с моддингом, которым нужна прозрачная основа для изучения и расширения поведения устаревших игр.",
         "zh-CN": "本项目是用 C 语言编写的经典动作 RPG 引擎的洁净室（clean-room）重新实现。它提供跨平台引擎组件，包括渲染、音频、场景管理、MPQ 资源处理，以及基于 SDL2、FFmpeg、zlib 和 libarchive 等库的媒体解码。代码库注重可移植性与可扩展性，而非复用原有专有游戏代码。主要面向引擎开发者与偏重模组研究的人员，为其提供透明基础，以便研究并扩展传统游戏行为。",
         "zh-TW": "本專案是以 C 語言撰寫的經典動作 RPG 引擎之潔淨室（clean-room）重新實作。它提供跨平台引擎元件，包括渲染、音訊、場景管理、MPQ 資產處理，以及透過 SDL2、FFmpeg、zlib 與 libarchive 等函式庫進行媒體解碼。程式碼著重可攜性與可擴充性，而非重用原有專有遊戲程式碼。主要對象為引擎開發者與偏向模組研究的人員，提供透明基礎，以便研究並擴充舊有遊戲行為。"
-      }
+      },
+      "metadataCheckedAt": "2026-09-09T08:10:30.252Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:30.252Z",
+      "upstreamUpdatedAt": "2024-04-21T16:13:07.000Z"
     },
     {
       "id": "8aac205b32ec894a",
@@ -3908,7 +4012,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:30.192Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:30.192Z",
+      "upstreamUpdatedAt": "2024-08-19T15:36:45.000Z"
     },
     {
       "id": "2b1589eb2f43d378",
@@ -3930,7 +4038,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:30.407Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:30.407Z",
+      "upstreamUpdatedAt": "2026-09-07T22:59:31.000Z"
     },
     {
       "id": "f2ef1318da949f41",
@@ -3952,7 +4064,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:30.508Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:30.508Z",
+      "upstreamUpdatedAt": "2026-02-05T16:35:29.000Z"
     },
     {
       "id": "f047e801ef915a51",
@@ -3974,7 +4090,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:30.831Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:30.831Z",
+      "upstreamUpdatedAt": "2026-08-20T06:43:53.000Z"
     },
     {
       "id": "9580a7f5a67ce57b",
@@ -3996,7 +4116,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:30.909Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:30.909Z",
+      "upstreamUpdatedAt": "2026-09-02T14:21:18.000Z"
     },
     {
       "id": "d139f67ad8f7b7c8",
@@ -4018,7 +4142,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:31.059Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:31.059Z",
+      "upstreamUpdatedAt": "2023-08-18T23:39:51.000Z"
     },
     {
       "id": "544d7706c0d5a2cb",
@@ -4040,7 +4168,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:31.111Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:31.111Z",
+      "upstreamUpdatedAt": "2023-04-09T23:29:37.000Z"
     },
     {
       "id": "147f9d79c61b3079",
@@ -4062,7 +4194,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:31.307Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:31.307Z",
+      "upstreamUpdatedAt": "2026-06-03T11:52:20.000Z"
     },
     {
       "id": "27943adf5e84305f",
@@ -4084,7 +4220,9 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "metadataCheckedAt": "2026-09-09T08:10:31.246Z",
+      "metadataStatus": "unavailable"
     },
     {
       "id": "fb6bd76007608f56",
@@ -4106,7 +4244,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:31.499Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:31.499Z",
+      "upstreamUpdatedAt": "2019-10-01T09:29:05.000Z"
     },
     {
       "id": "6283dbfaa05a4f20",
@@ -4128,7 +4270,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:31.506Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:31.506Z",
+      "upstreamUpdatedAt": "2021-11-14T16:05:06.000Z"
     },
     {
       "id": "4815c656100f78b2",
@@ -4153,7 +4299,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:31.700Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:31.700Z",
+      "upstreamUpdatedAt": "2025-11-02T14:51:48.000Z"
     },
     {
       "id": "594f7113c8c51dea",
@@ -4175,7 +4325,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:31.705Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:31.705Z",
+      "upstreamUpdatedAt": "2026-08-09T13:57:07.000Z"
     },
     {
       "id": "761894037e6776d6",
@@ -4200,7 +4354,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-09T08:10:31.961Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-09T08:10:31.961Z",
+      "upstreamUpdatedAt": "2021-02-15T16:08:38.000Z"
     },
     {
       "id": "02669c1dda47268c",
@@ -4222,7 +4380,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.456Z"
     },
     {
       "id": "af72f456c43046d7",
@@ -4978,7 +5137,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.458Z"
     },
     {
       "id": "da4e92bf3c1f1b62",
@@ -6189,7 +6349,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.461Z"
     },
     {
       "id": "060b13b8dad398b4",
@@ -6355,7 +6516,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.462Z"
     },
     {
       "id": "b822608c35c5ffc1",
@@ -7576,7 +7738,8 @@
         "ru": "Этот проект — курируемый индекс ресурсов на Rust для создания и исследования экосистем приватных серверов World of Warcraft. В нём собраны реализации серверов, библиотеки протоколов и форматов файлов, а также вспомогательные инструменты — рендереры и просмотрщики ассетов. Коллекция делает акцент на практических материалах по аутентификации, сетям, форматам данных и инструментам, связанным с эмуляторами. Она предназначена для разработчиков игровых серверов на Rust и энтузиастов реверс-инжиниринга, изучающих технологии эмуляции WoW.",
         "zh-CN": "本项目是一份精选的 Rust 资源索引，面向 World of Warcraft 私服生态的构建与研究。它收录了服务端实现、协议与文件格式库，以及渲染器、资源查看器等配套工具。该合集侧重认证、网络、数据格式及模拟器相关工具的实用参考。面向探索 WoW 模拟技术的 Rust 游戏服务端开发者与逆向工程爱好者。",
         "zh-TW": "本專案是一份精選的 Rust 資源索引，面向 World of Warcraft 私服生態的建置與研究。它收錄了伺服器實作、協定與檔案格式函式庫，以及渲染器、資源檢視器等配套工具。該合集著重認證、網路、資料格式及模擬器相關工具的實用參考。服務於探索 WoW 模擬技術的 Rust 遊戲伺服器開發者與逆向工程愛好者。"
-      }
+      },
+      "lastCheckedAt": "2026-09-09T08:10:26.461Z"
     },
     {
       "id": "ea998b7238697e27",
@@ -10443,7 +10606,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.458Z"
     },
     {
       "id": "5ef20d03de609935",
@@ -13047,7 +13211,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.458Z"
     },
     {
       "id": "657b8cd2a69bfde6",
@@ -17632,7 +17797,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.459Z"
     },
     {
       "id": "119e39ac0dae00b9",
@@ -17829,10 +17995,10 @@
         "zh-TW": "Daedalic Test Automation 是一款面向 Unreal Engine 4 的外掛，用於建置並執行自動化整合測試。它在以 Gauntlet 為基礎的測試流程上擴充了斷言、延遲、模擬輸入、觸發器驅動檢查、參數化測試以及效能導向情境。專案主要以 C++ 撰寫，旨在提升覆蓋率、加快回歸問題偵測，並支援在開發管線中無人值守執行測試。它面向希望實現可靠 QA 自動化、並對遊戲行為進行可重複驗證的遊戲團隊。"
       },
       "upstreamUpdatedAt": "2022-08-18T11:26:16.000Z",
+      "lastCheckedAt": "2026-09-08T20:17:08.124Z",
       "metadataCheckedAt": "2026-09-08T19:35:44.654Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-08T19:35:44.654Z",
-      "lastCheckedAt": "2026-09-08T20:17:08.124Z"
+      "metadataVerifiedAt": "2026-09-08T19:35:44.654Z"
     },
     {
       "id": "8e53a9aa10cd8954",
@@ -19287,7 +19453,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.459Z"
     },
     {
       "id": "cd1b5275dab97a6e",
@@ -20720,7 +20887,8 @@
         "ru": "Python-фреймворк для управления устройствами Android и iOS через агентов на базе LLM, которые автоматизируют взаимодействие с устройством с помощью команд на естественном языке через ADB и нативные API доступности платформы.\nПоддерживает несколько провайдеров LLM (OpenAI, Anthropic, Gemini, Ollama, DeepSeek), архитектуру scripter-агента, регистрацию пользовательских инструментов и структурированный вывод для надёжной автоматизации устройств.\nВ основном полезен специалистам по мобильной безопасности и QA-инженерам, автоматизирующим тестирование приложений Android/iOS и рабочие процессы взаимодействия с помощью ИИ-управления устройствами.",
         "zh-CN": "用于通过 LLM 驱动的智能体控制 Android 与 iOS 设备的 Python 框架，借助 ADB 与平台原生无障碍 API，以自然语言命令自动化设备交互。\n它支持多种 LLM 提供商（OpenAI、Anthropic、Gemini、Ollama、DeepSeek），具备 scripter 智能体架构、自定义工具注册以及结构化输出，实现可靠的设备自动化。\n主要面向移动安全测试人员与 QA 工程师，用于以 AI 驱动的设备控制自动化 Android/iOS 应用测试与交互流程。",
         "zh-TW": "用於透過 LLM 驅動的代理程式控制 Android 與 iOS 裝置的 Python 框架，借助 ADB 與平台原生無障礙 API，以自然語言指令自動化裝置互動。\n它支援多種 LLM 提供商（OpenAI、Anthropic、Gemini、Ollama、DeepSeek），具備 scripter 代理架構、自訂工具註冊以及結構化輸出，實現可靠的裝置自動化。\n主要面向行動安全測試人員與 QA 工程師，用於以 AI 驅動的裝置控制自動化 Android/iOS 應用測試與互動流程。"
-      }
+      },
+      "lastCheckedAt": "2026-09-09T08:10:26.461Z"
     },
     {
       "id": "20522ef838390822",
@@ -25749,7 +25917,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.458Z"
     },
     {
       "id": "1bc756c59a774dd7",
@@ -29374,7 +29543,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.455Z"
     },
     {
       "id": "ddd75d22b5ea5a98",
@@ -29807,7 +29977,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.458Z"
     },
     {
       "id": "ace280243b51fd42",
@@ -32862,7 +33033,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.461Z"
     },
     {
       "id": "c50ddef814112053",
@@ -33251,7 +33423,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.456Z"
     },
     {
       "id": "39e02b419d4d64df",
@@ -33345,7 +33518,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.458Z"
     },
     {
       "id": "07d75d03ca52551f",
@@ -36804,7 +36978,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.457Z"
     },
     {
       "id": "8df76dc27aa5d8d0",
@@ -37544,7 +37719,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.456Z"
     },
     {
       "id": "044166ee208a982c",
@@ -37566,7 +37742,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.462Z"
     },
     {
       "id": "5d51892874443b0b",
@@ -37610,7 +37787,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.455Z"
     },
     {
       "id": "060dc6f30b3a6618",
@@ -45217,7 +45395,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.455Z"
     },
     {
       "id": "90428c98b0c81181",
@@ -48897,7 +49076,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.459Z"
     },
     {
       "id": "b2d3d1cf0cd7801f",
@@ -49511,7 +49691,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.459Z"
     },
     {
       "id": "799e57bc8a9c0fe7",
@@ -50371,7 +50552,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.457Z"
     },
     {
       "id": "ea62fe669215ea96",
@@ -59276,7 +59458,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.460Z"
     },
     {
       "id": "808c83edf82a3ee7",
@@ -61127,7 +61310,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.459Z"
     },
     {
       "id": "e89acbeffdcf43d6",
@@ -63144,7 +63328,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.457Z"
     },
     {
       "id": "48cd7a1765e2f7a1",
@@ -64343,7 +64528,8 @@
         "ru": "MCP-сервер, управляющий headless-экземплярами Ghidra для реверс-инжиниринга с помощью ИИ и предоставляющий более 40 инструментов в областях дизассемблирования, декомпиляции, перекрёстных ссылок, управления символами/типами и скриптинга. Включает фейковый бэкенд для офлайн-тестирования, CLI для работы без MCP, поддержку фаззинг-тестов и интеграцию с агентами Claude/Cursor/Copilot через JSON-RPC по stdio.",
         "zh-CN": "驱动无头 Ghidra 实例的 MCP 服务器，用于 AI 辅助逆向工程，提供 40 余项工具，涵盖反汇编、反编译、交叉引用、符号/类型管理与脚本等类别。支持用于离线测试的伪后端、非 MCP 场景的 CLI、模糊测试，以及通过 stdio 上的 JSON-RPC 与 Claude/Cursor/Copilot 代理集成。",
         "zh-TW": "驅動無頭 Ghidra 實例的 MCP 伺服器，用於 AI 輔助逆向工程，提供 40 餘項工具，涵蓋反組譯、反編譯、交叉參照、符號/型別管理與指令碼等類別。支援用於離線測試的偽後端、非 MCP 場景的 CLI、模糊測試，以及透過 stdio 上的 JSON-RPC 與 Claude/Cursor/Copilot 代理整合。"
-      }
+      },
+      "lastCheckedAt": "2026-09-09T08:10:26.459Z"
     },
     {
       "id": "7c593742cdacf998",
@@ -68540,7 +68726,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.462Z"
     },
     {
       "id": "74de1f009fdf07d7",
@@ -72585,7 +72772,8 @@
         "ru": "Этот проект предоставляет учебник по 3D DirectX на C++.\nОн организован как документация и справочные материалы для области directx / guide, а не как единая автономная runtime-кодовая база.\nОн в первую очередь полезен графическим программистам и разработчикам игровых инструментов для Windows, работающим в области directx / guide.",
         "zh-CN": "本项目提供 C++ 3D DirectX 教程。\n它作为 directx / guide 领域的文档与参考资料组织，而非单一的独立运行时代码库。\n主要适用于从事 directx / guide 相关工作的图形程序员与 Windows 游戏工具开发者。",
         "zh-TW": "本專案提供 C++ 3D DirectX 教學。\n它以 directx / guide 領域的文件與參考資料形式組織，而非單一的獨立執行時期程式碼庫。\n主要適用於從事 directx / guide 相關工作的圖形程式設計師與 Windows 遊戲工具開發者。"
-      }
+      },
+      "lastCheckedAt": "2026-09-09T08:10:26.460Z"
     },
     {
       "id": "b3d31c0654389904",
@@ -77306,7 +77494,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.457Z"
     },
     {
       "id": "8fca9a4f547f2194",
@@ -78816,7 +79005,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.455Z"
     },
     {
       "id": "94ff94a98b0f4e31",
@@ -79179,7 +79369,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.457Z"
     },
     {
       "id": "6bf5284d49aa5b1e",
@@ -82901,7 +83092,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.460Z"
     },
     {
       "id": "37f263d2c05c5f83",
@@ -83834,7 +84026,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.455Z"
     },
     {
       "id": "ebd3252b827515bf",
@@ -84034,7 +84227,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.457Z"
     },
     {
       "id": "714b36da13b82fba",
@@ -87272,6 +87466,31 @@
       "maintenance": "unknown"
     },
     {
+      "id": "53ff36c3c28b5bbf",
+      "title": "ShinobiX",
+      "url": "https://github.com/timehue/shinobix",
+      "description": "Live browser MMORPG with server-authoritative combat and documented auth/reward-integrity anti-cheat patterns",
+      "categories": [
+        "Anti Cheat",
+        "Anti Cheat / Anti-Cheat Programming"
+      ],
+      "tags": [
+        "Anti Cheat",
+        "Anti Cheat / Anti-Cheat Programming",
+        "Web"
+      ],
+      "engines": [],
+      "platforms": [
+        "Web"
+      ],
+      "kind": "tool",
+      "level": "all",
+      "firstSeenAt": "2026-09-09T08:10:19.765Z",
+      "contentChangedAt": "2026-09-09T08:10:19.765Z",
+      "linkStatus": "unknown",
+      "maintenance": "unknown"
+    },
+    {
       "id": "bd2cf43fd56d0e19",
       "title": "IDARustDemangler",
       "url": "https://github.com/timetravelthree/idarustdemangler",
@@ -89012,7 +89231,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.462Z"
     },
     {
       "id": "6de2fd2f301eeebe",
@@ -94547,7 +94767,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.460Z"
     },
     {
       "id": "aaa81c6e2d5e0180",
@@ -96194,7 +96415,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.456Z"
     },
     {
       "id": "2546e5a2727dca12",
@@ -99535,7 +99757,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-09T08:10:26.498Z"
     },
     {
       "id": "9f2d12d013c91950",
@@ -99773,6 +99996,14 @@
       "maintenance": "unknown"
     }
   ],
-  "changes": [],
-  "sourceEntryCount": 4310
+  "changes": [
+    {
+      "resourceId": "53ff36c3c28b5bbf",
+      "title": "ShinobiX",
+      "url": "https://github.com/timehue/shinobix",
+      "type": "added",
+      "date": "2026-09-09T08:10:19.765Z"
+    }
+  ],
+  "sourceEntryCount": 4311
 }
