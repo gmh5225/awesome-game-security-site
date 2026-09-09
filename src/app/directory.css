@@ -151,6 +151,7 @@ main { min-height: 65vh; }
 .resource-field-label { color: var(--label); font-family: var(--font-geist-mono), monospace; font-size: .8rem; padding-top: 2px; }
 .resource-field-value { min-width: 0; margin: 0; }
 .resource-card h3 { overflow-wrap: anywhere; font-size: .98rem; line-height: 1.6; }
+.resource-card h3>a { display: block; }
 .resource-description { font-size: .86rem; line-height: 1.85; color: var(--muted); overflow-wrap: anywhere; }
 .url-text { font-family: var(--font-geist-mono), monospace; color: var(--string); font-size: .78rem; overflow-wrap: anywhere; }
 .resource-tags { display: flex; flex-wrap: wrap; gap: 6px; }
