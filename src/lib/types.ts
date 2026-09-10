@@ -1,3 +1,5 @@
+import type { WikiSnapshot } from './wiki-types';
+
 export const LOCALES = ['en', 'zh-CN', 'zh-TW', 'ja', 'ko', 'de', 'fr', 'es', 'it', 'ru'] as const;
 export type Locale = (typeof LOCALES)[number];
 export type Localized = Record<Locale, string>;
@@ -41,6 +43,7 @@ export interface Catalog {
   resources: Resource[];
   changes: CatalogChange[];
   sourceEntryCount: number;
+  wiki?: WikiSnapshot;
 }
 export interface EditorialEntry {
   url: string;

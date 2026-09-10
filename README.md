@@ -1,6 +1,6 @@
 # Awesome Game Security — multilingual resource directory
 
-A structured website for [gmh5225/awesome-game-security](https://github.com/gmh5225/awesome-game-security), published at [gs.awesome.rip](https://gs.awesome.rip). It combines the original catalog with task-oriented topic notes, search and filters, visible observation history, RSS, and a reading list.
+A structured website for [gmh5225/awesome-game-security](https://github.com/gmh5225/awesome-game-security), published at [gs.awesome.rip](https://gs.awesome.rip). It connects the original resource catalog, upstream Wiki index, authored topic notes, search, observation history, RSS, and browser-local reading lists.
 
 ## Content and languages
 
@@ -27,6 +27,16 @@ The directory lives directly at `/[locale]` (for example `/zh-CN`), not at `/[lo
 
 Original project names and URLs remain searchable. Available multilingual descriptions are imported from the source repository for eligible development and conceptual resources. Upstream machine-generated descriptions are labelled as source descriptions and have not been individually fact-checked or editorially vetted. Where no localized description exists, the interface labels its English or original-description fallback. Ten interface languages do not imply that every linked third-party page is translated.
 
+## Wiki knowledge index
+
+The Knowledge navigation opens `/[locale]/wiki`: overview, concept, and project entries from the upstream `wiki/` directory. Existing `/topics` URLs remain available. The homepage searches resources, Wiki metadata, and editorial topics in separate groups; resource filters apply only to resource results. Wiki pages display source metadata and explicit citations, with links to the pinned original documents. Article bodies are not mirrored, summarized, or sent to browsers.
+
+Wiki links and resource URLs form bidirectional references only when their targets resolve. Resource matches use canonical URLs rather than similar names. Every citation retains its original target and source line. Missing documents, missing sections, and ambiguous targets remain visible as unresolved records. Generated `wiki/sources` projections link to verified original inputs where the upstream mapping can be determined; they are not presented as tracked projection files. Source-declared dates and confidence labels remain distinct from independently verified repository metadata. An absent language field remains unknown.
+
+The importer stores metadata, relationships, and observed Wiki changes inside `Catalog.wiki` in the existing single snapshot. README, descriptions, and Wiki share one commit, and a single atomic rename publishes their validated result. Git tree responses must be complete; selected text blobs are verified against their Git SHA and cached in `node_modules/.cache/ags-wiki-blobs`. `WIKI_CACHE_DIR`, `WIKI_MAX_DOCUMENT_BYTES` (default 1 MiB), and `WIKI_MAX_TEXT_BYTES` (default 32 MiB) configure the cache and text limits. The importer fails on invalid data or exceeded limits and preserves the previous snapshot. First import creates a baseline rather than thousands of publication events.
+
+Sitemaps use `/sitemap.xml` as an index with bounded locale shards under `/sitemaps/`, allowing both resource and Wiki detail pages to be discovered without exceeding a single sitemap's URL limit.
+
 ## Local development
 
 Install Node.js for the Next.js runtime and [Bun](https://bun.sh/) for package installation, tests, and data jobs. Source synchronization also requires Git. Install the checked-in lockfile:
@@ -40,13 +50,13 @@ bun run dev
 
 | Command | Purpose |
 | --- | --- |
-| `bun run sync:data` | Resolve the source commit, import its README and available descriptions, validate, and replace the catalog snapshot atomically. |
+| `bun run sync:data` | Pin one source commit, import README, descriptions, and Wiki metadata/references, validate, and atomically replace the snapshot. |
 | `bun run check:links --limit 40 --concurrency 3` | Check a bounded rotation of links, prioritizing never-checked or oldest-checked entries. |
 | `bun run check:metadata --limit 40 --concurrency 2` | Read a bounded rotation of GitHub repositories’ archive status and last-push timestamp. |
 | `bun run test` | Run parser, search, observation history, dictionary, and editorial integrity tests. |
 | `bun run typecheck` | Check TypeScript without emitting application files. |
 | `bun run build` | Produce the production Next.js build. |
-| `bun run test:smoke` | Start the production build temporarily and verify localized home pages, real localized 404 responses, a resource page, RSS, and the share image. |
+| `bun run test:smoke` | Verify ten-language home/Wiki pages, real localized 404 responses, bidirectional Godot references, RSS, sitemap shards, and the share image against a temporary production server. |
 | `bun run start` | Serve an existing production build locally. |
 
 Run `bun run typecheck`, `bun run lint`, `bun run test`, `bun run build`, and `bun run test:smoke` before deploying a change. Tests require the actual checked-in `src/data/catalog.json`, so missing snapshot data fails rather than silently skipping editorial membership checks. All three publishing workflows run the production HTTP smoke checks after building.
@@ -80,15 +90,17 @@ The metadata job reads public GitHub repository metadata only. Failed or restric
 
 ## Following, saving, and RSS
 
-Bookmarks and followed-topic preferences are stored only in the current browser’s `localStorage` (`ags:saved` and `ags:topics`). They need no account, do not sync between devices, and do not send email or push notifications. Clearing browser storage removes them. Following a topic filters the on-site updates view.
+Bookmarks and followed-topic preferences are stored only in the current browser’s `localStorage`: existing resource keys `ags:saved` / `ags:topics`, plus independent Wiki keys `ags:wiki-saved` / `ags:wiki-topics`. They need no account, do not sync between devices, and do not send email or push notifications. Clearing browser storage removes them. Following a topic filters its on-site updates scope. Missing Wiki bookmarks can be removed without pretending their documents still exist.
 
 Use an RSS reader for subscriptions outside the browser:
 
 - All observed changes: `/en/feed.xml`
 - A topic: `/en/feed.xml?topic=testing-observability`
 - Another language: `/zh-CN/feed.xml?topic=multiplayer-foundations`
+- Wiki changes: `/en/feed.xml?scope=wiki`
+- A Wiki topic: `/zh-CN/feed.xml?scope=wiki&topic=game-engine`
 
-The general form is `/[locale]/feed.xml?topic=[slug]`; omit `topic` for all changes. RSS reports index observations and can be empty at the initial baseline. It does not reinterpret the initial collection as newly published resources.
+The general form is `/[locale]/feed.xml?topic=[slug]`; use `scope=wiki` for Wiki changes and omit `topic` for the entire selected scope. RSS reports index observations and can be empty at the initial baseline. It does not reinterpret the initial collection as newly published resources. Historical Wiki events whose documents are no longer indexed retain links to their recorded source versions.
 
 ## Architecture and deployment
 

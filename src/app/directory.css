@@ -427,3 +427,23 @@ body:has(dialog[open]) { overflow: hidden; }
   html { scroll-behavior: auto; }
   * { transition: none !important; animation: none !important; }
 }
+
+/* Wiki connections share the directory's quiet, text-led structure. */
+.wiki-search-results { margin: 20px 0 30px; }
+.wiki-search-results .section-heading h2 { display: flex; align-items: baseline; gap: 12px; font-size: .95rem; font-weight: 500; }
+.wiki-inline-list { list-style: none; padding: 0; margin: 0; }
+.wiki-inline-list li+li { border-top: 1px solid #ffffff09; }
+.wiki-inline-list a { display: flex; gap: 12px; align-items: center; min-height: 45px; padding: 10px 0; }
+.wiki-inline-list .mono { color: var(--string); flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.wiki-inline-list .small { font-size: .73rem; }
+.wiki-inline-list a:hover .mono { color: var(--label); }
+.wiki-inline-list svg { color: var(--muted); }
+.collection-scopes { margin: 0 0 18px; }
+.wiki-updates-note { margin-bottom: 24px; }
+.saved-collection-switch { max-width: 1600px; margin: 0 auto; padding: 28px 32px 0; }
+.saved-collection-switch .count { margin-left: 5px; color: var(--muted); font-size: .73rem; }
+@media(max-width:560px) {
+  .saved-collection-switch { padding: 22px 18px 0; }
+  .wiki-inline-list a { flex-wrap: wrap; gap: 6px 12px; }
+  .wiki-inline-list .small { max-width: 45%; overflow-wrap: anywhere; }
+}

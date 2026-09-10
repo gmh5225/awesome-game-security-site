@@ -17,7 +17,7 @@ jobs:
   sync:
     if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     env:
       TARGET_BRANCH: ${{ github.event.repository.default_branch }}
     steps:
@@ -31,6 +31,12 @@ jobs:
         with:
           bun-version: '1.2.13'
       - run: bun install --frozen-lockfile
+      - name: Restore verified wiki blob cache
+        uses: actions/cache@v4
+        with:
+          path: node_modules/.cache/ags-wiki-blobs
+          key: wiki-blobs-v1-${{ github.run_id }}
+          restore-keys: wiki-blobs-v1-
       - name: Import pinned source and multilingual descriptions
         run: bun run sync:data
         env:
