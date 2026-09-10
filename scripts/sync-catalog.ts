@@ -5,6 +5,8 @@ import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { LOCALES, type Catalog, type Resource } from '../src/lib/types';
 import { buildCatalog, canEnrichResource, parseReadme, validateCatalog } from './catalog-core';
+import { DEFAULT_WIKI_LIMITS, syncWiki } from './wiki-sync';
+import { validateWikiSnapshot } from './wiki-core';
 
 const REPOSITORY = 'gmh5225/awesome-game-security';
 const output = path.resolve('src/data/catalog.json');
@@ -119,6 +121,22 @@ async function main() {
     for (const resource of parsed.resources) resource.summaries = canEnrichResource(resource) ? old.get(resource.id)?.summaries : undefined;
   }
   const catalog = buildCatalog(parsed, previous, commit, observedAt);
+  if (args.includes('--no-wiki')) {
+    if (previous?.wiki && previous.wiki.sourceCommit !== commit) throw new Error('Cannot preserve a wiki snapshot from a different source commit.');
+    catalog.wiki = previous?.wiki;
+  } else {
+    const boundedBytes = (name: string, fallback: number, maximum: number) => {
+      const value = Number(process.env[name] || fallback);
+      if (!Number.isSafeInteger(value) || value < 1 || value > maximum) throw new Error(`Invalid ${name}.`);
+      return value;
+    };
+    catalog.wiki = await syncWiki(catalog.resources, commit, observedAt, previous?.wiki, {
+      cacheDirectory: process.env.WIKI_CACHE_DIR,
+      allowLargeRemoval: args.includes('--allow-large-removal'),
+      limits: { ...DEFAULT_WIKI_LIMITS, documentBytes: boundedBytes('WIKI_MAX_DOCUMENT_BYTES', DEFAULT_WIKI_LIMITS.documentBytes, 16 * 1024 * 1024), totalBytes: boundedBytes('WIKI_MAX_TEXT_BYTES', DEFAULT_WIKI_LIMITS.totalBytes, 128 * 1024 * 1024) },
+    });
+  }
+  if (catalog.wiki) validateWikiSnapshot(catalog.wiki, catalog.resources, commit);
   validateCatalog(catalog);
   await mkdir(path.dirname(output), { recursive: true });
   const temporary = `${output}.${process.pid}.tmp`;

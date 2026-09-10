@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from 'next/server';
 import { LOCALES, type Locale } from '@/lib/types';
 
 const locales = new Set<string>(LOCALES);
-const localizedIndexes = new Set(['about', 'saved', 'topics', 'updates', 'feed.xml']);
+const localizedIndexes = new Set(['about', 'saved', 'topics', 'wiki', 'updates', 'feed.xml']);
 const publicRoutes = new Set([
   'opengraph-image', 'icon.svg', 'favicon.ico', 'robots.txt', 'sitemap.xml',
   'window.svg', 'globe.svg', 'next.svg', 'vercel.svg', 'file.svg',
@@ -23,6 +23,7 @@ export async function proxy(request: NextRequest) {
   try { segments = request.nextUrl.pathname.split('/').filter(Boolean).map(decodeURIComponent); }
   catch { return missing(request, 'en'); }
   const [first, section, id] = segments;
+  if (first === 'sitemaps' && segments.length === 2 && /^(en|zh-CN|zh-TW|ja|ko|de|fr|es|it|ru)-[1-9][0-9]*\.xml$/.test(section)) return NextResponse.next();
   if (!first || publicRoutes.has(first) || first === '_next') return NextResponse.next();
   if (!locales.has(first)) return missing(request, 'en');
   const locale = first as Locale;
@@ -40,6 +41,11 @@ export async function proxy(request: NextRequest) {
   if (section === 'topics' && segments.length === 3) {
     const { getTopic } = await import('@/data/topics');
     if (!getTopic(id)) return missing(request, locale);
+    return NextResponse.next();
+  }
+  if (section === 'wiki' && segments.length === 3) {
+    const { getWikiDocument } = await import('@/lib/wiki');
+    if (!getWikiDocument(id)) return missing(request, locale);
     return NextResponse.next();
   }
   // Production caches global-not-found in English. Known locale prefixes must

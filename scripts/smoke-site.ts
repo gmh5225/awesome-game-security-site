@@ -6,6 +6,8 @@ import { parse, type DefaultTreeAdapterTypes } from 'parse5';
 import { getResource, getResourceByUrl } from '../src/lib/catalog';
 import { getDictionary } from '../src/lib/i18n';
 import { LOCALES, type Locale } from '../src/lib/types';
+import { getWiki, getWikiListDocuments } from '../src/lib/wiki';
+import { getWikiDictionary } from '../src/lib/wiki-i18n';
 
 const HOST = 'localhost';
 const PORT = 3319;
@@ -143,12 +145,18 @@ async function main() {
         await pause(150);
       }
       assert(ready, 'The production server did not become ready.');
+      const wiki = getWiki();
+      assert(wiki && wiki.documents.length > 1000, 'The Wiki snapshot is missing or unexpectedly small.');
       const missingId = '0000000000000000';
       assert(!getResource(missingId), 'The smoke-test missing resource ID unexpectedly exists.');
       for (const locale of LOCALES) {
         const homepage = `/${locale}`;
         const homepageDocument = await document(homepage, 200);
         assertLocale(homepageDocument, locale, homepage);
+        const knowledgeRoute = `/${locale}/wiki`;
+        const knowledge = await document(knowledgeRoute, 200);
+        assertLocale(knowledge, locale, knowledgeRoute);
+        assert(headingText(knowledge) === getWikiDictionary(locale).wikiTitle, `${knowledgeRoute}: missing localized Wiki heading.`);
         if (locale === 'en') {
           const stylesheets = new Set<string>();
           for (const element of elements(homepageDocument)) {
@@ -168,7 +176,7 @@ async function main() {
           const combined = css.join('\n');
           assert(combined.includes('.directory-shell') && combined.includes('.site-header'), '/en: linked CSS is missing the current directory layout or site header.');
         }
-        for (const missing of [`/${locale}/resources/${missingId}`, `/${locale}/smoke-missing-page`]) {
+        for (const missing of [`/${locale}/resources/${missingId}`, `/${locale}/wiki/${missingId}`, `/${locale}/smoke-missing-page`]) {
           const markup = await document(missing, 404);
           assertLocale(markup, locale, missing);
           assert(headingText(markup) === getDictionary(locale).notFoundTitle, `${missing}: missing or incorrectly localized SSR h1.`);
@@ -183,14 +191,33 @@ async function main() {
       const detailMarkup = await document(detail, 200);
       assertLocale(detailMarkup, 'en', detail);
       assert(headingText(detailMarkup) === known.title, `${detail}: expected the known resource SSR h1.`);
+      const godot = getWikiListDocuments().find(doc => doc.title === 'Godot');
+      assert(godot, 'Known Godot Wiki entry is missing.');
+      const wikiMarkup = await document(`/zh-CN/wiki/${godot.id}`, 200);
+      assert(headingText(wikiMarkup) === 'Godot', 'Wiki detail does not render its real title.');
+      const wikiLinks = [...elements(wikiMarkup)].filter(element => element.tagName === 'a').map(element => htmlAttribute(element, 'href'));
+      assert(wikiLinks.includes(`/zh-CN/resources/${known.id}`), 'Godot Wiki entry is not linked to the matching resource.');
+      const resourceLinks = [...elements(detailMarkup)].filter(element => element.tagName === 'a').map(element => htmlAttribute(element, 'href'));
+      assert(resourceLinks.includes(`/en/wiki/${godot.id}`), 'Resource page is missing the Godot Wiki backlink.');
       const rss = await request('/en/feed.xml');
       assert(rss.status === 200 && /(?:rss|xml)/i.test(rss.headers.get('content-type') || ''), '/en/feed.xml: expected HTTP 200 XML.');
       assert(/<rss\b[^>]*version="2\.0"/i.test(new TextDecoder().decode(await boundedBody(rss))), '/en/feed.xml: invalid RSS root.');
+      const wikiRss = await request('/en/feed.xml?scope=wiki');
+      assert(wikiRss.status === 200, 'Wiki RSS did not respond successfully.');
+      const wikiXml = new TextDecoder().decode(await boundedBody(wikiRss));
+      assert((wikiXml.match(/<item>/g) || []).length === Math.min(wiki.changes.length, 100), 'Wiki RSS invents or loses observed changes.');
+      const invalidFeed = await request('/en/feed.xml?scope=wiki&topic=smoke-nonexistent-topic');
+      assert(invalidFeed.status === 404, 'An unknown Wiki feed topic must return 404.');
+      await invalidFeed.body?.cancel();
+      const sitemap = await request('/sitemap.xml');
+      assert(sitemap.status === 200 && (await sitemap.text()).includes('<sitemapindex'), 'Sitemap index is unavailable.');
+      const shard = await request('/sitemaps/en-1.xml');
+      assert(shard.status === 200 && (await shard.text()).includes(`/en/wiki/${godot.id}</loc>`), 'Wiki entry is missing from the sitemap.');
       const og = await request('/opengraph-image');
       assert(og.status === 200 && og.headers.get('content-type')?.includes('image/png'), '/opengraph-image: expected HTTP 200 PNG.');
       const png = await boundedBody(og, 4 * 1024 * 1024);
       assert(png.length > 100 && [137, 80, 78, 71, 13, 10, 26, 10].every((byte, index) => png[index] === byte), '/opengraph-image: invalid PNG signature.');
-      console.log('Production smoke passed: 10 localized homepages, current linked directory CSS, 20 localized HTTP 404 pages with SSR h1/noindex, known resource, RSS, and OG image.');
+      console.log('Production smoke passed: 10 localized homepages and Wiki indexes, 30 localized HTTP 404 pages, linked CSS, Godot bidirectional references, resource/Wiki RSS, sitemap shards, and OG image.');
     })(), deadline]);
   } catch (error) {
     if (logs) console.error(`Next.js startup/output tail: ${logs.slice(-1200).replace(/\s+/g, ' ').trim()}`);

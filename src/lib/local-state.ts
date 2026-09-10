@@ -12,7 +12,7 @@ function read(key: string) {
 function parse(value: string): string[] {
   try { const items: unknown = JSON.parse(value); return Array.isArray(items) ? items.filter((item): item is string => typeof item === 'string') : []; } catch { return []; }
 }
-export function useLocalList(key: 'ags:saved' | 'ags:topics') {
+export function useLocalList(key: 'ags:saved' | 'ags:topics' | 'ags:wiki-saved' | 'ags:wiki-topics') {
   const value = useSyncExternalStore(subscribe, () => read(key), () => '[]');
   const items = useMemo(()=>parse(value),[value]);
   function toggle(id: string): boolean {
