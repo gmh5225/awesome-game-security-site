@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "sourceCommit": "90b22a83c9eb896e8988510ebdc8dd484a22b35f",
-  "syncedAt": "2026-09-09T08:10:19.765Z",
+  "sourceCommit": "ccb54b112390e03e77e3365c96be4d9dd0b742c4",
+  "syncedAt": "2026-09-10T08:09:39.101Z",
   "baselineAt": "2026-09-08T18:47:01.871Z",
   "resources": [
     {
@@ -2323,6 +2323,32 @@
       "metadataVerifiedAt": "2026-09-08T20:17:10.152Z"
     },
     {
+      "id": "d5d9d8076dc02088",
+      "title": "disrobe",
+      "url": "https://github.com/1-3-7/disrobe",
+      "description": "Rust CLI suite for static recovery: decompile, deobfuscate, and unpack native code, bytecode, scripts, firmware, and nested application packages through an automatic pipeline",
+      "categories": [
+        "Cheat",
+        "Cheat / Decompiler"
+      ],
+      "tags": [
+        "Cheat",
+        "Cheat / Decompiler"
+      ],
+      "engines": [],
+      "platforms": [],
+      "kind": "tool",
+      "level": "all",
+      "firstSeenAt": "2026-09-10T08:09:39.101Z",
+      "contentChangedAt": "2026-09-10T08:09:39.101Z",
+      "linkStatus": "unknown",
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:47.205Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:47.205Z",
+      "upstreamUpdatedAt": "2026-09-10T03:36:57.000Z"
+    },
+    {
       "id": "ad4d84d919366965",
       "title": "Morphida",
       "url": "https://github.com/1013503897/morphida",
@@ -3276,10 +3302,10 @@
         "zh-CN": "GDevelop 是一款开源、跨平台的游戏创作工具与引擎，用户可通过基于可视化事件的逻辑系统构建 2D 与 3D 游戏，而无需完全依赖传统编程。其架构将 C++ 项目核心（GDCore，负责事件解析与代码生成）、JavaScript 绑定（GDevelop.js）、基于 Pixi.js 的 HTML5/JavaScript 运行时（GDJS），以及基于 React 的桌面 IDE（newIDE，可通过 Electron 及相关打包工具导出）分离开来。代码库包含庞大的扩展生态，涵盖精灵、行为、瓦片地图、3D 对象与特效、音频、输入、网络、广告与调试工具。它主要面向无需大量编程即可制作游戏的开发者与教育工作者，也适合研究开放游戏引擎设计、可视化脚本与 HTML5 导出流水线的研究人员。",
         "zh-TW": "GDevelop 是一款開源、跨平台的遊戲創作工具與引擎，使用者可透過基於視覺化事件的邏輯系統製作 2D 與 3D 遊戲，而不必完全依賴傳統程式設計。其架構將 C++ 專案核心（GDCore，負責事件解析與程式碼產生）、JavaScript 繫結（GDevelop.js）、以 Pixi.js 為基礎的 HTML5/JavaScript 執行環境（GDJS），以及以 React 為基礎的桌面 IDE（newIDE，可透過 Electron 及相關打包工具匯出）分開。程式碼庫包含龐大的擴充生態系統，涵蓋精靈、行為、圖磚地圖、3D 物件與特效、音訊、輸入、網路、廣告與除錯工具。它主要適用於無需大量程式設計即可製作遊戲的開發者與教育工作者，也適合研究開放遊戲引擎設計、視覺化腳本與 HTML5 匯出流程的研究人員。"
       },
+      "upstreamUpdatedAt": "2026-09-09T00:07:07.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:26.980Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:26.980Z",
-      "upstreamUpdatedAt": "2026-09-09T00:07:07.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:26.980Z"
     },
     {
       "id": "a2ced24c8d90be4c",
@@ -3302,10 +3328,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2025-07-12T08:25:37.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:27.011Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:27.011Z",
-      "upstreamUpdatedAt": "2025-07-12T08:25:37.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:27.011Z"
     },
     {
       "id": "7807d54b0e1d1feb",
@@ -3331,10 +3357,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2025-11-30T13:05:48.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:27.274Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:27.274Z",
-      "upstreamUpdatedAt": "2025-11-30T13:05:48.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:27.274Z"
     },
     {
       "id": "5d6a43aef44de89f",
@@ -3360,10 +3386,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2022-12-12T16:50:18.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:27.511Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:27.511Z",
-      "upstreamUpdatedAt": "2022-12-12T16:50:18.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:27.511Z"
     },
     {
       "id": "714b66be8845eb7a",
@@ -3386,10 +3412,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2020-10-24T22:53:19.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:27.530Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:27.530Z",
-      "upstreamUpdatedAt": "2020-10-24T22:53:19.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:27.530Z"
     },
     {
       "id": "1a9e1dfb114d9bb1",
@@ -3415,10 +3441,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2020-11-09T05:28:26.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:27.762Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:27.762Z",
-      "upstreamUpdatedAt": "2020-11-09T05:28:26.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:27.762Z"
     },
     {
       "id": "3c67442ac8878694",
@@ -3441,10 +3467,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2020-09-30T22:32:17.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:27.728Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:27.728Z",
-      "upstreamUpdatedAt": "2020-09-30T22:32:17.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:27.728Z"
     },
     {
       "id": "fe9a3d95ee871054",
@@ -3467,10 +3493,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2023-01-16T21:07:13.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:28.056Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:28.056Z",
-      "upstreamUpdatedAt": "2023-01-16T21:07:13.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:28.056Z"
     },
     {
       "id": "2d9468618fb5af04",
@@ -3497,10 +3523,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2022-04-21T06:50:54.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:28.030Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:28.030Z",
-      "upstreamUpdatedAt": "2022-04-21T06:50:54.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:28.030Z"
     },
     {
       "id": "9e9006ca9e506b62",
@@ -3523,10 +3549,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2024-07-31T11:12:55.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:28.243Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:28.243Z",
-      "upstreamUpdatedAt": "2024-07-31T11:12:55.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:28.243Z"
     },
     {
       "id": "695d735e35f1aff5",
@@ -3549,10 +3575,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "archived",
+      "upstreamUpdatedAt": "2024-06-21T08:49:44.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:28.303Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:28.303Z",
-      "upstreamUpdatedAt": "2024-06-21T08:49:44.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:28.303Z"
     },
     {
       "id": "46a5a910f5198d80",
@@ -3575,10 +3601,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2025-12-24T11:54:35.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:28.458Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:28.458Z",
-      "upstreamUpdatedAt": "2025-12-24T11:54:35.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:28.458Z"
     },
     {
       "id": "9c764a535e7323c1",
@@ -3601,10 +3627,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-02-18T19:21:52.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:28.543Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:28.543Z",
-      "upstreamUpdatedAt": "2026-02-18T19:21:52.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:28.543Z"
     },
     {
       "id": "4c6f87f5f29d9c62",
@@ -3634,10 +3660,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2025-11-07T07:24:39.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:28.722Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:28.722Z",
-      "upstreamUpdatedAt": "2025-11-07T07:24:39.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:28.722Z"
     },
     {
       "id": "2384847408a09dd2",
@@ -3660,10 +3686,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2025-12-24T10:53:19.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:28.807Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:28.807Z",
-      "upstreamUpdatedAt": "2025-12-24T10:53:19.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:28.807Z"
     },
     {
       "id": "b64bfe53398f8b81",
@@ -3686,10 +3712,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-08-19T20:48:45.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:28.938Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:28.938Z",
-      "upstreamUpdatedAt": "2026-08-19T20:48:45.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:28.938Z"
     },
     {
       "id": "f7e94407f5557ff3",
@@ -3718,10 +3744,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2024-12-31T19:23:17.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:29.041Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:29.041Z",
-      "upstreamUpdatedAt": "2024-12-31T19:23:17.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:29.041Z"
     },
     {
       "id": "d6816e74aacc40be",
@@ -3744,10 +3770,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-08-29T09:33:21.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:29.158Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:29.158Z",
-      "upstreamUpdatedAt": "2026-08-29T09:33:21.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:29.158Z"
     },
     {
       "id": "c1c39cf41582489b",
@@ -3773,10 +3799,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2022-11-11T00:29:41.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:29.236Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:29.236Z",
-      "upstreamUpdatedAt": "2022-11-11T00:29:41.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:29.236Z"
     },
     {
       "id": "5a4882eb8a78b98d",
@@ -3799,10 +3825,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2024-05-14T08:50:52.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:29.443Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:29.443Z",
-      "upstreamUpdatedAt": "2024-05-14T08:50:52.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:29.443Z"
     },
     {
       "id": "ec46603f649df297",
@@ -3830,10 +3856,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2025-12-04T12:16:15.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:29.464Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:29.464Z",
-      "upstreamUpdatedAt": "2025-12-04T12:16:15.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:29.464Z"
     },
     {
       "id": "e5a73ace1573140c",
@@ -3865,10 +3891,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-09-02T09:35:52.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:29.637Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:29.637Z",
-      "upstreamUpdatedAt": "2026-09-02T09:35:52.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:29.637Z"
     },
     {
       "id": "56a94bdfe21446ac",
@@ -3894,10 +3920,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-07-18T16:03:06.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:29.710Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:29.710Z",
-      "upstreamUpdatedAt": "2026-07-18T16:03:06.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:29.710Z"
     },
     {
       "id": "4260573d1128aeb9",
@@ -3923,10 +3949,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-08-29T19:44:34.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:29.925Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:29.925Z",
-      "upstreamUpdatedAt": "2026-08-29T19:44:34.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:29.925Z"
     },
     {
       "id": "8b7cdb2ac40b6115",
@@ -3949,10 +3975,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2022-02-16T17:24:42.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:29.943Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:29.943Z",
-      "upstreamUpdatedAt": "2022-02-16T17:24:42.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:29.943Z"
     },
     {
       "id": "bf40559b55215fda",
@@ -3987,10 +4013,10 @@
         "zh-CN": "本项目是用 C 语言编写的经典动作 RPG 引擎的洁净室（clean-room）重新实现。它提供跨平台引擎组件，包括渲染、音频、场景管理、MPQ 资源处理，以及基于 SDL2、FFmpeg、zlib 和 libarchive 等库的媒体解码。代码库注重可移植性与可扩展性，而非复用原有专有游戏代码。主要面向引擎开发者与偏重模组研究的人员，为其提供透明基础，以便研究并扩展传统游戏行为。",
         "zh-TW": "本專案是以 C 語言撰寫的經典動作 RPG 引擎之潔淨室（clean-room）重新實作。它提供跨平台引擎元件，包括渲染、音訊、場景管理、MPQ 資產處理，以及透過 SDL2、FFmpeg、zlib 與 libarchive 等函式庫進行媒體解碼。程式碼著重可攜性與可擴充性，而非重用原有專有遊戲程式碼。主要對象為引擎開發者與偏向模組研究的人員，提供透明基礎，以便研究並擴充舊有遊戲行為。"
       },
+      "upstreamUpdatedAt": "2024-04-21T16:13:07.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:30.252Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:30.252Z",
-      "upstreamUpdatedAt": "2024-04-21T16:13:07.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:30.252Z"
     },
     {
       "id": "8aac205b32ec894a",
@@ -4013,10 +4039,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2024-08-19T15:36:45.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:30.192Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:30.192Z",
-      "upstreamUpdatedAt": "2024-08-19T15:36:45.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:30.192Z"
     },
     {
       "id": "2b1589eb2f43d378",
@@ -4039,10 +4065,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-09-07T22:59:31.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:30.407Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:30.407Z",
-      "upstreamUpdatedAt": "2026-09-07T22:59:31.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:30.407Z"
     },
     {
       "id": "f2ef1318da949f41",
@@ -4065,10 +4091,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-02-05T16:35:29.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:30.508Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:30.508Z",
-      "upstreamUpdatedAt": "2026-02-05T16:35:29.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:30.508Z"
     },
     {
       "id": "f047e801ef915a51",
@@ -4091,10 +4117,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-08-20T06:43:53.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:30.831Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:30.831Z",
-      "upstreamUpdatedAt": "2026-08-20T06:43:53.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:30.831Z"
     },
     {
       "id": "9580a7f5a67ce57b",
@@ -4117,10 +4143,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-09-02T14:21:18.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:30.909Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:30.909Z",
-      "upstreamUpdatedAt": "2026-09-02T14:21:18.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:30.909Z"
     },
     {
       "id": "d139f67ad8f7b7c8",
@@ -4143,10 +4169,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2023-08-18T23:39:51.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:31.059Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:31.059Z",
-      "upstreamUpdatedAt": "2023-08-18T23:39:51.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:31.059Z"
     },
     {
       "id": "544d7706c0d5a2cb",
@@ -4169,10 +4195,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2023-04-09T23:29:37.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:31.111Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:31.111Z",
-      "upstreamUpdatedAt": "2023-04-09T23:29:37.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:31.111Z"
     },
     {
       "id": "147f9d79c61b3079",
@@ -4195,10 +4221,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-06-03T11:52:20.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:31.307Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:31.307Z",
-      "upstreamUpdatedAt": "2026-06-03T11:52:20.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:31.307Z"
     },
     {
       "id": "27943adf5e84305f",
@@ -4245,10 +4271,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2019-10-01T09:29:05.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:31.499Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:31.499Z",
-      "upstreamUpdatedAt": "2019-10-01T09:29:05.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:31.499Z"
     },
     {
       "id": "6283dbfaa05a4f20",
@@ -4271,10 +4297,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2021-11-14T16:05:06.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:31.506Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:31.506Z",
-      "upstreamUpdatedAt": "2021-11-14T16:05:06.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:31.506Z"
     },
     {
       "id": "4815c656100f78b2",
@@ -4300,10 +4326,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2025-11-02T14:51:48.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:31.700Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:31.700Z",
-      "upstreamUpdatedAt": "2025-11-02T14:51:48.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:31.700Z"
     },
     {
       "id": "594f7113c8c51dea",
@@ -4326,10 +4352,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2026-08-09T13:57:07.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:31.705Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:31.705Z",
-      "upstreamUpdatedAt": "2026-08-09T13:57:07.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:31.705Z"
     },
     {
       "id": "761894037e6776d6",
@@ -4355,10 +4381,10 @@
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
       "maintenance": "active",
+      "upstreamUpdatedAt": "2021-02-15T16:08:38.000Z",
       "metadataCheckedAt": "2026-09-09T08:10:31.961Z",
       "metadataStatus": "ok",
-      "metadataVerifiedAt": "2026-09-09T08:10:31.961Z",
-      "upstreamUpdatedAt": "2021-02-15T16:08:38.000Z"
+      "metadataVerifiedAt": "2026-09-09T08:10:31.961Z"
     },
     {
       "id": "02669c1dda47268c",
@@ -4380,8 +4406,12 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown",
-      "lastCheckedAt": "2026-09-09T08:10:26.456Z"
+      "maintenance": "archived",
+      "lastCheckedAt": "2026-09-09T08:10:26.456Z",
+      "metadataCheckedAt": "2026-09-10T08:09:47.186Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:47.186Z",
+      "upstreamUpdatedAt": "2024-06-29T15:57:34.000Z"
     },
     {
       "id": "af72f456c43046d7",
@@ -4403,7 +4433,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:47.417Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:47.417Z",
+      "upstreamUpdatedAt": "2019-02-22T15:23:44.000Z"
     },
     {
       "id": "9be5a3cd0709c9a2",
@@ -4425,7 +4459,7 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown",
+      "maintenance": "active",
       "summaries": {
         "de": "Overload ist eine Open-Source-3D-Spiel-Engine mit Laufzeitsystemen und einem integrierten Editor.\nSie ist vorwiegend in modernem C++ mit Lua-Skriptunterstützung umgesetzt und bietet Werkzeuge für Rendering, Physik, Audio, Profiling und Materialien.\nDas Projekt legt Wert auf Benutzerfreundlichkeit und Erweiterbarkeit durch Dokumentation, Beispielprojekte und eine communitygetriebene Architektur.\nFür die Spielsicherheitsforschung stellt es eine umfangreiche Engine-Codebasis bereit, um Angriffsflächen, interne Tooling-Strukturen und defensive Entwurfsmuster zu untersuchen.",
         "en": "Overload is an open-source 3D game engine that includes both runtime systems and an integrated editor.\nIt is built primarily in modern C++ with Lua scripting support and offers rendering, physics, audio, profiling, and material tooling.\nThe project emphasizes usability and extensibility through documentation, sample projects, and a community-driven architecture.\nFor game security research, it provides a substantial engine codebase for studying attack surfaces, tooling internals, and defensive design patterns.",
@@ -4437,7 +4471,11 @@
         "ru": "Overload — это открытый 3D-игровой движок, включающий как runtime-системы, так и встроенный редактор.\nОн в основном написан на современном C++ с поддержкой скриптов на Lua и предлагает средства для рендеринга, физики, аудио, профилирования и работы с материалами.\nПроект делает акцент на удобстве использования и расширяемости благодаря документации, примерам проектов и архитектуре, развиваемой сообществом.\nДля исследований в области безопасности игр он даёт объёмную кодовую базу движка для изучения поверхностей атаки, внутренней работы инструментов и защитных архитектурных паттернов.",
         "zh-CN": "Overload 是一款开源 3D 游戏引擎，同时包含运行时系统与集成编辑器。\n它主要采用现代 C++ 构建，并支持 Lua 脚本，提供渲染、物理、音频、性能分析以及材质相关工具。\n项目通过文档、示例工程和社区驱动的架构，强调易用性与可扩展性。\n对于游戏安全研究而言，它提供了体量可观的引擎代码库，便于研究攻击面、工具内部机制以及防御设计模式。",
         "zh-TW": "Overload 是一款開源 3D 遊戲引擎，同時包含執行時期系統與整合式編輯器。\n它主要以現代 C++ 打造，並支援 Lua 腳本，提供渲染、物理、音訊、效能分析以及材質相關工具。\n專案透過文件、範例專案與社群驅動的架構，強調易用性與可擴充性。\n對遊戲安全研究來說，它提供了規模可觀的引擎程式碼庫，便於研究攻擊面、工具內部機制以及防禦設計模式。"
-      }
+      },
+      "metadataCheckedAt": "2026-09-10T08:09:47.634Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:47.634Z",
+      "upstreamUpdatedAt": "2026-09-09T21:30:27.000Z"
     },
     {
       "id": "6a45b1e64314ebbe",
@@ -4459,7 +4497,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:47.600Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:47.600Z",
+      "upstreamUpdatedAt": "2018-09-05T02:56:01.000Z"
     },
     {
       "id": "381f48a015e0b9ba",
@@ -4481,7 +4523,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:47.839Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:47.839Z",
+      "upstreamUpdatedAt": "2019-09-18T07:15:39.000Z"
     },
     {
       "id": "8c97db9ea78b37d5",
@@ -4503,7 +4549,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:47.882Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:47.882Z",
+      "upstreamUpdatedAt": "2025-07-01T12:30:18.000Z"
     },
     {
       "id": "a2e2c556bd67f23a",
@@ -4525,7 +4575,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:48.102Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:48.102Z",
+      "upstreamUpdatedAt": "2025-07-19T22:28:02.000Z"
     },
     {
       "id": "4616c96b37d4e89e",
@@ -4547,7 +4601,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:48.101Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:48.101Z",
+      "upstreamUpdatedAt": "2026-09-10T06:21:58.000Z"
     },
     {
       "id": "e2b3dfbda347a744",
@@ -4572,7 +4630,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:48.331Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:48.331Z",
+      "upstreamUpdatedAt": "2026-09-07T16:01:35.000Z"
     },
     {
       "id": "d5f60696b3d763bc",
@@ -4594,7 +4656,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:48.329Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:48.329Z",
+      "upstreamUpdatedAt": "2025-05-25T12:39:00.000Z"
     },
     {
       "id": "2894dded1fa35b2c",
@@ -4616,7 +4682,7 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown",
+      "maintenance": "active",
       "summaries": {
         "de": "Dieses Projekt ist ein Plugin, das Debugger-Funktionen über eine MCP-kompatible HTTP-Schnittstelle für x64dbg und verwandte Varianten bereitstellt. Es ist in C# auf dem .NET Framework umgesetzt und mappt Debugger-Aktionen auf remote aufrufbare Befehle für Speicherlesen, Disassembly, Registerabfragen, Labeling und Automatisierung. Die Architektur umfasst einen leichtgewichtigen selbstgehosteten Listener und ein modulares Command-Routing für Tool-Integration und schnelle Erweiterung. Es richtet sich an KI-gestützte Reverse-Engineering- und skriptbasierte Game-Security-Analyse-Workflows.",
         "en": "This project is a plugin that exposes debugger functionality through an MCP-compatible HTTP interface for x64dbg and related variants. It is built in C# on .NET Framework and maps debugger actions to remotely callable commands for memory reads, disassembly, register queries, labeling, and automation. The architecture includes a lightweight self-hosted listener and modular command routing designed for tool integration and rapid extension. It is aimed at AI-assisted reverse engineering and scripted game security analysis workflows.",
@@ -4628,7 +4694,11 @@
         "ru": "Этот проект — плагин, который предоставляет функциональность отладчика через HTTP-интерфейс, совместимый с MCP, для x64dbg и связанных вариантов. Он написан на C# под .NET Framework и сопоставляет действия отладчика удалённо вызываемым командам для чтения памяти, дизассемблирования, запросов регистров, разметки (labeling) и автоматизации. Архитектура включает лёгкий самохостируемый слушатель и модульную маршрутизацию команд, рассчитанную на интеграцию инструментов и быстрое расширение. Ориентирован на рабочие процессы обратной разработки с поддержкой ИИ и скриптового анализа безопасности игр.",
         "zh-CN": "本项目是一款插件，通过兼容 MCP 的 HTTP 接口暴露 x64dbg 及相关变体的调试器功能。它基于 C# 与 .NET Framework 构建，将内存读取、反汇编、寄存器查询、标注以及自动化等调试操作映射为可远程调用的命令。架构包含轻量级自托管监听器与模块化命令路由，便于工具集成与快速扩展。面向 AI 辅助逆向工程与脚本化游戏安全分析工作流。",
         "zh-TW": "本專案是一款外掛，透過相容 MCP 的 HTTP 介面暴露 x64dbg 及相關變體的除錯器功能。它以 C# 與 .NET Framework 建置，將記憶體讀取、反組譯、暫存器查詢、標註以及自動化等除錯操作對應為可遠端呼叫的命令。架構包含輕量級自託管監聽器與模組化命令路由，便於工具整合與快速擴充。面向 AI 輔助逆向工程與腳本化遊戲安全分析工作流程。"
-      }
+      },
+      "metadataCheckedAt": "2026-09-10T08:09:48.514Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:48.514Z",
+      "upstreamUpdatedAt": "2026-06-16T05:00:23.000Z"
     },
     {
       "id": "2c36dc6ed33738eb",
@@ -4650,7 +4720,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:48.578Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:48.578Z",
+      "upstreamUpdatedAt": "2024-12-11T21:25:24.000Z"
     },
     {
       "id": "8868772d3dd92c83",
@@ -4672,7 +4746,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:48.789Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:48.789Z",
+      "upstreamUpdatedAt": "2022-07-06T21:16:57.000Z"
     },
     {
       "id": "e41255980fd5ed90",
@@ -4696,7 +4774,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:48.814Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:48.814Z",
+      "upstreamUpdatedAt": "2023-06-07T11:27:07.000Z"
     },
     {
       "id": "ab1b5dcc045a6817",
@@ -4718,7 +4800,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:49.065Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:49.065Z",
+      "upstreamUpdatedAt": "2022-08-02T23:50:08.000Z"
     },
     {
       "id": "d593f3402dcfc4bf",
@@ -4740,7 +4826,7 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown",
+      "maintenance": "active",
       "summaries": {
         "de": "blender-mcp verbindet Blender über das Model Context Protocol mit KI-Assistenten, sodass Szenen per natürlichsprachlichen Befehlen geprüft und bearbeitet werden können. Das Projekt kombiniert ein Blender-Addon mit einem Python-MCP-Server, der über ein socketbasiertes JSON-Protokoll kommuniziert. Es unterstützt Objekt- und Materialmanipulation, Szenenabfragen, skriptbasierte Codeausführung sowie optionale Integrationen für externe Assets und generierte 3D-Modelle. Der Hauptanwendungsfall ist KI-gestützte 3D-Content-Erstellung und schnelles Szenenprototyping für Künstler und Entwickler.",
         "en": "blender-mcp connects Blender to AI assistants through the Model Context Protocol so scenes can be inspected and edited by natural-language commands. The project combines a Blender addon with a Python MCP server that communicates over a socket-based JSON protocol. It supports object and material manipulation, scene queries, scripted code execution, and optional integrations for external assets and generated 3D models. The primary use case is AI-assisted 3D content creation and rapid scene prototyping for artists and developers.",
@@ -4752,7 +4838,11 @@
         "ru": "blender-mcp соединяет Blender с ИИ-ассистентами через Model Context Protocol, позволяя просматривать и редактировать сцены командами на естественном языке. Проект сочетает аддон Blender и Python MCP-сервер, которые обмениваются данными по сокетному JSON-протоколу. Поддерживаются манипуляции с объектами и материалами, запросы к сцене, выполнение скриптового кода, а также опциональные интеграции внешних ассетов и сгенерированных 3D-моделей. Основной сценарий использования — создание 3D-контента с помощью ИИ и быстрое прототипирование сцен для художников и разработчиков.",
         "zh-CN": "blender-mcp 通过 Model Context Protocol 将 Blender 连接到 AI 助手，从而可用自然语言命令检查并编辑场景。该项目将 Blender 插件与基于套接字的 JSON 协议通信的 Python MCP 服务器结合在一起。它支持对象与材质操作、场景查询、脚本代码执行，以及外部资源和生成式 3D 模型的可选集成。主要用例是面向艺术家与开发者的 AI 辅助 3D 内容创作和快速场景原型设计。",
         "zh-TW": "blender-mcp 透過 Model Context Protocol 將 Blender 連接到 AI 助手，從而可用自然語言命令檢查並編輯場景。該專案將 Blender 外掛與基於通訊端的 JSON 協定通訊的 Python MCP 伺服器結合在一起。它支援物件與材質操作、場景查詢、指令碼程式碼執行，以及外部資源和生成式 3D 模型的可選整合。主要使用情境是面向藝術家與開發者的 AI 輔助 3D 內容創作和快速場景原型設計。"
-      }
+      },
+      "metadataCheckedAt": "2026-09-10T08:09:49.034Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:49.034Z",
+      "upstreamUpdatedAt": "2026-09-07T15:51:01.000Z"
     },
     {
       "id": "e3d78b9abc6d9db9",
@@ -4774,7 +4864,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:49.248Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:49.248Z",
+      "upstreamUpdatedAt": "2025-02-14T17:55:53.000Z"
     },
     {
       "id": "4f86177b92ab9cde",
@@ -4799,7 +4893,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "archived",
+      "metadataCheckedAt": "2026-09-10T08:09:49.266Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:49.266Z",
+      "upstreamUpdatedAt": "2022-07-03T18:00:59.000Z"
     },
     {
       "id": "87f54bd46c11b793",
@@ -4821,7 +4919,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:49.504Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:49.504Z",
+      "upstreamUpdatedAt": "2024-07-08T19:41:50.000Z"
     },
     {
       "id": "74a698589f4a02cb",
@@ -4846,7 +4948,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:49.508Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:49.508Z",
+      "upstreamUpdatedAt": "2021-02-08T20:19:58.000Z"
     },
     {
       "id": "c91788a975b51176",
@@ -4868,7 +4974,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:49.737Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:49.737Z",
+      "upstreamUpdatedAt": "2025-10-10T08:02:23.000Z"
     },
     {
       "id": "a14bc2925bbfb2ec",
@@ -4890,7 +5000,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:49.730Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:49.730Z",
+      "upstreamUpdatedAt": "2022-10-15T20:36:55.000Z"
     },
     {
       "id": "b5d73ba166427aea",
@@ -4912,7 +5026,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:49.963Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:49.963Z",
+      "upstreamUpdatedAt": "2023-11-03T11:07:43.000Z"
     },
     {
       "id": "c23d7ef2ca2c14dd",
@@ -4970,7 +5088,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:49.965Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:49.965Z",
+      "upstreamUpdatedAt": "2026-09-01T01:46:58.000Z"
     },
     {
       "id": "bec0ca67a19baf16",
@@ -4992,7 +5114,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:50.203Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:50.203Z",
+      "upstreamUpdatedAt": "2026-08-21T09:01:20.000Z"
     },
     {
       "id": "9814496f64a8e64d",
@@ -5027,7 +5153,9 @@
         "ru": "FastLogs — это открытый движок отладки и отчётов об ошибках для игровых сборок, где консоль движка трудно или невозможно открыть: WebGL, порталы, мобильные платформы и консоли. Из работающей сборки одним жестом или вызовом агента можно отправить недавние строки логов, сведения об устройстве, контекстные «хлебные крошки», скриншоты и снимки сцены на self-hosted сервер Node.js, который хранит отчёты в SQLite и возвращает короткую ссылку на просмотрщик. Клиенты есть для Unity (пакет C# UPM) и GameMaker (GML) по общему контракту JSON-ingest, с функциями автозахвата сбоев и офлайн-очереди отправки, просматриваемого каталога с полнотекстовым поиском и triage, опциональными sink’ами в Slack, Discord, webhook’и и трекеры задач, а также scrubbing PII по умолчанию. Также есть headless-путь отправки и канал удалённых команд, чтобы QA, разработчики или ИИ-агенты могли осматривать и управлять живой сборкой без отладчика. Основной сценарий — сократить цикл от бага в распределённой сборке до того момента, когда разработчик видит причину в фильтруемой браузерной консоли.",
         "zh-CN": "FastLogs 是一款开源的调试与缺陷上报引擎，面向难以或无法打开引擎控制台的游戏构建环境，例如 WebGL、门户、移动端和主机平台。在运行中的构建里，一次手势或 agent 调用即可将近期日志行、设备信息、上下文面包屑、截图和场景快照发送到自托管的 Node.js 服务器；服务器用 SQLite 存储报告，并返回可分享的简短查看链接。客户端覆盖 Unity（C# UPM 包）和 GameMaker（GML），共用同一套 JSON 接入约定，功能包括崩溃自动采集与离线发件箱、带全文搜索与分诊的可浏览目录、可选接入 Slack、Discord、webhook 与问题跟踪系统，以及默认启用的 PII 脱敏。它还提供无界面发送路径和远程命令通道，便于 QA、开发者或 AI agent 在无调试器的情况下检查并驱动实机构建。主要用途是缩短从分布式构建中出现缺陷到开发者在可筛选的浏览器控制台中看到原因之间的闭环。",
         "zh-TW": "FastLogs 是一款開源的除錯與缺陷回報引擎，面向難以或無法開啟引擎主控台的遊戲建置環境，例如 WebGL、入口站、行動裝置與主機平台。在執行中的建置裡，一次手勢或 agent 呼叫即可將近期日誌列、裝置資訊、上下文麵包屑、截圖與場景快照送至自架的 Node.js 伺服器；伺服器用 SQLite 儲存報告，並回傳可分享的簡短檢視連結。用戶端涵蓋 Unity（C# UPM 套件）與 GameMaker（GML），共用同一套 JSON 接收約定，功能包括當機自動擷取與離線寄件匣、具備全文搜尋與分診的可瀏覽目錄、可選接至 Slack、Discord、webhook 與問題追蹤系統，以及預設啟用的 PII 脫敏。它也提供無介面傳送路徑與遠端命令通道，方便 QA、開發者或 AI agent 在沒有除錯器的情況下檢查並驅動實機建置。主要用途是縮短從分散式建置出現缺陷到開發者在可篩選的瀏覽器主控台中看到原因之間的迴圈。"
-      }
+      },
+      "metadataCheckedAt": "2026-09-10T08:09:50.109Z",
+      "metadataStatus": "unavailable"
     },
     {
       "id": "2a8d0aa1160def20",
@@ -5049,7 +5177,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:50.308Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:50.308Z",
+      "upstreamUpdatedAt": "2021-10-01T15:17:36.000Z"
     },
     {
       "id": "fa6c5fb35c4d95c0",
@@ -5071,7 +5203,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:50.421Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:50.421Z",
+      "upstreamUpdatedAt": "2021-07-05T14:03:36.000Z"
     },
     {
       "id": "a286a22c0d0d6915",
@@ -5093,7 +5229,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:50.481Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:50.481Z",
+      "upstreamUpdatedAt": "2019-08-29T14:16:09.000Z"
     },
     {
       "id": "8cd88358ff337c3a",
@@ -5115,7 +5255,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:50.655Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:50.655Z",
+      "upstreamUpdatedAt": "2023-09-16T00:00:04.000Z"
     },
     {
       "id": "031f502dc3896394",
@@ -5137,8 +5281,12 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown",
-      "lastCheckedAt": "2026-09-09T08:10:26.458Z"
+      "maintenance": "active",
+      "lastCheckedAt": "2026-09-09T08:10:26.458Z",
+      "metadataCheckedAt": "2026-09-10T08:09:50.720Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:50.720Z",
+      "upstreamUpdatedAt": "2021-09-22T15:00:45.000Z"
     },
     {
       "id": "da4e92bf3c1f1b62",
@@ -5160,7 +5308,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:50.924Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:50.924Z",
+      "upstreamUpdatedAt": "2024-07-09T16:30:54.000Z"
     },
     {
       "id": "241ffcfcc74917fb",
@@ -5182,7 +5334,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:50.976Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:50.976Z",
+      "upstreamUpdatedAt": "2026-09-06T05:40:15.000Z"
     },
     {
       "id": "e1285cd8dc3b3a43",
@@ -5204,7 +5360,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:51.286Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:51.286Z",
+      "upstreamUpdatedAt": "2021-09-25T13:51:13.000Z"
     },
     {
       "id": "d50e83ac8de0c739",
@@ -5229,7 +5389,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:51.197Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:51.197Z",
+      "upstreamUpdatedAt": "2023-11-05T09:25:07.000Z"
     },
     {
       "id": "9630e7bddce9de51",
@@ -5251,7 +5415,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:51.416Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:51.416Z",
+      "upstreamUpdatedAt": "2020-08-10T03:14:21.000Z"
     },
     {
       "id": "6ce1477fcf680b63",
@@ -5276,7 +5444,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:51.461Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:51.461Z",
+      "upstreamUpdatedAt": "2024-02-12T17:59:30.000Z"
     },
     {
       "id": "bebb99fd8db408c8",
@@ -5301,7 +5473,9 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "metadataCheckedAt": "2026-09-10T08:09:51.570Z",
+      "metadataStatus": "unavailable"
     },
     {
       "id": "60b9adf30321b7da",
@@ -5323,7 +5497,11 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "active",
+      "metadataCheckedAt": "2026-09-10T08:09:51.692Z",
+      "metadataStatus": "ok",
+      "metadataVerifiedAt": "2026-09-10T08:09:51.692Z",
+      "upstreamUpdatedAt": "2021-09-11T13:00:34.000Z"
     },
     {
       "id": "51978aa303e449b4",
@@ -6375,7 +6553,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.572Z"
     },
     {
       "id": "817ffed1eeec94a3",
@@ -11462,7 +11641,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.571Z"
     },
     {
       "id": "6e01ff9a9c165ebe",
@@ -11806,6 +11986,28 @@
         "zh-CN": "本项目为 DOOM Retro，一款面向 Windows、使用 C 与 SDL2 编写的经典 DOOM 源码移植。它在保留原汁原味玩法手感的同时，为原版 DOOM 引擎加入宽屏渲染、无帧率上限、改进光照、纹理过滤、手柄支持以及大量漏洞修复。该移植支持全部原版 WAD 格式、DeHackEd 补丁以及兼容 BOOM 的地图特性。面向经典第一人称射击爱好者、DOOM MOD 作者，以及研究 idTech 1 引擎现代化的游戏引擎研究者。",
         "zh-TW": "本專案為 DOOM Retro，一款面向 Windows、以 C 與 SDL2 撰寫的經典 DOOM 原始碼移植。它在保留原汁原味遊玩手感的同時，為原版 DOOM 引擎加入寬螢幕渲染、無幀率上限、改進光照、紋理過濾、手把支援以及大量錯誤修復。該移植支援全部原版 WAD 格式、DeHackEd 修補程式以及相容 BOOM 的地圖特性。適合經典第一人稱射擊愛好者、DOOM MOD 作者，以及研究 idTech 1 引擎現代化的遊戲引擎研究者。"
       }
+    },
+    {
+      "id": "76b8809ddda604dc",
+      "title": "r6-siege-battleye-launch-bug",
+      "url": "https://github.com/brandenbailey23/r6-siege-battleye-launch-bug",
+      "description": "Documented R6 Siege Y11S3 BattlEye/Sentinel handshake failure on standard launch paths, with timeline, driver load evidence, and working bypass via RainbowSixHelper.exe",
+      "categories": [
+        "Cheat",
+        "Cheat / Explore AntiCheat System:BE"
+      ],
+      "tags": [
+        "Cheat",
+        "Cheat / Explore AntiCheat System:BE"
+      ],
+      "engines": [],
+      "platforms": [],
+      "kind": "tool",
+      "level": "all",
+      "firstSeenAt": "2026-09-10T08:09:39.101Z",
+      "contentChangedAt": "2026-09-10T08:09:39.101Z",
+      "linkStatus": "unknown",
+      "maintenance": "unknown"
     },
     {
       "id": "1aed2d5dfcbb1847",
@@ -15761,7 +15963,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.571Z"
     },
     {
       "id": "acca2bea0916a92c",
@@ -16407,7 +16610,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.571Z"
     },
     {
       "id": "2d5390d72ae79f2c",
@@ -18688,7 +18892,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.572Z"
     },
     {
       "id": "fd65440ab0b574d9",
@@ -19745,7 +19950,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.574Z"
     },
     {
       "id": "cfc8b89717ea7842",
@@ -20979,7 +21185,8 @@
         "ru": "Документация и скрипты для клонирования расширенных накопителей PS4/PS5 с помощью dd и sparse-образов в Linux, позволяющие переносить установленные приложения между консолями через образы дисков.",
         "zh-CN": "关于在 Linux 上使用 dd 与稀疏镜像克隆 PS4/PS5 扩展存储驱动器的文档与脚本，可通过磁盘镜像在主机之间转移已安装的应用程序。",
         "zh-TW": "關於在 Linux 上使用 dd 與稀疏映像複製 PS4/PS5 擴充儲存磁碟的文件與指令碼，可透過磁碟映像在主機之間轉移已安裝的應用程式。"
-      }
+      },
+      "lastCheckedAt": "2026-09-10T08:09:45.570Z"
     },
     {
       "id": "f01452232d2d44bd",
@@ -22290,7 +22497,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.569Z"
     },
     {
       "id": "5dec81d10cf242b8",
@@ -22929,7 +23137,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.574Z"
     },
     {
       "id": "04fee834f2e84b50",
@@ -22951,7 +23160,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.571Z"
     },
     {
       "id": "f005af957f15205a",
@@ -24607,6 +24817,28 @@
       "maintenance": "unknown"
     },
     {
+      "id": "10cedcae550793c4",
+      "title": "dragons-vs-vms",
+      "url": "https://github.com/fare9/dragons-vs-vms",
+      "description": "VMProtect x64 devirtualization lab: dragon-tales symbolic handler analysis, all 256 handler slots classified, LLVM IR recovery, and protected sample binaries with Binary Ninja databases",
+      "categories": [
+        "Cheat",
+        "Cheat / Fix VMP"
+      ],
+      "tags": [
+        "Cheat",
+        "Cheat / Fix VMP"
+      ],
+      "engines": [],
+      "platforms": [],
+      "kind": "tool",
+      "level": "all",
+      "firstSeenAt": "2026-09-10T08:09:39.101Z",
+      "contentChangedAt": "2026-09-10T08:09:39.101Z",
+      "linkStatus": "unknown",
+      "maintenance": "unknown"
+    },
+    {
       "id": "b442969bf54269de",
       "title": "umap-mapper",
       "url": "https://github.com/farmequipment69/umap-mapper",
@@ -26057,6 +26289,31 @@
       "maintenance": "unknown"
     },
     {
+      "id": "23c03076c7910628",
+      "title": "amice",
+      "url": "https://github.com/fuqiuluo/amice",
+      "description": "Rust LLVM pass plugin for compile-time obfuscation and instruction-level VM virtualization on C/C++/Rust (LLVM 11–22; Android NDK supported)",
+      "categories": [
+        "Anti Cheat",
+        "Anti Cheat / Obfuscation Engine"
+      ],
+      "tags": [
+        "Anti Cheat",
+        "Anti Cheat / Obfuscation Engine",
+        "Android"
+      ],
+      "engines": [],
+      "platforms": [
+        "Android"
+      ],
+      "kind": "tool",
+      "level": "all",
+      "firstSeenAt": "2026-09-10T08:09:39.101Z",
+      "contentChangedAt": "2026-09-10T08:09:39.101Z",
+      "linkStatus": "unknown",
+      "maintenance": "unknown"
+    },
+    {
       "id": "158c37b8cea6d3fe",
       "title": "android-wuwa",
       "url": "https://github.com/fuqiuluo/android-wuwa",
@@ -26970,7 +27227,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.570Z"
     },
     {
       "id": "e1045a0bb890bb1d",
@@ -29823,7 +30081,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.570Z"
     },
     {
       "id": "78d684f2450a4346",
@@ -30113,7 +30372,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.572Z"
     },
     {
       "id": "fb0f4c277342a1a7",
@@ -37096,7 +37356,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.571Z"
     },
     {
       "id": "e554c1a9e1aa8803",
@@ -37810,7 +38071,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.572Z"
     },
     {
       "id": "d28fa79bb9ad7943",
@@ -38310,7 +38572,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.574Z"
     },
     {
       "id": "2f8ba959e4c2fe29",
@@ -38423,7 +38686,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.574Z"
     },
     {
       "id": "1d9b936a78c4d06c",
@@ -44275,7 +44539,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.571Z"
     },
     {
       "id": "64fe6e10124966ad",
@@ -46929,7 +47194,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.573Z"
     },
     {
       "id": "49485262fbe63686",
@@ -47588,7 +47854,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.572Z"
     },
     {
       "id": "60d42e4df1a022dc",
@@ -48732,7 +48999,8 @@
         "ru": "X360GameHack — это открытое универсальное десктопное приложение для Windows, предназначенное для установки и управления лично созданными резервными копиями игр на консолях Xbox 360 с RGH/JTAG, Bad Update, Bad Avatar и комплектах разработчика, с дополнительной поддержкой ISO и XBE файлов оригинальной Xbox. Написано на C# для .NET Framework в виде WinForms GUI и объединяет типичные сценарии моддинга: шифрование/расшифровку/сжатие XEX и патчинг под целевую консоль, инструменты разблокировки пакетов и DLC, изменение Title ID и Media ID, а также преобразование контейнеров сохранений для RGH или комплекта разработчика. Также включает конвертацию ISO в GOD/STFS, передачу файлов по FTP на Xbox и другие консоли, средства массового извлечения ISO и помощники установки с USB, чтобы готовить и развёртывать игровой контент без Xbox Neighborhood. Основной сценарий использования — homebrew и инструменты реверс-инжиниринга Xbox 360 для модифицированных консолей, с целью сделать установку бэкапов и патчинг XEX/пакетов доступными как новичкам, так и продавцам RGH.",
         "zh-CN": "X360GameHack 是一款开源的 Windows 一体化桌面应用，用于在 Xbox 360 RGH/JTAG、Bad Update、Bad Avatar 以及开发套件主机上安装和管理个人备份游戏，并额外支持原版 Xbox 的 ISO 与 XBE 文件。该工具以 C# 面向 .NET Framework 编写，采用 WinForms 图形界面，封装了常见改机流程，例如 XEX 加密/解密/压缩与主机目标打补丁、安装包与 DLC 解锁、Title ID 与 Media ID 修改，以及面向 RGH 或开发套件的存档容器转换。它还提供 ISO 转 GOD/STFS、通过 FTP 向 Xbox 及其他主机传输文件、批量 ISO 解压辅助，以及 USB 安装辅助，使用户无需 Xbox Neighborhood 即可准备并部署游戏内容。主要面向 Xbox 360 自制软件与改装主机逆向工程工具场景，旨在让备份安装及 XEX/安装包打补丁对初学者和 RGH 卖家都更易上手。",
         "zh-TW": "X360GameHack 是一款開源的 Windows 一體化桌面應用，用於在 Xbox 360 RGH/JTAG、Bad Update、Bad Avatar 以及開發套件主機上安裝與管理個人備份遊戲，並額外支援原版 Xbox 的 ISO 與 XBE 檔案。此工具以 C# 面向 .NET Framework 編寫，採用 WinForms 圖形介面，封裝了常見改機流程，例如 XEX 加密/解密/壓縮與主機目標打補丁、安裝包與 DLC 解鎖、Title ID 與 Media ID 修改，以及面向 RGH 或開發套件的存檔容器轉換。它還提供 ISO 轉 GOD/STFS、透過 FTP 向 Xbox 及其他主機傳輸檔案、批次 ISO 解壓輔助，以及 USB 安裝輔助，讓使用者無需 Xbox Neighborhood 即可準備並部署遊戲內容。主要面向 Xbox 360 自製軟體與改裝主機逆向工程工具場景，旨在讓備份安裝及 XEX/安裝包打補丁對初學者與 RGH 賣家都更易上手。"
-      }
+      },
+      "lastCheckedAt": "2026-09-10T08:09:45.570Z"
     },
     {
       "id": "963cb12a67ee1610",
@@ -51429,7 +51697,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.573Z"
     },
     {
       "id": "250d4c2517c95aa8",
@@ -53426,7 +53695,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.570Z"
     },
     {
       "id": "2cd33a35d2c77f19",
@@ -56804,7 +57074,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.570Z"
     },
     {
       "id": "a1f4d45fc68c9894",
@@ -57171,7 +57442,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.572Z"
     },
     {
       "id": "76ae6511db8805c5",
@@ -58700,6 +58972,28 @@
       "level": "all",
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
+      "linkStatus": "unknown",
+      "maintenance": "unknown"
+    },
+    {
+      "id": "7460cd7c0305346c",
+      "title": "PokeAllianceAntiCheatAnalysis",
+      "url": "https://github.com/lordetyrael/pokeallianceanticheatanalysis",
+      "description": "Static audit of PokeAlliance client telemetry: server-triggered process/DLL/window enumeration, login hardware fingerprinting, and supporting Frida/tracer scripts",
+      "categories": [
+        "Cheat",
+        "Cheat / Guide"
+      ],
+      "tags": [
+        "Cheat",
+        "Cheat / Guide"
+      ],
+      "engines": [],
+      "platforms": [],
+      "kind": "guide",
+      "level": "all",
+      "firstSeenAt": "2026-09-10T08:09:39.101Z",
+      "contentChangedAt": "2026-09-10T08:09:39.101Z",
       "linkStatus": "unknown",
       "maintenance": "unknown"
     },
@@ -60591,7 +60885,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.574Z"
     },
     {
       "id": "52eb9c4bf031d7e6",
@@ -67776,7 +68071,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.571Z"
     },
     {
       "id": "d59a15b9cb7fc284",
@@ -69477,7 +69773,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.570Z"
     },
     {
       "id": "a97530e9b7a57bea",
@@ -70520,7 +70817,8 @@
         "ru": "Vk-Engine — это 3D-игровой движок на базе Vulkan, написанный в основном на языке программирования Jai, с C/C++ glue для сторонних библиотек.\nОн предоставляет runtime в стиле entity-component, конвейеры сцен и ассетов для мешей, материалов, анимаций и LOD, а также примеры сцен для освещения, теней, параллакса и тестов физики.\nВ проект интегрированы Dear ImGui для UI редактора и гизмо, а также Jolt Physics через собственные привязки для коллизий и симуляции твёрдых тел, с кроссплатформенными скриптами сборки для Windows и Unix-подобных систем.\nОн особенно полезен разработчикам игр и графики, изучающим или прототипирующим современный рендеринг на Vulkan, инструменты редактора и геймплей на основе физики.",
         "zh-CN": "Vk-Engine 是一款基于 Vulkan 的 3D 游戏引擎，主要使用 Jai 编程语言编写，并通过 C/C++ 胶水代码对接第三方库。\n它提供实体-组件风格的运行时，以及面向网格、材质、动画和 LOD 的场景与资源管线，并附带用于光照、阴影、视差与物理测试的示例场景。\n项目集成 Dear ImGui 用于编辑器界面与 gizmo，并通过自定义绑定接入 Jolt Physics 以实现碰撞与刚体模拟，同时提供适用于 Windows 与类 Unix 系统的跨平台构建脚本。\n它主要面向希望学习或原型化现代 Vulkan 渲染、编辑器工具以及物理驱动玩法的游戏与图形开发者。",
         "zh-TW": "Vk-Engine 是一款以 Vulkan 為基礎的 3D 遊戲引擎，主要使用 Jai 程式語言編寫，並透過 C/C++ 膠水程式碼接駁第三方函式庫。\n它提供實體-元件風格的執行階段，以及面向網格、材質、動畫與 LOD 的場景與資源管線，並附帶用於光照、陰影、視差與物理測試的範例場景。\n專案整合 Dear ImGui 用於編輯器介面與 gizmo，並透過自訂繫結接入 Jolt Physics 以實現碰撞與剛體模擬，同時提供適用於 Windows 與類 Unix 系統的跨平台建置腳本。\n它主要適合希望學習或原型化現代 Vulkan 算繪、編輯器工具以及物理驅動玩法的遊戲與圖形開發者。"
-      }
+      },
+      "lastCheckedAt": "2026-09-10T08:09:45.572Z"
     },
     {
       "id": "9e29034c7fc3dced",
@@ -71123,7 +71421,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.572Z"
     },
     {
       "id": "17c0a160e418839c",
@@ -71660,6 +71959,28 @@
       "level": "all",
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
+      "linkStatus": "unknown",
+      "maintenance": "unknown"
+    },
+    {
+      "id": "b8d83d2f27a78899",
+      "title": "anticheatsystem",
+      "url": "https://github.com/pavelinbs-afk/anticheatsystem",
+      "description": "CS2 MetaMod server-side anti-cheat with C++ aim/movement/statistics analyzers, suspicion scoring, and AdminPlugin ban integration",
+      "categories": [
+        "Anti Cheat",
+        "Anti Cheat / Open Source Anti Cheat System"
+      ],
+      "tags": [
+        "Anti Cheat",
+        "Anti Cheat / Open Source Anti Cheat System"
+      ],
+      "engines": [],
+      "platforms": [],
+      "kind": "library",
+      "level": "all",
+      "firstSeenAt": "2026-09-10T08:09:39.101Z",
+      "contentChangedAt": "2026-09-10T08:09:39.101Z",
       "linkStatus": "unknown",
       "maintenance": "unknown"
     },
@@ -73410,7 +73731,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.570Z"
     },
     {
       "id": "4cad91e3a83d8ce4",
@@ -76054,7 +76376,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.573Z"
     },
     {
       "id": "4237b256fb51ab27",
@@ -76945,7 +77268,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.574Z"
     },
     {
       "id": "388b25c25fd871a3",
@@ -80266,7 +80590,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.572Z"
     },
     {
       "id": "3a7d8a6b075fb002",
@@ -82500,7 +82825,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.571Z"
     },
     {
       "id": "e58af8b61ac7337f",
@@ -82853,6 +83179,28 @@
       "level": "all",
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
+      "linkStatus": "unknown",
+      "maintenance": "unknown"
+    },
+    {
+      "id": "6c0eca651cbb7643",
+      "title": "omikron-tns-omk-engine",
+      "url": "https://github.com/sosso33/omikron-tns-omk-engine",
+      "description": "From-scratch C++20 reimplementation of Omikron: The Nomad Soul (1999) with documented format reverse engineering and evidence-backed asset readers",
+      "categories": [
+        "Cheat",
+        "Cheat / RE Tools"
+      ],
+      "tags": [
+        "Cheat",
+        "Cheat / RE Tools"
+      ],
+      "engines": [],
+      "platforms": [],
+      "kind": "tool",
+      "level": "all",
+      "firstSeenAt": "2026-09-10T08:09:39.101Z",
+      "contentChangedAt": "2026-09-10T08:09:39.101Z",
       "linkStatus": "unknown",
       "maintenance": "unknown"
     },
@@ -83681,7 +84029,8 @@
         "ru": "Этот проект — файтинг на Unreal Engine 5 с комплексной системой анимации, включающей локомоцию на основе root motion, переходы в боевой idle и смешивание направленного движения.\nВ нём есть Blueprint и UAsset для персонажей-бойцов с последовательностями анимаций ходьбы, бега, прыжка, атаки, реакции на удар, блока, уклонения и смерти, организованными по направлению движения и боевому состоянию.\nПроект использует систему animation blueprint UE5 с боевыми приёмами на основе montage, обработкой ввода и конфигурациями game mode.\nОн в первую очередь полезен разработчикам игр и исследователям UE5, изучающим архитектуру анимации файтингов и реализацию root motion в Unreal Engine 5.",
         "zh-CN": "本项目是一款 Unreal Engine 5 格斗游戏，具备完整的动画系统，包括根运动（root motion）移动、战斗待机过渡以及方向性移动混合。\n项目包含角色格斗手的 Blueprint 与 UAsset，涵盖行走、奔跑、跳跃、攻击、受击反应、格挡、闪避与死亡等动画序列，并按移动方向与战斗状态组织。\n项目基于 UE5 的动画蓝图系统，采用 Montage 驱动的战斗招式、输入处理以及游戏模式配置。\n主要面向游戏开发者与 UE5 研究者，用于学习格斗游戏动画架构以及 Unreal Engine 5 中的根运动实现。",
         "zh-TW": "本專案是一款 Unreal Engine 5 格鬥遊戲，具備完整的動畫系統，包括根運動（root motion）移動、戰鬥待機過渡以及方向性移動混合。\n專案包含角色格鬥手的 Blueprint 與 UAsset，涵蓋行走、奔跑、跳躍、攻擊、受擊反應、格擋、閃避與死亡等動畫序列，並依移動方向與戰鬥狀態組織。\n專案基於 UE5 的動畫藍圖系統，採用 Montage 驅動的戰鬥招式、輸入處理以及遊戲模式設定。\n主要面向遊戲開發者與 UE5 研究者，用於學習格鬥遊戲動畫架構以及 Unreal Engine 5 中的根運動實作。"
-      }
+      },
+      "lastCheckedAt": "2026-09-10T08:09:45.572Z"
     },
     {
       "id": "eabee7ca35ff4093",
@@ -84900,7 +85249,8 @@
         "ru": "Этот проект — MCP-сервер (Model Context Protocol), интегрирующийся с CDB/WinDbg, чтобы модели ИИ могли анализировать дампы аварий Windows и подключаться к удалённым сеансам отладки. Сервер на Python оборачивает сеансы CDB, предоставляет промпты для triage дампов и включает примеры программ, демонстрирующие типичные сценарии сбоев: разыменование нулевого указателя, переполнения кучи и ошибки деления на ноль. Он в первую очередь полезен реверс-инженерам и разработчикам ядра, которым нужен ИИ-усиленный анализ дампов аварий и автоматизированные рабочие процессы отладки.",
         "zh-CN": "本项目是一个 MCP（Model Context Protocol）服务器，与 CDB/WinDbg 集成，使 AI 模型能够分析 Windows 崩溃转储并连接到远程调试会话。该基于 Python 的服务器封装 CDB 会话，提供转储分类提示，并包含演示空指针解引用、堆溢出和除零错误等常见崩溃场景的示例程序。它主要适用于寻求 AI 增强的崩溃转储分析和自动化调试工作流的逆向工程师与内核开发者。",
         "zh-TW": "本專案是一個 MCP（Model Context Protocol）伺服器，與 CDB/WinDbg 整合，使 AI 模型能夠分析 Windows 當機傾印並連接到遠端偵錯工作階段。此以 Python 為基礎的伺服器封裝 CDB 工作階段，提供傾印分流提示，並包含示範空指標解參考、堆積溢位與除以零錯誤等常見當機情境的範例程式。它主要適用於尋求 AI 強化的當機傾印分析與自動化偵錯工作流程的逆向工程師與核心開發者。"
-      }
+      },
+      "lastCheckedAt": "2026-09-10T08:09:45.572Z"
     },
     {
       "id": "29de1fddd534d536",
@@ -85830,7 +86180,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.571Z"
     },
     {
       "id": "6c669a048cb35b6f",
@@ -92087,7 +92438,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.572Z"
     },
     {
       "id": "d49308b56db279ba",
@@ -98261,7 +98613,8 @@
       "firstSeenAt": "2026-09-08T18:47:01.871Z",
       "contentChangedAt": "2026-09-08T18:47:01.871Z",
       "linkStatus": "unknown",
-      "maintenance": "unknown"
+      "maintenance": "unknown",
+      "lastCheckedAt": "2026-09-10T08:09:45.574Z"
     },
     {
       "id": "cbd306417ac30a87",
@@ -99998,6 +100351,55 @@
   ],
   "changes": [
     {
+      "resourceId": "d5d9d8076dc02088",
+      "title": "disrobe",
+      "url": "https://github.com/1-3-7/disrobe",
+      "type": "added",
+      "date": "2026-09-10T08:09:39.101Z"
+    },
+    {
+      "resourceId": "76b8809ddda604dc",
+      "title": "r6-siege-battleye-launch-bug",
+      "url": "https://github.com/brandenbailey23/r6-siege-battleye-launch-bug",
+      "type": "added",
+      "date": "2026-09-10T08:09:39.101Z"
+    },
+    {
+      "resourceId": "10cedcae550793c4",
+      "title": "dragons-vs-vms",
+      "url": "https://github.com/fare9/dragons-vs-vms",
+      "type": "added",
+      "date": "2026-09-10T08:09:39.101Z"
+    },
+    {
+      "resourceId": "23c03076c7910628",
+      "title": "amice",
+      "url": "https://github.com/fuqiuluo/amice",
+      "type": "added",
+      "date": "2026-09-10T08:09:39.101Z"
+    },
+    {
+      "resourceId": "7460cd7c0305346c",
+      "title": "PokeAllianceAntiCheatAnalysis",
+      "url": "https://github.com/lordetyrael/pokeallianceanticheatanalysis",
+      "type": "added",
+      "date": "2026-09-10T08:09:39.101Z"
+    },
+    {
+      "resourceId": "b8d83d2f27a78899",
+      "title": "anticheatsystem",
+      "url": "https://github.com/pavelinbs-afk/anticheatsystem",
+      "type": "added",
+      "date": "2026-09-10T08:09:39.101Z"
+    },
+    {
+      "resourceId": "6c0eca651cbb7643",
+      "title": "omikron-tns-omk-engine",
+      "url": "https://github.com/sosso33/omikron-tns-omk-engine",
+      "type": "added",
+      "date": "2026-09-10T08:09:39.101Z"
+    },
+    {
       "resourceId": "53ff36c3c28b5bbf",
       "title": "ShinobiX",
       "url": "https://github.com/timehue/shinobix",
@@ -100005,5 +100407,5 @@
       "date": "2026-09-09T08:10:19.765Z"
     }
   ],
-  "sourceEntryCount": 4311
+  "sourceEntryCount": 4318
 }
